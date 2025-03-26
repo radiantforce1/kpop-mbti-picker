@@ -79,22 +79,20 @@ export default function KpopMbtiPicker() {
   return (
     <div className="p-4 max-w-2xl mx-auto flex flex-col items-center text-center">
       <h1 className="text-xl font-bold mb-2">K-Pop Idol MBTI Consensus</h1>
-      <p className="text-sm text-gray-600 mb-2">Please select up to 10 idols.<br/>p.s. odd numbers work better to break potential ties</p>
+      <p className="text-sm text-gray-600 mb-2">Please select up to 10 idols.<br/>p.s. odd numbers work better to break potential ties<br/>Disclaimer: Given that MBTIs may change, idol's MBTI displayed may not be up to date.</p>
       <div className="relative w-full">
         <input
           type="text"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           onFocus={() => setShowOptions(true)}
-          placeholder="Search idols..."
+          placeholder="Search idols or group"
           className="border p-2 rounded w-full"
         />
         {showOptions && (
           <ul className="absolute w-full border bg-white max-h-40 overflow-y-auto shadow-lg rounded-md">
             {idols
-              .filter((idol) => 
-                idol["Name (Group)"].toLowerCase().includes(search.toLowerCase())
-              )
+              .filter((idol) => idol["Name (Group)"].toLowerCase().includes(search.toLowerCase()))
               .map((idol) => (
                 <li
                   key={idol["Name (Group)"]}
@@ -141,9 +139,7 @@ export default function KpopMbtiPicker() {
               <li key={letter} className="text-sm">{letter} - {otherLetterPercentages[letter]}</li>
             ))}
           </ul>
-        </div>
-          <div>
-          <h2 className="text-lg font-semibold">20 Random Idols with {result} MBTI:</h2>
+          <h3 className="text-md font-semibold mt-2">20 Random Idols with {result} MBTI:</h3>
           <ul>
             {similarIdols.map((idol) => (
               <li key={idol["Name (Group)"]} className="text-md font-medium">
@@ -152,7 +148,6 @@ export default function KpopMbtiPicker() {
             ))}
           </ul>
         </div>
-      </div>
       )}
     </div>
   );
