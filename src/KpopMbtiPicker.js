@@ -142,6 +142,16 @@ export default function KpopMbtiPicker() {
             ))}
           </ul>
         </div>
+          <div>
+          <h2 className="text-lg font-semibold">20 Random Idols with {result} MBTI:</h2>
+          <ul>
+            {similarIdols.map((idol) => (
+              <li key={idol["Name (Group)"]} className="text-md font-medium">
+                {idol["Name (Group)"]}
+              </li>
+            ))}
+          </ul>
+        </div>
       )}
     </div>
   );
