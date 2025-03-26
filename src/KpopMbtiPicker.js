@@ -93,10 +93,8 @@ export default function KpopMbtiPicker() {
           <ul className="absolute w-full border bg-white max-h-40 overflow-y-auto">
             {idols
               .filter((idol) => 
-                idol["Name (Group)"]
-                  .toLowerCase()
-                  .split(" ")
-                  .some((word) => word.includes(search.toLowerCase()))
+                idol["Name (Group)"].toLowerCase().includes(search.toLowerCase()) &&
+                !["Hiroto", "Iris", "Ivan", "Kim Seung Ho", "Kim Sujin", "Lee Taerim", "Rinka", "Santa", "Vivi"].includes(idol["Name (Group)"])
               )
               .map((idol) => (
                 <li
