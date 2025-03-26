@@ -90,16 +90,15 @@ export default function KpopMbtiPicker() {
           className="border p-2 rounded w-full"
         />
         {showOptions && (
-          <ul className="absolute w-full border bg-white max-h-40 overflow-y-auto">
+          <ul className="absolute w-full border bg-white max-h-40 overflow-y-auto shadow-lg rounded-md">
             {idols
               .filter((idol) => 
-                idol["Name (Group)"].toLowerCase().includes(search.toLowerCase()) &&
-                !["Hiroto", "Iris", "Ivan", "Kim Seung Ho", "Kim Sujin", "Lee Taerim", "Rinka", "Santa", "Vivi"].includes(idol["Name (Group)"])
+                idol["Name (Group)"].toLowerCase().includes(search.toLowerCase())
               )
               .map((idol) => (
                 <li
                   key={idol["Name (Group)"]}
-                  className="p-2 hover:bg-gray-200 cursor-pointer"
+                  className="p-3 hover:bg-blue-500 hover:text-white cursor-pointer transition-all"
                   onClick={() => handleSelect(idol["Name (Group)"])}
                 >
                   {idol["Name (Group)"]}
