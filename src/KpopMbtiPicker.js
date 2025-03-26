@@ -152,6 +152,7 @@ export default function KpopMbtiPicker() {
             ))}
           </ul>
         </div>
+      </div>
       )}
     </div>
   );
