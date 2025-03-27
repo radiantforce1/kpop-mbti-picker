@@ -79,7 +79,10 @@ export default function KpopMbtiPicker() {
   return (
     <div className="p-4 max-w-2xl mx-auto flex flex-col items-center text-center">
       <h1 className="text-xl font-bold mb-2">K-Pop Idol MBTI Consensus</h1>
-      <p className="text-sm text-gray-600 mb-2">Please select up to 10 idols.<br/>p.s. odd numbers work better to break potential ties<br/>Disclaimer: Given that MBTIs may change, idol's MBTI displayed may not be up to date.</p>
+      <p className="text-sm text-gray-600 mb-2">Please select up to 10 idols. p.s. odd numbers work better to break potential ties
+        <br/>If you have any add/amend/others request, please let me know by completing this <a href="https://forms.gle/NARhpvRi3JCFM2RK8" className="text-blue-500 underline">form</a>
+        <br/>Disclaimer: Given that MBTIs may change, idol's MBTI displayed may not be up to date.
+      </p>
       <div className="relative w-full">
         <input
           type="text"
@@ -115,40 +118,6 @@ export default function KpopMbtiPicker() {
           </div>
         ))}
       </div>
-      <div className="mt-2 flex gap-2">
-        <button className="bg-blue-500 text-white px-4 py-2 rounded" onClick={calculateMbti}>
-          Get Consensus MBTI
-        </button>
-        <button className="bg-gray-500 text-white px-4 py-2 rounded" onClick={resetSelection}>
-          Reset
-        </button>
-      </div>
-      {result && (
-        <div className="mt-4 p-4 border rounded bg-gray-100 w-full">
-          <h2 className="text-lg font-semibold">Consensus MBTI:</h2>
-          <p className="text-2xl font-bold">{result}</p>
-          <h3 className="text-md font-semibold mt-2">MBTI Breakdown:</h3>
-          <ul>
-            {result.split('').map((letter) => (
-              <li key={letter} className="text-sm">{letter} - {letterPercentages[letter]}</li>
-            ))}
-          </ul>
-          <h3 className="text-md font-semibold mt-2">MBTI Others:</h3>
-          <ul>
-            {Object.keys(otherLetterPercentages).map((letter) => (
-              <li key={letter} className="text-sm">{letter} - {otherLetterPercentages[letter]}</li>
-            ))}
-          </ul>
-          <h3 className="text-md font-semibold mt-2">20 Random Idols with {result} MBTI:</h3>
-          <ul>
-            {similarIdols.map((idol) => (
-              <li key={idol["Name (Group)"]} className="text-md font-medium">
-                {idol["Name (Group)"]}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
     </div>
   );
 }
