@@ -81,7 +81,7 @@ export default function KpopMbtiPicker() {
       <h1 className="text-xl font-bold mb-2">K-Pop Idol MBTI Consensus</h1>
       <p className="text-sm text-gray-600 mb-2">Please select up to 10 idols. p.s. odd numbers work better to break potential ties
         <br/>If you have any add/amend/others request, please let me know by completing this <a href="https://forms.gle/NARhpvRi3JCFM2RK8" className="text-blue-500 underline">form</a>
-        <br/>Disclaimer: Given that MBTIs may change, idol's MBTI displayed may not be up to date.
+        <br/>Disclaimer: Idols' MBTI may not be accurate as their MBTIs may change. Both official and unofficial sources were used to build this database.
       </p>
       <div className="relative w-full">
         <input
