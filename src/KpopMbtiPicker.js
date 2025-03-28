@@ -16,13 +16,20 @@ export default function KpopMbtiPicker() {
   }, []);
 
   const handleSelect = (idolName) => {
+    // Prevent duplicate selection
+    if (selectedIdols.some((idol) => idol["Name (Group)"] === idolName)) {
+      return; // Exit function if idol is already selected
+    }
+  
     if (selectedIdols.length < 10) {
       const idol = idols.find((i) => i["Name (Group)"] === idolName);
       setSelectedIdols([...selectedIdols, idol]);
     }
+    
     setSearch("");
     setShowOptions(false);
   };
+  
 
   const handleRemove = (idolName) => {
     setSelectedIdols(selectedIdols.filter((idol) => idol["Name (Group)"] !== idolName));
@@ -96,16 +103,20 @@ export default function KpopMbtiPicker() {
         {showOptions && (
           <ul className="absolute w-full border bg-white max-h-40 overflow-y-auto shadow-lg rounded-md">
             {idols
-              .filter((idol) => idol["Name (Group)"].toLowerCase().includes(search.toLowerCase()))
-              .map((idol) => (
-                <li
-                  key={idol["Name (Group)"]}
-                  className="p-3 hover:bg-blue-500 hover:text-white cursor-pointer transition-all"
-                  onClick={() => handleSelect(idol["Name (Group)"])}
-                >
-                  {idol["Name (Group)"]}
-                </li>
-              ))}
+  .filter((idol) => 
+    idol["Name (Group)"].toLowerCase().includes(search.toLowerCase()) &&
+    !selectedIdols.some((selected) => selected["Name (Group)"] === idol["Name (Group)"]) // Exclude selected idols
+  )
+  .map((idol) => (
+    <li
+      key={idol["Name (Group)"]}
+      className="p-3 hover:bg-blue-500 hover:text-white cursor-pointer transition-all"
+      onClick={() => handleSelect(idol["Name (Group)"])}
+    >
+      {idol["Name (Group)"]}
+    </li>
+  ))}
+
           </ul>
         )}
       </div>
