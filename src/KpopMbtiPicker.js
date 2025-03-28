@@ -10,30 +10,52 @@ export default function KpopMbtiPicker() {
   const [similarIdols, setSimilarIdols] = useState([]);
   const [search, setSearch] = useState("");
   const [showOptions, setShowOptions] = useState(false);
+  const [maxReachedMessage, setMaxReachedMessage] = useState("");
+
 
   useEffect(() => {
     setIdols(idolData);
   }, []);
 
   const handleSelect = (idolName) => {
-    // Prevent duplicate selection
-    if (selectedIdols.some((idol) => idol["Name (Group)"] === idolName)) {
-      return; // Exit function if idol is already selected
+    if (selectedIdols.length >= 10) {
+      setMaxReachedMessage("You have hit the maximum of 10 idols. Please remove to add another.");
+      return;
     }
   
-    if (selectedIdols.length < 10) {
-      const idol = idols.find((i) => i["Name (Group)"] === idolName);
-      setSelectedIdols([...selectedIdols, idol]);
+    if (selectedIdols.some((idol) => idol["Name (Group)"] === idolName)) {
+      return; // Prevent duplicate selection
     }
+  
+    const idol = idols.find((i) => i["Name (Group)"] === idolName);
     
+    setSelectedIdols((prevSelected) => {
+      const newSelection = [...prevSelected, idol];
+  
+      if (newSelection.length >= 10) {
+        setMaxReachedMessage("You have hit the maximum of 10 idols. Please remove to add another.");
+      } else {
+        setMaxReachedMessage(""); // Clear if below max
+      }
+  
+      return newSelection;
+    });
+  
     setSearch("");
     setShowOptions(false);
   };
-  
 
   const handleRemove = (idolName) => {
-    setSelectedIdols(selectedIdols.filter((idol) => idol["Name (Group)"] !== idolName));
-  };
+  setSelectedIdols((prevSelected) => {
+    const updatedList = prevSelected.filter((idol) => idol["Name (Group)"] !== idolName);
+
+    if (updatedList.length < 10) {
+      setMaxReachedMessage(""); // Clear warning when below 10
+    }
+
+    return updatedList;
+  });
+};
 
   const calculateMbti = () => {
     const letterCounts = [{}, {}, {}, {}];
@@ -81,7 +103,9 @@ export default function KpopMbtiPicker() {
     setOtherLetterPercentages({});
     setSimilarIdols([]);
     setSearch("");
+    setMaxReachedMessage(""); // Clear the max reached message
   };
+  
 
   return (
     <div className="p-4 max-w-2xl mx-auto flex flex-col items-center text-center">
@@ -92,6 +116,9 @@ export default function KpopMbtiPicker() {
       <br/>For any outreach/feedback, you can email me at: <a href="kpopmbtipicker@gmail.com" className="text-blue-500 underline">kpopmbtipicker@gmail.com</a>
       <br/>Disclaimer: Idols' MBTI may not be accurate as their MBTI changes. Data has been compiled from both official and non-official sources.</p>
       <div className="relative w-full">
+      {maxReachedMessage && (
+  <p className="text-red-500 font-semibold mb-2">{maxReachedMessage}</p>
+)}
         <input
           type="text"
           value={search}
@@ -99,6 +126,7 @@ export default function KpopMbtiPicker() {
           onFocus={() => setShowOptions(true)}
           placeholder="Search idols or group"
           className="border p-2 rounded w-full"
+          disabled={selectedIdols.length >= 10} // Disable input when max reached
         />
         {showOptions && (
           <ul className="absolute w-full border bg-white max-h-40 overflow-y-auto shadow-lg rounded-md">
