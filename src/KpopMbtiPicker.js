@@ -109,8 +109,9 @@ export default function KpopMbtiPicker() {
 
   return (
     <div className="p-4 max-w-2xl mx-auto flex flex-col items-center text-center">
-      <h1 className="text-xl font-bold mb-2">K-Pop Idol MBTI Consensus</h1>
-      <p className="text-sm text-gray-600 mb-2">Please select up to 10 idols.<br/>p.s. odd numbers work better to break potential ties
+      <h1 className="text-xl font-bold mb-2">Kpop MBTI Picker - Match Your MBTI with K-Pop Idols</h1>
+      <p className="text-sm text-gray-600 mb-2">Ever wondered which idols share your MBTI? 
+      <br/>Pick up to 10 of your favorites and reveal your MBTI consensus. 
       <br/>If you have any add/amend/others request, please let me know by completing this <a href="https://forms.gle/ni6CkCGZPktyCiML8" className="text-blue-500 underline">form</a>
       <br/>I hope you enjoyed using this. Please do share it on your socials and help me spread the word if you did. Thank you. 
       <br/>For any outreach/feedback, you can email me at: <a href="kpopmbtipicker@gmail.com" className="text-blue-500 underline">kpopmbtipicker@gmail.com</a>
