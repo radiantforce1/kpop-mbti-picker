@@ -46,7 +46,7 @@ const s = {
   btnRow: { display: "flex", gap: "12px", marginTop: "22px", justifyContent: "center" },
   btnPrimary: { background: "linear-gradient(90deg, #e91e8c, #9c27b0)", color: "white", border: "none", borderRadius: "14px", padding: "12px 28px", fontSize: "1rem", fontWeight: 700, cursor: "pointer", boxShadow: "0 4px 14px rgba(233,30,140,0.35)" },
   btnSecondary: { background: "white", color: "#9c27b0", border: "2px solid #ce93d8", borderRadius: "14px", padding: "12px 22px", fontSize: "1rem", fontWeight: 700, cursor: "pointer" },
-  adSlot: { maxWidth: "640px", margin: "0 auto 20px", minHeight: "90px" },
+  adSlot: { maxWidth: "640px", margin: "0 auto", minHeight: "0px" },
   resultCard: { background: "white", borderRadius: "24px", padding: "28px", maxWidth: "640px", margin: "0 auto 20px", boxShadow: "0 4px 24px rgba(156,39,176,0.12)" },
   resultHeader: { textAlign: "center", marginBottom: "24px" },
   resultLabel: { fontSize: "0.85rem", fontWeight: 700, color: "#9c27b0", textTransform: "uppercase", letterSpacing: "0.5px" },
