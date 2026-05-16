@@ -54,14 +54,16 @@ const s = {
   resultName: { fontSize: "1rem", color: "#7c5c8a", fontStyle: "italic" },
   blurb: { background: "linear-gradient(135deg, #fce4ec, #f3e5f5)", border: "1.5px solid #f48fb1", borderRadius: "16px", padding: "18px 20px", marginBottom: "24px", fontSize: "0.88rem", color: "#4a3358", lineHeight: 1.65 },
   breakdownSection: { marginBottom: "24px" },
-  barRow: { display: "flex", alignItems: "center", gap: "10px", marginBottom: "8px" },
-  barLetter: { fontWeight: 800, fontSize: "0.95rem", width: "18px", color: "#e91e8c" },
-  barLetterAlt: { fontWeight: 800, fontSize: "0.95rem", width: "18px", color: "#bbb" },
-  barTrack: { flex: 1, background: "#fce4ec", borderRadius: "100px", height: "10px", overflow: "hidden" },
-  barFill: { height: "100%", borderRadius: "100px", background: "linear-gradient(90deg, #f48fb1, #9c27b0)" },
-  barFillAlt: { height: "100%", borderRadius: "100px", background: "linear-gradient(90deg, #e0e0e0, #bdbdbd)" },
-  barPct: { fontSize: "0.8rem", fontWeight: 700, color: "#7c5c8a", width: "38px", textAlign: "right" },
-  barPctAlt: { fontSize: "0.8rem", fontWeight: 700, color: "#bbb", width: "38px", textAlign: "right" },
+  splitRow: { display: "flex", alignItems: "center", gap: "8px", marginBottom: "12px" },
+  splitLetterWin: { fontWeight: 800, fontSize: "1rem", color: "#e91e8c", width: "20px", textAlign: "center" },
+  splitLetterAlt: { fontWeight: 800, fontSize: "1rem", color: "#bbb", width: "20px", textAlign: "center" },
+  splitPctWin: { fontSize: "0.8rem", fontWeight: 700, color: "#9c27b0", width: "34px", textAlign: "right" },
+  splitPctAlt: { fontSize: "0.8rem", fontWeight: 700, color: "#bbb", width: "34px", textAlign: "left" },
+  splitTrack: { flex: 1, height: "12px", background: "#e0e0e0", borderRadius: "100px", overflow: "hidden", position: "relative" },
+  splitFill: { position: "absolute", left: 0, top: 0, height: "100%", background: "linear-gradient(90deg, #e91e8c, #9c27b0)", borderRadius: "100px" },
+  shareSection: { marginBottom: "24px", paddingBottom: "24px", borderBottom: "1.5px solid #f3e5f5" },
+  shareButtons: { display: "flex", gap: "10px", flexWrap: "wrap" },
+  shareBtn: { display: "flex", alignItems: "center", justifyContent: "center", width: "44px", height: "44px", borderRadius: "50%", cursor: "pointer", border: "none", textDecoration: "none", transition: "opacity 0.15s" },
   matchingHeader: { display: "flex", alignItems: "baseline", gap: "8px", marginBottom: "12px", flexWrap: "wrap" },
   matchingTitle: { fontSize: "0.85rem", fontWeight: 700, color: "#9c27b0", textTransform: "uppercase", letterSpacing: "0.5px" },
   matchingSubtitle: { fontSize: "0.78rem", color: "#b39ddb", fontStyle: "italic" },
@@ -88,6 +90,7 @@ export default function KpopMbtiPicker() {
   const [showOptions, setShowOptions] = useState(false);
   const [maxReachedMessage, setMaxReachedMessage] = useState("");
   const [hoveredItem, setHoveredItem] = useState(null);
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => { setIdols(idolData); }, []);
 
@@ -273,6 +276,30 @@ export default function KpopMbtiPicker() {
           {/* Personality description */}
           {info && <div style={s.blurb}>{info.description}</div>}
 
+          {/* Share section */}
+          <div style={s.shareSection}>
+            <div style={{ ...s.sectionLabel, marginBottom: "12px" }}>Share your result 💜</div>
+            <div style={s.shareButtons}>
+              <a href={`https://wa.me/?text=My%20K-pop%20MBTI%20consensus%20is%20${result}%20%E2%80%94%20${info?.name}!%20Find%20yours%20at%20https://radiantforce1.github.io/kpop-mbti-picker`} target="_blank" rel="noreferrer" style={{ ...s.shareBtn, background: "#25D366" }} title="Share on WhatsApp">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </a>
+              <a href={`https://twitter.com/intent/tweet?text=My%20K-pop%20MBTI%20consensus%20is%20${result}%20%E2%80%94%20${info?.name}!%20Find%20yours%20at%20https://radiantforce1.github.io/kpop-mbti-picker`} target="_blank" rel="noreferrer" style={{ ...s.shareBtn, background: "#000" }} title="Share on X">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href={`https://threads.net/intent/post?text=My%20K-pop%20MBTI%20consensus%20is%20${result}%20%E2%80%94%20${info?.name}!%20Find%20yours%20at%20https://radiantforce1.github.io/kpop-mbti-picker`} target="_blank" rel="noreferrer" style={{ ...s.shareBtn, background: "#000" }} title="Share on Threads">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.347-.79-.974-1.448-1.821-1.922-.281 1.626-.87 2.916-1.86 3.803-1.05.938-2.436 1.364-4.241 1.341-1.379-.02-2.577-.468-3.365-1.261-.902-.909-1.207-2.163-.829-3.43.49-1.637 1.849-2.625 3.65-2.625.502 0 1.01.044 1.513.131a21.87 21.87 0 011.311.281c-.069-.42-.127-.81-.175-1.168-.3-2.253.216-3.83 1.536-4.688 1.255-.816 3.046-.77 5.17.133l-.791 1.864c-1.446-.614-2.572-.67-3.27-.22-.674.438-.932 1.454-.71 3.09.098.738.237 1.51.413 2.294 1.024.437 1.876 1.065 2.512 1.85 1.088 1.352 1.43 3.162.916 5.044-.58 2.11-2.003 3.642-4.098 4.447-1.334.511-2.884.763-4.636.763z"/></svg>
+              </a>
+              <button onClick={() => { navigator.clipboard.writeText("https://radiantforce1.github.io/kpop-mbti-picker").then(() => { setCopied(true); setTimeout(() => setCopied(false), 2000); }); }} style={{ ...s.shareBtn, background: copied ? "#ce93d8" : "#f3e5f5", border: "1.5px solid #ce93d8" }} title="Copy link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={copied ? "white" : "#9c27b0"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+              </button>
+              {navigator.share && (
+                <button onClick={() => navigator.share({ title: "Kpop MBTI Picker", text: `My K-pop MBTI consensus is ${result} — ${info?.name}!`, url: "https://radiantforce1.github.io/kpop-mbti-picker" })} style={{ ...s.shareBtn, background: "linear-gradient(90deg, #e91e8c, #9c27b0)" }} title="Share">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                </button>
+              )}
+            </div>
+          </div>
+
           {/* Breakdown bars */}
           <div style={s.breakdownSection}>
             <div style={s.sectionLabel}>MBTI Breakdown</div>
@@ -282,17 +309,12 @@ export default function KpopMbtiPicker() {
               const winPct = parseInt(letterPercentages[winLetter] || otherLetterPercentages[winLetter] || 0);
               const altPct = parseInt(otherLetterPercentages[altLetter] || letterPercentages[altLetter] || 0);
               return (
-                <div key={a + b} style={{ marginBottom: "10px" }}>
-                  <div style={s.barRow}>
-                    <div style={s.barLetter}>{winLetter}</div>
-                    <div style={s.barTrack}><div style={{ ...s.barFill, width: `${winPct}%` }} /></div>
-                    <div style={s.barPct}>{winPct}%</div>
-                  </div>
-                  <div style={s.barRow}>
-                    <div style={s.barLetterAlt}>{altLetter}</div>
-                    <div style={s.barTrack}><div style={{ ...s.barFillAlt, width: `${altPct}%` }} /></div>
-                    <div style={s.barPctAlt}>{altPct}%</div>
-                  </div>
+                <div key={a + b} style={s.splitRow}>
+                  <div style={s.splitLetterWin}>{winLetter}</div>
+                  <div style={s.splitPctWin}>{winPct}%</div>
+                  <div style={s.splitTrack}><div style={{ ...s.splitFill, width: `${winPct}%` }} /></div>
+                  <div style={s.splitPctAlt}>{altPct}%</div>
+                  <div style={s.splitLetterAlt}>{altLetter}</div>
                 </div>
               );
             })}
