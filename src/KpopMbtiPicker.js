@@ -132,6 +132,7 @@ export default function KpopMbtiPicker() {
     }
     if (selectedIdols.some((idol) => idol["Name (Group)"] === idolName)) return;
     const idol = idols.find((i) => i["Name (Group)"] === idolName);
+    setSearch("");
     setSelectedIdols((prev) => {
       const next = [...prev, idol];
       if (next.length >= 10) setMaxReachedMessage("You've reached the maximum of 10 idols. Remove one to add another.");
