@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import html2canvas from "html2canvas";
 import idolData from "./idolData.json";
 
 const mbtiInfo = {
@@ -91,8 +92,38 @@ export default function KpopMbtiPicker() {
   const [maxReachedMessage, setMaxReachedMessage] = useState("");
   const [hoveredItem, setHoveredItem] = useState(null);
   const [copied, setCopied] = useState(false);
+  const [generatingImage, setGeneratingImage] = useState(false);
+  const shareCardRef = useRef(null);
 
   useEffect(() => { setIdols(idolData); }, []);
+
+  const generateImage = async (download = true) => {
+    if (!shareCardRef.current) return;
+    setGeneratingImage(true);
+    try {
+      const canvas = await html2canvas(shareCardRef.current, {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: null,
+      });
+      canvas.toBlob(async (blob) => {
+        if (download) {
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = `kpop-mbti-${result}.png`;
+          a.click();
+          URL.revokeObjectURL(url);
+        } else if (navigator.share) {
+          const file = new File([blob], `kpop-mbti-${result}.png`, { type: "image/png" });
+          await navigator.share({ files: [file], title: "Kpop MBTI Picker", text: `My K-pop MBTI consensus is ${result} — ${info?.name}!` });
+        }
+        setGeneratingImage(false);
+      }, "image/png");
+    } catch (e) {
+      setGeneratingImage(false);
+    }
+  };
 
   const handleSelect = (idolName) => {
     if (selectedIdols.length >= 10) {
@@ -349,6 +380,21 @@ export default function KpopMbtiPicker() {
             })}
           </div>
 
+          {/* Image share buttons */}
+          <div style={{ marginBottom: "24px", paddingBottom: "24px", borderBottom: "1.5px solid #f3e5f5" }}>
+            <div style={{ ...s.sectionLabel, marginBottom: "12px" }}>Save & Share Image 🖼️</div>
+            <div style={{ display: "flex", gap: "10px" }}>
+              <button onClick={() => generateImage(true)} disabled={generatingImage} style={{ ...s.btnPrimary, fontSize: "0.88rem", padding: "10px 20px" }}>
+                {generatingImage ? "Generating..." : "⬇ Save Image"}
+              </button>
+              {navigator.share && (
+                <button onClick={() => generateImage(false)} disabled={generatingImage} style={{ ...s.btnSecondary, fontSize: "0.88rem", padding: "10px 20px" }}>
+                  Share Image
+                </button>
+              )}
+            </div>
+          </div>
+
           {/* Matching idols */}
           {similarIdols.length > 0 && (
             <>
@@ -363,6 +409,82 @@ export default function KpopMbtiPicker() {
               </div>
             </>
           )}
+        </div>
+      )}
+
+      {/* HIDDEN SHARE CARD — captured by html2canvas */}
+      {result && (
+        <div ref={shareCardRef} style={{
+          position: "fixed", top: "-9999px", left: "-9999px",
+          width: "540px", height: "540px",
+          background: "linear-gradient(135deg, #fce4ec 0%, #f3e5f5 50%, #ede7f6 100%)",
+          fontFamily: "'Segoe UI', sans-serif",
+          display: "flex", flexDirection: "column",
+          padding: "28px", boxSizing: "border-box",
+        }}>
+
+          {/* Header */}
+          <div style={{ textAlign: "center", marginBottom: "24px" }}>
+            <div style={{ fontSize: "18px", fontWeight: 800, color: "#9c27b0", letterSpacing: "2px", textTransform: "uppercase" }}>✦ Kpop MBTI Picker ✦</div>
+            <div style={{ fontSize: "12px", fontWeight: 600, color: "#ce93d8", marginTop: "3px", letterSpacing: "0.5px" }}>kpopmbtipicker.com</div>
+          </div>
+
+          {/* Two columns */}
+          <div style={{ display: "flex", gap: "14px", flex: 1, overflow: "hidden" }}>
+
+            {/* LEFT — My Picks */}
+            <div style={{ width: "200px", flexShrink: 0, background: "white", borderRadius: "14px", padding: "12px", display: "flex", flexDirection: "column", overflow: "hidden", alignSelf: "flex-start" }}>
+              <div style={{ fontSize: "9px", fontWeight: 700, color: "#9c27b0", textTransform: "uppercase", letterSpacing: "0.5px", marginBottom: "8px" }}>My Picks</div>
+              <div style={{ display: "flex", flexDirection: "column", gap: "5px", overflow: "hidden" }}>
+                {selectedIdols.map((idol) => (
+                  <div key={idol["Name (Group)"]} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", background: "#fce4ec", borderRadius: "8px", padding: "4px 8px" }}>
+                    <span style={{ fontSize: "9px", fontWeight: 600, color: "#3d2c4e", flex: 1, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{idol["Name (Group)"]}</span>
+                    <span style={{ background: "#e91e8c", color: "white", borderRadius: "6px", width: "30px", textAlign: "center", fontSize: "8px", fontWeight: 700, flexShrink: 0, marginLeft: "4px" }}>{idol.Personality}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* RIGHT — Result, summary, bars */}
+            <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: "10px", overflow: "hidden" }}>
+
+              {/* MBTI result */}
+              <div style={{ background: "white", borderRadius: "14px", padding: "10px 12px", textAlign: "center" }}>
+                <div style={{ fontSize: "9px", fontWeight: 700, color: "#9c27b0", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "2px" }}>Consensus MBTI</div>
+                <div style={{ fontSize: "48px", fontWeight: 900, color: "#e91e8c", letterSpacing: "4px", lineHeight: 1 }}>{result}</div>
+                <div style={{ fontSize: "12px", color: "#7c5c8a", fontStyle: "italic", marginTop: "2px" }}>{info?.name}</div>
+              </div>
+
+              {/* MBTI summary */}
+              {info && (
+                <div style={{ background: "white", borderRadius: "14px", padding: "10px 12px", fontSize: "9px", color: "#4a3358", lineHeight: 1.6, overflow: "hidden" }}>
+                  {info.description}
+                </div>
+              )}
+
+              {/* Breakdown bars */}
+              <div style={{ background: "white", borderRadius: "14px", padding: "10px 12px" }}>
+                {mbtiPairs.map(([a, b]) => {
+                  const winLetter = result.includes(a) ? a : b;
+                  const altLetter = winLetter === a ? b : a;
+                  const winPct = parseInt(letterPercentages[winLetter] || otherLetterPercentages[winLetter] || 0);
+                  const altPct = parseInt(otherLetterPercentages[altLetter] || letterPercentages[altLetter] || 0);
+                  return (
+                    <div key={a + b} style={{ display: "flex", alignItems: "center", gap: "5px", marginBottom: "6px" }}>
+                      <div style={{ fontWeight: 800, fontSize: "10px", color: "#e91e8c", width: "12px", textAlign: "center" }}>{winLetter}</div>
+                      <div style={{ fontWeight: 700, fontSize: "9px", color: "#9c27b0", width: "24px", textAlign: "right" }}>{winPct}%</div>
+                      <div style={{ flex: 1, height: "7px", background: "#e0e0e0", borderRadius: "100px", overflow: "hidden", position: "relative" }}>
+                        <div style={{ position: "absolute", left: 0, top: 0, height: "100%", width: `${winPct}%`, background: "linear-gradient(90deg, #e91e8c, #9c27b0)", borderRadius: "100px" }} />
+                      </div>
+                      <div style={{ fontWeight: 700, fontSize: "9px", color: "#bbb", width: "24px" }}>{altPct}%</div>
+                      <div style={{ fontWeight: 800, fontSize: "10px", color: "#bbb", width: "12px", textAlign: "center" }}>{altLetter}</div>
+                    </div>
+                  );
+                })}
+              </div>
+
+            </div>
+          </div>
         </div>
       )}
 
