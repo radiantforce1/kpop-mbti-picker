@@ -42,7 +42,7 @@ const s = {
   chipsWrap: { display: "flex", flexWrap: "wrap", gap: "8px" },
   chip: { display: "flex", alignItems: "center", gap: "8px", background: "#fce4ec", border: "1.5px solid #f48fb1", borderRadius: "100px", padding: "6px 12px 6px 14px", fontSize: "0.85rem", fontWeight: 600, color: "#3d2c4e" },
   badge: { background: "linear-gradient(90deg, #e91e8c, #9c27b0)", color: "white", fontSize: "0.72rem", fontWeight: 700, borderRadius: "100px", padding: "2px 8px" },
-  removeBtn: { background: "none", border: "none", cursor: "pointer", color: "#ce93d8", fontSize: "1rem", lineHeight: 1, padding: 0 },
+  removeBtn: { background: "none", border: "none", cursor: "pointer", color: "#3d2c4e", fontSize: "1rem", lineHeight: 1, padding: 0 },
   btnRow: { display: "flex", gap: "12px", marginTop: "22px", justifyContent: "center" },
   btnPrimary: { background: "linear-gradient(90deg, #e91e8c, #9c27b0)", color: "white", border: "none", borderRadius: "14px", padding: "12px 28px", fontSize: "1rem", fontWeight: 700, cursor: "pointer", boxShadow: "0 4px 14px rgba(233,30,140,0.35)" },
   btnSecondary: { background: "white", color: "#9c27b0", border: "2px solid #ce93d8", borderRadius: "14px", padding: "12px 22px", fontSize: "1rem", fontWeight: 700, cursor: "pointer" },
@@ -107,9 +107,11 @@ export default function KpopMbtiPicker() {
       else setMaxReachedMessage("");
       return next;
     });
-    setSearch("");
+  };
+
+  const closeDropdown = () => {
     setShowOptions(false);
-    setTimeout(() => searchRef.current?.focus(), 200);
+    setSearch("");
   };
 
   const handleRemove = (idolName) => {
@@ -162,10 +164,8 @@ export default function KpopMbtiPicker() {
     setMaxReachedMessage("");
   };
 
-  const filteredIdols = idols.filter(
-    (idol) =>
-      idol["Name (Group)"].toLowerCase().includes(search.toLowerCase()) &&
-      !selectedIdols.some((s) => s["Name (Group)"] === idol["Name (Group)"])
+  const filteredIdols = idols.filter((idol) =>
+    idol["Name (Group)"].toLowerCase().includes(search.toLowerCase())
   );
 
   const info = result ? mbtiInfo[result] : null;
@@ -203,32 +203,61 @@ export default function KpopMbtiPicker() {
               onChange={(e) => setSearch(e.target.value)}
               onFocus={() => setShowOptions(true)}
               onBlur={() => setTimeout(() => setShowOptions(false), 150)}
+              onKeyDown={(e) => e.key === "Escape" && closeDropdown()}
               placeholder="Search by idol name or group..."
               ref={searchRef}
               style={{ ...s.searchInput, opacity: selectedIdols.length >= 10 ? 0.5 : 1 }}
               disabled={selectedIdols.length >= 10}
             />
+            {search && (
+              <button
+                onMouseDown={(e) => e.preventDefault()}
+                onClick={() => { setSearch(""); searchRef.current?.focus(); }}
+                style={{ background: "none", border: "none", cursor: "pointer", color: "#3d2c4e", fontSize: "1.1rem", lineHeight: 1, padding: 0 }}
+              >
+                ✕
+              </button>
+            )}
           </div>
           <div style={s.counter}>{selectedIdols.length} / 10 idols selected</div>
 
           {showOptions && search && (
             <ul style={{ ...s.dropdown, listStyle: "none", margin: 0, padding: 0 }}>
-              {filteredIdols.slice(0, 50).map((idol) => (
-                <li
-                  key={idol["Name (Group)"]}
-                  style={hoveredItem === idol["Name (Group)"]
-                    ? { ...s.dropdownItem, ...s.dropdownItemHover }
-                    : s.dropdownItem}
-                  onMouseEnter={() => setHoveredItem(idol["Name (Group)"])}
-                  onMouseLeave={() => setHoveredItem(null)}
-                  onClick={() => handleSelect(idol["Name (Group)"])}
-                >
-                  <span>{idol["Name (Group)"]}</span>
-                  <span style={hoveredItem === idol["Name (Group)"] ? s.mbtiTagActive : s.mbtiTag}>
-                    {idol.Personality}
-                  </span>
-                </li>
-              ))}
+              {filteredIdols.slice(0, 50).map((idol) => {
+                const isSelected = selectedIdols.some((s) => s["Name (Group)"] === idol["Name (Group)"]);
+                const isHovered = hoveredItem === idol["Name (Group)"];
+                return (
+                  <li
+                    key={idol["Name (Group)"]}
+                    style={isSelected
+                      ? { ...s.dropdownItem, background: "#fdf4ff" }
+                      : isHovered
+                        ? { ...s.dropdownItem, ...s.dropdownItemHover }
+                        : s.dropdownItem}
+                    onMouseEnter={() => setHoveredItem(idol["Name (Group)"])}
+                    onMouseLeave={() => setHoveredItem(null)}
+                    onMouseDown={(e) => e.preventDefault()}
+                    onClick={() => isSelected ? handleRemove(idol["Name (Group)"]) : handleSelect(idol["Name (Group)"])}
+                  >
+                    <span style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                      <span style={{ width: "16px", color: "#9c27b0", fontWeight: 700, fontSize: "0.9rem" }}>
+                        {isSelected ? "✓" : ""}
+                      </span>
+                      {idol["Name (Group)"]}
+                    </span>
+                    <span style={isHovered && !isSelected ? s.mbtiTagActive : s.mbtiTag}>
+                      {idol.Personality}
+                    </span>
+                  </li>
+                );
+              })}
+              <li
+                onMouseDown={(e) => e.preventDefault()}
+                onClick={closeDropdown}
+                style={{ padding: "10px 16px", textAlign: "center", fontSize: "0.8rem", fontWeight: 700, color: "#9c27b0", cursor: "pointer", borderTop: "1.5px solid #fce4ec", background: "#fdf4ff" }}
+              >
+                ✕ Done
+              </li>
             </ul>
           )}
         </div>
