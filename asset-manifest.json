@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/kpop-mbti-picker/static/css/main.903d1a8d.css",
-    "main.js": "/kpop-mbti-picker/static/js/main.28a30755.js",
+    "main.js": "/kpop-mbti-picker/static/js/main.fd96820e.js",
     "static/js/453.2cacfafb.chunk.js": "/kpop-mbti-picker/static/js/453.2cacfafb.chunk.js",
     "index.html": "/kpop-mbti-picker/index.html",
     "main.903d1a8d.css.map": "/kpop-mbti-picker/static/css/main.903d1a8d.css.map",
-    "main.28a30755.js.map": "/kpop-mbti-picker/static/js/main.28a30755.js.map",
+    "main.fd96820e.js.map": "/kpop-mbti-picker/static/js/main.fd96820e.js.map",
     "453.2cacfafb.chunk.js.map": "/kpop-mbti-picker/static/js/453.2cacfafb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.903d1a8d.css",
-    "static/js/main.28a30755.js"
+    "static/js/main.fd96820e.js"
   ]
 }
