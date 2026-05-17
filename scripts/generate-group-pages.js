@@ -4,18 +4,29 @@ const path = require("path");
 const idolData = require("../src/idolData.json");
 
 const TARGET_GROUPS = [
-  { name: "BLACKPINK",    slug: "blackpink",    agency: "YG Entertainment",      debut: 2016 },
-  { name: "aespa",        slug: "aespa",        agency: "SM Entertainment",      debut: 2020 },
-  { name: "TWICE",        slug: "twice",        agency: "JYP Entertainment",     debut: 2015 },
-  { name: "ITZY",         slug: "itzy",         agency: "JYP Entertainment",     debut: 2019 },
-  { name: "ILLIT",        slug: "illit",        agency: "BELIFT LAB",            debut: 2024 },
+  { name: "BLACKPINK",    slug: "blackpink",    agency: "YG Entertainment",       debut: 2016 },
+  { name: "aespa",        slug: "aespa",        agency: "SM Entertainment",       debut: 2020 },
+  { name: "TWICE",        slug: "twice",        agency: "JYP Entertainment",      debut: 2015 },
+  { name: "ITZY",         slug: "itzy",         agency: "JYP Entertainment",      debut: 2019 },
+  { name: "ILLIT",        slug: "illit",        agency: "BELIFT LAB",             debut: 2024 },
   { name: "IVE",          slug: "ive",          agency: "Starship Entertainment", debut: 2021 },
-  { name: "LE SSERAFIM",  slug: "le-sserafim",  agency: "HYBE Labels",           debut: 2022 },
-  { name: "BTS",          slug: "bts",          agency: "Big Hit Music",         debut: 2013 },
-  { name: "Stray Kids",   slug: "stray-kids",   agency: "JYP Entertainment",     debut: 2018 },
-  { name: "ATEEZ",        slug: "ateez",        agency: "KQ Entertainment",      debut: 2018 },
-  { name: "SEVENTEEN",    slug: "seventeen",    agency: "Pledis Entertainment",  debut: 2015 },
-  { name: "EXO",          slug: "exo",          agency: "SM Entertainment",      debut: 2012 },
+  { name: "LE SSERAFIM",  slug: "le-sserafim",  agency: "HYBE Labels",            debut: 2022 },
+  { name: "Newjeans",     slug: "newjeans",     agency: "ADOR",                   debut: 2022 },
+  { name: "I-DLE",        slug: "i-dle",        agency: "Cube Entertainment",     debut: 2018 },
+  { name: "Red Velvet",   slug: "red-velvet",   agency: "SM Entertainment",       debut: 2014 },
+  { name: "MAMAMOO",      slug: "mamamoo",      agency: "RBW",                    debut: 2014 },
+  { name: "NMIXX",        slug: "nmixx",        agency: "JYP Entertainment",      debut: 2022 },
+  { name: "BTS",          slug: "bts",          agency: "Big Hit Music",          debut: 2013 },
+  { name: "Stray Kids",   slug: "stray-kids",   agency: "JYP Entertainment",      debut: 2018 },
+  { name: "ATEEZ",        slug: "ateez",        agency: "KQ Entertainment",       debut: 2018 },
+  { name: "SEVENTEEN",    slug: "seventeen",    agency: "Pledis Entertainment",   debut: 2015 },
+  { name: "EXO",          slug: "exo",          agency: "SM Entertainment",       debut: 2012 },
+  { name: "TXT",          slug: "txt",          agency: "Big Hit Music",          debut: 2019 },
+  { name: "ENHYPEN",      slug: "enhypen",      agency: "BELIFT LAB",             debut: 2020 },
+  { name: "GOT7",         slug: "got7",         agency: "JYPE",                   debut: 2014 },
+  { name: "MONSTA X",     slug: "monsta-x",     agency: "Starship Entertainment", debut: 2015 },
+  { name: "SHINee",       slug: "shinee",       agency: "SM Entertainment",       debut: 2008 },
+  { name: "NCT",          slug: "nct",          agency: "SM Entertainment",       debut: 2016 },
 ];
 
 const MBTI_NAMES = {
@@ -85,9 +96,9 @@ const CSS = `
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 50%, #ede7f6 100%); min-height: 100vh; color: #3d2c4e; padding: 24px 16px 48px; }
     .site-header { text-align: center; margin-bottom: 20px; }
-    .site-name { font-size: 0.85rem; font-weight: 700; color: #9c6aaa; text-decoration: none; letter-spacing: 0.5px; }
-    .site-name:hover { color: #e91e8c; }
-    .breadcrumb { text-align: center; font-size: 0.8rem; color: #b39ddb; margin-bottom: 24px; }
+    .site-name { font-size: 2rem; font-weight: 800; background: linear-gradient(90deg, #e91e8c, #9c27b0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-decoration: none; letter-spacing: -0.5px; }
+    .site-name:hover { opacity: 0.85; }
+    .breadcrumb { text-align: center; font-size: 0.85rem; font-weight: 700; color: #b39ddb; margin-bottom: 24px; }
     .breadcrumb a { color: #e91e8c; text-decoration: none; }
     .card { background: white; border-radius: 24px; padding: 28px; max-width: 640px; margin: 0 auto 20px; box-shadow: 0 4px 24px rgba(156,39,176,0.12); }
     .group-hero { text-align: center; }
@@ -239,9 +250,9 @@ function generateGroupsIndex(groups) {
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 50%, #ede7f6 100%); min-height: 100vh; color: #3d2c4e; padding: 24px 16px 48px; }
     .site-header { text-align: center; margin-bottom: 20px; }
-    .site-name { font-size: 0.85rem; font-weight: 700; color: #9c6aaa; text-decoration: none; letter-spacing: 0.5px; }
-    .site-name:hover { color: #e91e8c; }
-    .breadcrumb { text-align: center; font-size: 0.8rem; color: #b39ddb; margin-bottom: 24px; }
+    .site-name { font-size: 2rem; font-weight: 800; background: linear-gradient(90deg, #e91e8c, #9c27b0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-decoration: none; letter-spacing: -0.5px; }
+    .site-name:hover { opacity: 0.85; }
+    .breadcrumb { text-align: center; font-size: 0.85rem; font-weight: 700; color: #b39ddb; margin-bottom: 24px; }
     .breadcrumb a { color: #e91e8c; text-decoration: none; }
     .page-title { text-align: center; font-size: 1.8rem; font-weight: 900; background: linear-gradient(90deg, #e91e8c, #9c27b0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 8px; }
     .page-sub { text-align: center; font-size: 0.9rem; color: #9c6aaa; margin-bottom: 28px; }
