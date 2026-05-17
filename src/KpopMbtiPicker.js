@@ -499,6 +499,8 @@ export default function KpopMbtiPicker() {
           Outreach &amp; feedback:{" "}
           <a href="mailto:kpopmbtipicker@gmail.com" style={s.footerLink}>kpopmbtipicker@gmail.com</a><br /><br />
           <em>Disclaimer: MBTI data is compiled from official and non-official sources and may not be fully accurate.</em>
+          <br /><br />
+          <span style={{ fontSize: "0.75rem", color: "#c9a0dc" }}>A project by radiantforce</span>
         </footer>
       </div>
 
