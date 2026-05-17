@@ -63,7 +63,7 @@ const s = {
   splitTrack: { flex: 1, height: "12px", background: "#e0e0e0", borderRadius: "100px", overflow: "hidden", position: "relative" },
   splitFill: { position: "absolute", left: 0, top: 0, height: "100%", background: "linear-gradient(90deg, #e91e8c, #9c27b0)", borderRadius: "100px" },
   shareSection: { marginBottom: "24px", paddingBottom: "24px", borderBottom: "1.5px solid #f3e5f5" },
-  shareButtons: { display: "flex", gap: "10px", flexWrap: "wrap" },
+  shareButtons: { display: "flex", gap: "10px", flexWrap: "wrap", alignItems: "center" },
   shareBtn: { display: "flex", alignItems: "center", justifyContent: "center", width: "44px", height: "44px", borderRadius: "50%", cursor: "pointer", border: "none", textDecoration: "none", transition: "opacity 0.15s" },
   matchingHeader: { display: "flex", alignItems: "baseline", gap: "8px", marginBottom: "12px", flexWrap: "wrap" },
   matchingTitle: { fontSize: "0.85rem", fontWeight: 700, color: "#9c27b0", textTransform: "uppercase", letterSpacing: "0.5px" },
@@ -422,6 +422,16 @@ export default function KpopMbtiPicker() {
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
                 </button>
               )}
+              <div style={{ display: "flex", gap: "8px", marginLeft: "auto" }}>
+                <button onClick={() => generateImage(true)} disabled={generatingImage} style={{ ...s.btnPrimary, fontSize: "0.82rem", padding: "0 14px", height: "44px" }}>
+                  {generatingImage ? "Generating..." : "⬇ Save Image 🖼️"}
+                </button>
+                {navigator.share && (
+                  <button onClick={() => generateImage(false)} disabled={generatingImage} style={{ ...s.btnSecondary, fontSize: "0.82rem", padding: "0 14px", height: "44px" }}>
+                    Share Image 🖼️
+                  </button>
+                )}
+              </div>
             </div>
           </div>
 
@@ -445,20 +455,6 @@ export default function KpopMbtiPicker() {
             })}
           </div>
 
-          {/* Image share buttons */}
-          <div style={{ marginBottom: "24px", paddingBottom: "24px", borderBottom: "1.5px solid #f3e5f5" }}>
-            <div style={{ ...s.sectionLabel, marginBottom: "12px" }}>Save & Share Image 🖼️</div>
-            <div style={{ display: "flex", gap: "10px" }}>
-              <button onClick={() => generateImage(true)} disabled={generatingImage} style={{ ...s.btnPrimary, fontSize: "0.88rem", padding: "10px 20px" }}>
-                {generatingImage ? "Generating..." : "⬇ Save Image"}
-              </button>
-              {navigator.share && (
-                <button onClick={() => generateImage(false)} disabled={generatingImage} style={{ ...s.btnSecondary, fontSize: "0.88rem", padding: "10px 20px" }}>
-                  Share Image
-                </button>
-              )}
-            </div>
-          </div>
 
           {/* Matching idols */}
           {similarIdols.length > 0 && (
