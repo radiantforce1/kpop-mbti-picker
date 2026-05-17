@@ -27,6 +27,8 @@ const TARGET_GROUPS = [
   { name: "MONSTA X",     slug: "monsta-x",     agency: "Starship Entertainment", debut: 2015 },
   { name: "SHINee",       slug: "shinee",       agency: "SM Entertainment",       debut: 2008 },
   { name: "NCT",          slug: "nct",          agency: "SM Entertainment",       debut: 2016 },
+  { name: "NiziU",        slug: "niziu",        agency: "JYP Entertainment",      debut: 2020 },
+  { name: "STAYC",        slug: "stayc",        agency: "High Up Entertainment",  debut: 2020 },
 ];
 
 const MBTI_NAMES = {
