@@ -247,8 +247,12 @@
       "Personality": "INTP"
     },
     {
-      "Name (Group)": "Anxin",
-      "Personality": "ENTP"
+      "Name (Group)": "Anxin (ALD1)",
+      "Personality": "ISTP"
+    },
+    {
+      "Name (Group)": "Arno (ALD1)",
+      "Personality": "ISTJ"
     },
     {
       "Name (Group)": "Aom",
@@ -2211,6 +2215,10 @@
       "Personality": "INFP"
     },
     {
+      "Name (Group)": "Geonwoo (ALD1)",
+      "Personality": "ESTJ"
+    },
+    {
       "Name (Group)": "Geon (SUPERKIND)",
       "Personality": "ESFP"
     },
@@ -2793,6 +2801,10 @@
     {
       "Name (Group)": "Heize",
       "Personality": "ISFJ"
+    },
+    {
+      "Name (Group)": "Hengyu (MODYSSEY)",
+      "Personality": "INFP"
     },
     {
       "Name (Group)": "Hendery (NCT)",
@@ -4744,7 +4756,11 @@
     },
     {
       "Name (Group)": "Junseo (WEi)",
-      "Personality": "ESFJ"
+      "Personality": "ESTJ"
+    },
+    {
+      "Name (Group)": "Junseo (ALD1)",
+      "Personality": "ESTJ"
     },
     {
       "Name (Group)": "Junseo (BAE173)",
@@ -6207,6 +6223,10 @@
       "Personality": "ISFJ"
     },
     {
+      "Name (Group)": "Leo (ALD1)",
+      "Personality": "INTP"
+    },
+    {
       "Name (Group)": "Leo (TFN)",
       "Personality": "ENFP"
     },
@@ -6217,10 +6237,6 @@
     {
       "Name (Group)": "Leo (XODIAC)",
       "Personality": "ISFP"
-    },
-    {
-      "Name (Group)": "Leo (Trainee A)",
-      "Personality": "ISTP"
     },
     {
       "Name (Group)": "Leo (WAKER)",
@@ -6481,6 +6497,10 @@
     {
       "Name (Group)": "Lynn (7SENSES)",
       "Personality": "ISFP"
+    },
+    {
+      "Name (Group)": "LynnLynn (MODYSSEY)",
+      "Personality": "ISTJ"
     },
     {
       "Name (Group)": "Lynn Lynn",
@@ -8079,6 +8099,10 @@
       "Personality": "ESFJ"
     },
     {
+      "Name (Group)": "Rowan (MODYSSEY)",
+      "Personality": "INTP"
+    },
+    {
       "Name (Group)": "Rowoon (SF9)",
       "Personality": "INFJ"
     },
@@ -8239,6 +8263,10 @@
       "Personality": "ISTJ"
     },
     {
+      "Name (Group)": "Sanghyeon (ALD1)",
+      "Personality": "ENFJ"
+    },
+    {
       "Name (Group)": "Sangah (LIGHTSUM)",
       "Personality": "ESFJ"
     },
@@ -8247,8 +8275,8 @@
       "Personality": "ESFJ"
     },
     {
-      "Name (Group)": "Sangwon (Trainee A)",
-      "Personality": "INTP"
+      "Name (Group)": "Sangwon (ALD1)",
+      "Personality": "INFP"
     },
     {
       "Name (Group)": "Sangwoo (Be:MAX)",
@@ -9479,6 +9507,10 @@
       "Personality": "ESFJ"
     },
     {
+      "Name (Group)": "Suren (MODYSSEY)",
+      "Personality": "INFP"
+    },
+    {
       "Name (Group)": "Sury Su",
       "Personality": "ENTJ"
     },
@@ -10104,7 +10136,7 @@
     },
     {
       "Name (Group)": "Woodz (UNIQ)",
-      "Personality": "ENTJ"
+      "Personality": "ENTP"
     },
     {
       "Name (Group)": "Woohyun (INFINITE)",
@@ -10253,6 +10285,10 @@
     {
       "Name (Group)": "XINI (Celestial Squad)",
       "Personality": "ISTP"
+    },
+    {
+      "Name (Group)": "Xinlong (ALD1)",
+      "Personality": "INFJ"
     },
     {
       "Name (Group)": "Xinlong (BOY STORY)",
@@ -10629,6 +10665,10 @@
     {
       "Name (Group)": "Yeyoung (Geenius)",
       "Personality": "ENTJ"
+    },
+    {
+      "Name (Group)": "Yichen (MODYSSEY)",
+      "Personality": "INFJ"
     },
     {
       "Name (Group)": "Yi Chen",
@@ -11357,6 +11397,14 @@
     {
       "Name (Group)": "Zico (Block B)",
       "Personality": "ENTJ"
+    },
+    {
+      "Name (Group)": "Zheyi (MODYSSEY)",
+      "Personality": "ENFJ"
+    },
+    {
+      "Name (Group)": "Zihao (MODYSSEY)",
+      "Personality": "ENFP"
     },
     {
       "Name (Group)": "Zihao (BOY STORY)",
