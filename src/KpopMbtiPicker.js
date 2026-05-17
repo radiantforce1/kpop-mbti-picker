@@ -563,7 +563,7 @@ export default function KpopMbtiPicker() {
             <input
               type="text"
               value={groupSearch}
-              onChange={(e) => { setGroupSearch(e.target.value); setSelectedGroup(null); }}
+              onChange={(e) => { setGroupSearch(e.target.value); setSelectedGroup(null); setShowGroupOptions(true); }}
               onFocus={() => setShowGroupOptions(true)}
               onBlur={() => setTimeout(() => setShowGroupOptions(false), 150)}
               placeholder="Search group name..."
