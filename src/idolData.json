@@ -1,11 +1,27 @@
 [
   {
-    "Name (Group)": "Aaron (W24)",
-    "Personality": "ENTP"
+    "Name (Group)": "A-hyeon (I:MOND)",
+    "Personality": "ENFP"
+  },
+  {
+    "Name (Group)": "A-Min (EPEX)",
+    "Personality": "INFJ"
+  },
+  {
+    "Name (Group)": "A-na (Hearts2Hearts)",
+    "Personality": "ESFP"
+  },
+  {
+    "Name (Group)": "A-ra (Girls' World)",
+    "Personality": "ESFP"
   },
   {
     "Name (Group)": "Aaron (NU'EST)",
     "Personality": "ISFP"
+  },
+  {
+    "Name (Group)": "Aaron (W24)",
+    "Personality": "ENTP"
   },
   {
     "Name (Group)": "Abigail (BLINGONE)",
@@ -60,10 +76,6 @@
     "Personality": "ISTJ"
   },
   {
-    "Name (Group)": "A-hyeon (I:MOND)",
-    "Personality": "ENFP"
-  },
-  {
     "Name (Group)": "Aiala",
     "Personality": "INFJ"
   },
@@ -88,12 +100,12 @@
     "Personality": "ENTJ"
   },
   {
-    "Name (Group)": "Aito (1VERSE)",
-    "Personality": "ESFJ"
-  },
-  {
     "Name (Group)": "Aito",
     "Personality": "ESTJ"
+  },
+  {
+    "Name (Group)": "Aito (1VERSE)",
+    "Personality": "ESFJ"
   },
   {
     "Name (Group)": "AJ (U-KISS)",
@@ -114,6 +126,10 @@
   {
     "Name (Group)": "Akira (KJRGL)",
     "Personality": "INFP"
+  },
+  {
+    "Name (Group)": "Ako (UNCHILD)",
+    "Personality": "ISFJ"
   },
   {
     "Name (Group)": "Alex (DRIPPIN)",
@@ -148,16 +164,8 @@
     "Personality": "ISFJ"
   },
   {
-    "Name (Group)": "A-Min (EPEX)",
-    "Personality": "INFJ"
-  },
-  {
     "Name (Group)": "An Chanwon (The Wind)",
     "Personality": "ENFP"
-  },
-  {
-    "Name (Group)": "Annie (ALLDAY PROJECT)",
-    "Personality": "ESTJ"
   },
   {
     "Name (Group)": "An Da Eun (The ADE)",
@@ -184,10 +192,6 @@
     "Personality": "INTJ"
   },
   {
-    "Name (Group)": "A-na (Hearts2Hearts)",
-    "Personality": "ESFP"
-  },
-  {
     "Name (Group)": "Andamiro (Geenius)",
     "Personality": "ESFP"
   },
@@ -212,16 +216,16 @@
     "Personality": "ESTJ"
   },
   {
-    "Name (Group)": "Anna (REDMINT)",
-    "Personality": "ENTP"
+    "Name (Group)": "Anna (MEOVV)",
+    "Personality": "ISTP"
   },
   {
     "Name (Group)": "Anna (MIMIIROSE)",
     "Personality": "ESTJ"
   },
   {
-    "Name (Group)": "Anna (MEOVV)",
-    "Personality": "ISTP"
+    "Name (Group)": "Anna (REDMINT)",
+    "Personality": "ENTP"
   },
   {
     "Name (Group)": "Annatalia",
@@ -229,6 +233,10 @@
   },
   {
     "Name (Group)": "Anne (GWSN)",
+    "Personality": "ESTJ"
+  },
+  {
+    "Name (Group)": "Annie (ALLDAY PROJECT)",
     "Personality": "ESTJ"
   },
   {
@@ -246,10 +254,6 @@
   {
     "Name (Group)": "Anxin (ALD1)",
     "Personality": "ISTP"
-  },
-  {
-    "Name (Group)": "Arno (ALD1)",
-    "Personality": "ISTJ"
   },
   {
     "Name (Group)": "Aom",
@@ -272,28 +276,24 @@
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "A-ra (Girls' World)",
-    "Personality": "ESFP"
-  },
-  {
     "Name (Group)": "Aran (ablume)",
     "Personality": "INTP"
+  },
+  {
+    "Name (Group)": "Ari (A.iRiD)",
+    "Personality": "ISFJ"
   },
   {
     "Name (Group)": "Ari (eite)",
     "Personality": "ENFJ"
   },
   {
-    "Name (Group)": "Ari (WAZE:Z)",
-    "Personality": "ENFP"
-  },
-  {
     "Name (Group)": "Ari (Red Queen)",
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Ari (A.iRiD)",
-    "Personality": "ISFJ"
+    "Name (Group)": "Ari (WAZE:Z)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "Aria (X:IN)",
@@ -304,16 +304,20 @@
     "Personality": "ENTJ"
   },
   {
-    "Name (Group)": "Arin (OH MY GIRL)",
-    "Personality": "INFP"
-  },
-  {
     "Name (Group)": "Arin (AtHeart)",
     "Personality": "ISFJ"
   },
   {
+    "Name (Group)": "Arin (OH MY GIRL)",
+    "Personality": "INFP"
+  },
+  {
     "Name (Group)": "Arisa (Aesther)",
     "Personality": "INFP"
+  },
+  {
+    "Name (Group)": "Arno (ALD1)",
+    "Personality": "ISTJ"
   },
   {
     "Name (Group)": "Aro",
@@ -394,6 +398,10 @@
   {
     "Name (Group)": "Ayuta (DXTEEN)",
     "Personality": "ISFJ"
+  },
+  {
+    "Name (Group)": "B-Bomb (BASTARZ)",
+    "Personality": "ENFJ"
   },
   {
     "Name (Group)": "B.I (iKON)",
@@ -520,8 +528,8 @@
     "Personality": "INTJ"
   },
   {
-    "Name (Group)": "B-Bomb (BASTARZ)",
-    "Personality": "ENFJ"
+    "Name (Group)": "BE'O",
+    "Personality": "INTJ"
   },
   {
     "Name (Group)": "Becky",
@@ -536,24 +544,24 @@
     "Personality": "INFP"
   },
   {
-    "Name (Group)": "Bell (Z-Girls T.P.I)",
-    "Personality": "INFJ"
-  },
-  {
     "Name (Group)": "Bell (A.iRiD)",
     "Personality": "INTP"
+  },
+  {
+    "Name (Group)": "Bell (Z-Girls T.P.I)",
+    "Personality": "INFJ"
   },
   {
     "Name (Group)": "Belle (KISS OF LIFE)",
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Benny (Another Level)",
-    "Personality": "ENFP"
+    "Name (Group)": "Beni (Baby DONT Cry)",
+    "Personality": "INTJ"
   },
   {
-    "Name (Group)": "BE'O",
-    "Personality": "INTJ"
+    "Name (Group)": "Benny (Another Level)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "Beomgyu (TXT)",
@@ -652,12 +660,12 @@
     "Personality": "ISFJ"
   },
   {
-    "Name (Group)": "Bomi (STRAW)",
-    "Personality": "ENTJ"
-  },
-  {
     "Name (Group)": "Bomi (Apink)",
     "Personality": "ISFP"
+  },
+  {
+    "Name (Group)": "Bomi (STRAW)",
+    "Personality": "ENTJ"
   },
   {
     "Name (Group)": "Bomin (GIG)",
@@ -800,12 +808,12 @@
     "Personality": "ESTP"
   },
   {
-    "Name (Group)": "Chaeeun (Beauty Box)",
-    "Personality": "INFP"
-  },
-  {
     "Name (Group)": "Chaeeun (ADYA)",
     "Personality": "ISFP"
+  },
+  {
+    "Name (Group)": "Chaeeun (Beauty Box)",
+    "Personality": "INFP"
   },
   {
     "Name (Group)": "Chaehyeon (SKYLE)",
@@ -848,12 +856,12 @@
     "Personality": "INFP"
   },
   {
-    "Name (Group)": "Chaerin (ICHILLIN')",
-    "Personality": "ENFJ"
-  },
-  {
     "Name (Group)": "Chaerin (Cherry Bullet)",
     "Personality": "INFP"
+  },
+  {
+    "Name (Group)": "Chaerin (ICHILLIN')",
+    "Personality": "ENFJ"
   },
   {
     "Name (Group)": "Chaerin (KELT9b)",
@@ -868,20 +876,20 @@
     "Personality": "INFJ"
   },
   {
-    "Name (Group)": "Chaewon (CLASS:y)",
-    "Personality": "ESTP"
-  },
-  {
-    "Name (Group)": "ChaeWon (tripleS)",
-    "Personality": "INTP"
-  },
-  {
     "Name (Group)": "Chaewon",
     "Personality": "INTP"
   },
   {
     "Name (Group)": "Chaewon (APRIL)",
     "Personality": "ISFJ"
+  },
+  {
+    "Name (Group)": "Chaewon (CLASS:y)",
+    "Personality": "ESTP"
+  },
+  {
+    "Name (Group)": "ChaeWon (tripleS)",
+    "Personality": "INTP"
   },
   {
     "Name (Group)": "ChaeY (CRAXY)",
@@ -892,28 +900,32 @@
     "Personality": "ESFP"
   },
   {
-    "Name (Group)": "Chaeyoung (TWICE)",
-    "Personality": "INFP"
-  },
-  {
     "Name (Group)": "Chaeyoung (fromis_9)",
     "Personality": "ISFP"
   },
   {
-    "Name (Group)": "Chan (VICTON)",
-    "Personality": "ENFJ"
-  },
-  {
-    "Name (Group)": "Chan (TO1)",
-    "Personality": "ENTJ"
+    "Name (Group)": "Chaeyoung (TWICE)",
+    "Personality": "INFP"
   },
   {
     "Name (Group)": "Chan (iKON)",
     "Personality": "ISTJ"
   },
   {
+    "Name (Group)": "Chan (TO1)",
+    "Personality": "ENTJ"
+  },
+  {
+    "Name (Group)": "Chan (VICTON)",
+    "Personality": "ENFJ"
+  },
+  {
     "Name (Group)": "Chanelle Moon (FIFTY FIFTY)",
     "Personality": "INFJ"
+  },
+  {
+    "Name (Group)": "Chang Jo(Teen Top)",
+    "Personality": "INTJ"
   },
   {
     "Name (Group)": "Chang Yu Hong",
@@ -932,19 +944,11 @@
     "Personality": "ENTJ"
   },
   {
-    "Name (Group)": "Chang Jo(Teen Top)",
-    "Personality": "INTJ"
-  },
-  {
     "Name (Group)": "Changsub (BTOB)",
     "Personality": "INFJ"
   },
   {
     "Name (Group)": "Changsun (24K +)",
-    "Personality": "ENFP"
-  },
-  {
-    "Name (Group)": "Chansung (2PM)",
     "Personality": "ENFP"
   },
   {
@@ -962,6 +966,10 @@
   {
     "Name (Group)": "Chani (SF9)",
     "Personality": "INTP"
+  },
+  {
+    "Name (Group)": "Chansung (2PM)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "Chanty (Lapillus)",
@@ -1304,6 +1312,10 @@
     "Personality": "ISTJ"
   },
   {
+    "Name (Group)": "D'om (SEVEN TO EIGHT)",
+    "Personality": "ENTP"
+  },
+  {
     "Name (Group)": "D1 (DKB)",
     "Personality": "ENFJ"
   },
@@ -1364,12 +1376,12 @@
     "Personality": "ISFJ"
   },
   {
-    "Name (Group)": "Dahyun (TWICE)",
-    "Personality": "ISFJ"
-  },
-  {
     "Name (Group)": "DaHyun (tripleS)",
     "Personality": "ISFP"
+  },
+  {
+    "Name (Group)": "Dahyun (TWICE)",
+    "Personality": "ISFJ"
   },
   {
     "Name (Group)": "Daigo (TO1)",
@@ -1400,11 +1412,11 @@
     "Personality": "INFJ"
   },
   {
-    "Name (Group)": "Dana (ViV)",
+    "Name (Group)": "Dana (HOT ISSUE)",
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Dana (HOT ISSUE)",
+    "Name (Group)": "Dana (ViV)",
     "Personality": "ENFP"
   },
   {
@@ -1464,11 +1476,11 @@
     "Personality": "ESTJ"
   },
   {
-    "Name (Group)": "Davin (XODIAC)",
+    "Name (Group)": "Davin (WE-SAY)",
     "Personality": "INFP"
   },
   {
-    "Name (Group)": "Davin (WE-SAY)",
+    "Name (Group)": "Davin (XODIAC)",
     "Personality": "INFP"
   },
   {
@@ -1476,12 +1488,12 @@
     "Personality": "INFP"
   },
   {
-    "Name (Group)": "Dawon (WJSN)",
-    "Personality": "INFP"
-  },
-  {
     "Name (Group)": "Dawon (SF9)",
     "Personality": "INTJ"
+  },
+  {
+    "Name (Group)": "Dawon (WJSN)",
+    "Personality": "INFP"
   },
   {
     "Name (Group)": "Day (A.iRiD)",
@@ -1588,10 +1600,6 @@
     "Personality": "INFP"
   },
   {
-    "Name (Group)": "Doha (BAE173)",
-    "Personality": "INFP"
-  },
-  {
     "Name (Group)": "Do Haneul",
     "Personality": "ESTP"
   },
@@ -1604,11 +1612,11 @@
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Doa (We;Na)",
+    "Name (Group)": "Do-A (ALICE)",
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Do-A (ALICE)",
+    "Name (Group)": "Doa (We;Na)",
     "Personality": "ENFP"
   },
   {
@@ -1624,12 +1632,16 @@
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Doha (n.SSign)",
-    "Personality": "INFJ"
+    "Name (Group)": "Doha (BAE173)",
+    "Personality": "INFP"
   },
   {
     "Name (Group)": "Doha (Be:MAX)",
     "Personality": "ISFJ"
+  },
+  {
+    "Name (Group)": "Doha (n.SSign)",
+    "Personality": "INFJ"
   },
   {
     "Name (Group)": "Dohanse (VICTON)",
@@ -1656,12 +1668,12 @@
     "Personality": "ISTP"
   },
   {
-    "Name (Group)": "Dohyun (MIRAE)",
-    "Personality": "INFP"
-  },
-  {
     "Name (Group)": "Dohyun (LUN8wave)",
     "Personality": "INTJ"
+  },
+  {
+    "Name (Group)": "Dohyun (MIRAE)",
+    "Personality": "INFP"
   },
   {
     "Name (Group)": "Doi",
@@ -1678,10 +1690,6 @@
   {
     "Name (Group)": "Dojun ((M)IRROR)",
     "Personality": "ESTJ"
-  },
-  {
-    "Name (Group)": "D'om (SEVEN TO EIGHT)",
-    "Personality": "ENTP"
   },
   {
     "Name (Group)": "Dong Dong",
@@ -1780,16 +1788,20 @@
     "Personality": "ISFP"
   },
   {
+    "Name (Group)": "Doyeon (KIIRAS)",
+    "Personality": "ENFJ"
+  },
+  {
     "Name (Group)": "Doyeon (Weki Meki)",
     "Personality": "ISTP"
   },
   {
-    "Name (Group)": "Doyoung (TREASURE)",
-    "Personality": "ENTJ"
-  },
-  {
     "Name (Group)": "Doyoung (NCT)",
     "Personality": "ISFJ"
+  },
+  {
+    "Name (Group)": "Doyoung (TREASURE)",
+    "Personality": "ENTJ"
   },
   {
     "Name (Group)": "Dozin (Ferry Blue)",
@@ -1820,6 +1832,22 @@
     "Personality": "ISFP"
   },
   {
+    "Name (Group)": "E-Chan (DKB)",
+    "Personality": "ESFP"
+  },
+  {
+    "Name (Group)": "E-seol (I:MOND)",
+    "Personality": "ISFP"
+  },
+  {
+    "Name (Group)": "E-Tion (ONF)",
+    "Personality": "INFP"
+  },
+  {
+    "Name (Group)": "E:U (EVERGLOW)",
+    "Personality": "ENFP"
+  },
+  {
     "Name (Group)": "E.an (NCHIVE)",
     "Personality": "ENFJ"
   },
@@ -1832,20 +1860,12 @@
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "E:U (EVERGLOW)",
-    "Personality": "ENFP"
-  },
-  {
     "Name (Group)": "eaJ (DAY6)",
     "Personality": "INTP"
   },
   {
     "Name (Group)": "Echae (A.iRiD)",
     "Personality": "INFP"
-  },
-  {
-    "Name (Group)": "E-Chan (DKB)",
-    "Personality": "ESFP"
   },
   {
     "Name (Group)": "Eddie (n.SSign)",
@@ -1884,12 +1904,12 @@
     "Personality": "ENFJ"
   },
   {
-    "Name (Group)": "Ella (PEACH A!)",
-    "Personality": "ESFJ"
-  },
-  {
     "Name (Group)": "Ella (MEOVV)",
     "Personality": "INTP"
+  },
+  {
+    "Name (Group)": "Ella (PEACH A!)",
+    "Personality": "ESFJ"
   },
   {
     "Name (Group)": "Ellia (S.I.S)",
@@ -1924,16 +1944,16 @@
     "Personality": "ENFJ"
   },
   {
-    "Name (Group)": "Eric (THE BOYZ)",
-    "Personality": "ENFJ"
+    "Name (Group)": "Eric",
+    "Personality": "ISFJ"
   },
   {
     "Name (Group)": "Eric (Shinhwa)",
     "Personality": "INTJ"
   },
   {
-    "Name (Group)": "Eric",
-    "Personality": "ISFJ"
+    "Name (Group)": "Eric (THE BOYZ)",
+    "Personality": "ENFJ"
   },
   {
     "Name (Group)": "Erin (SKYLE)",
@@ -1950,14 +1970,6 @@
   {
     "Name (Group)": "Eseo (LUNARSOLAR)",
     "Personality": "ENFJ"
-  },
-  {
-    "Name (Group)": "E-seol (I:MOND)",
-    "Personality": "ISFP"
-  },
-  {
-    "Name (Group)": "E-Tion (ONF)",
-    "Personality": "INFP"
   },
   {
     "Name (Group)": "Eun (IB147)",
@@ -2004,16 +2016,16 @@
     "Personality": "ISTP"
   },
   {
-    "Name (Group)": "Eunho (UNVS)",
-    "Personality": "ENFJ"
-  },
-  {
     "Name (Group)": "Eunho (NTX)",
     "Personality": "ENFP"
   },
   {
     "Name (Group)": "Eunho (PLAVE)",
     "Personality": "ENTP"
+  },
+  {
+    "Name (Group)": "Eunho (UNVS)",
+    "Personality": "ENFJ"
   },
   {
     "Name (Group)": "Eunho (YOUNITE)",
@@ -2036,12 +2048,12 @@
     "Personality": "INTJ"
   },
   {
-    "Name (Group)": "Eunji (BB GIRLS)",
-    "Personality": "ESFP"
-  },
-  {
     "Name (Group)": "Eunji (Apink)",
     "Personality": "INTP"
+  },
+  {
+    "Name (Group)": "Eunji (BB GIRLS)",
+    "Personality": "ESFP"
   },
   {
     "Name (Group)": "Eunjo (DreamNote)",
@@ -2084,6 +2096,10 @@
     "Personality": "INFP"
   },
   {
+    "Name (Group)": "Evon (UNCHILD)",
+    "Personality": "ISFJ"
+  },
+  {
     "Name (Group)": "Exy (WJSN)",
     "Personality": "ESFP"
   },
@@ -2100,12 +2116,12 @@
     "Personality": "INTP"
   },
   {
-    "Name (Group)": "Felix (Stray Kids)",
-    "Personality": "ENFJ"
-  },
-  {
     "Name (Group)": "Felix",
     "Personality": "ENFP"
+  },
+  {
+    "Name (Group)": "Felix (Stray Kids)",
+    "Personality": "ENFJ"
   },
   {
     "Name (Group)": "Feng Jun Lan",
@@ -2152,6 +2168,10 @@
     "Personality": "INFJ"
   },
   {
+    "Name (Group)": "G-Dragon (BIGBANG)",
+    "Personality": "ENTP"
+  },
+  {
     "Name (Group)": "Gabee (La Chica)",
     "Personality": "ENFP"
   },
@@ -2172,12 +2192,12 @@
     "Personality": "ISTJ"
   },
   {
-    "Name (Group)": "Gaeun (MADEIN)",
-    "Personality": "ENFJ"
-  },
-  {
     "Name (Group)": "Gaeun (ARTBEAT v)",
     "Personality": "ISTP"
+  },
+  {
+    "Name (Group)": "Gaeun (MADEIN)",
+    "Personality": "ENFJ"
   },
   {
     "Name (Group)": "Gaga (CocaNButter)",
@@ -2192,12 +2212,12 @@
     "Personality": "ENTJ"
   },
   {
-    "Name (Group)": "Gain (YOURS)",
-    "Personality": "ENFP"
-  },
-  {
     "Name (Group)": "Gain (Brown Eyed Girls)",
     "Personality": "ISFP"
+  },
+  {
+    "Name (Group)": "Gain (YOURS)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "Gaon (Xdinary Heroes)",
@@ -2208,16 +2228,8 @@
     "Personality": "INTJ"
   },
   {
-    "Name (Group)": "G-Dragon (BIGBANG)",
-    "Personality": "ENTP"
-  },
-  {
     "Name (Group)": "Gehlee (UNIS)",
     "Personality": "INFP"
-  },
-  {
-    "Name (Group)": "Geonwoo (ALD1)",
-    "Personality": "ESTJ"
   },
   {
     "Name (Group)": "Geon (SUPERKIND)",
@@ -2226,6 +2238,10 @@
   {
     "Name (Group)": "Geonu (JUST B)",
     "Personality": "ENTP"
+  },
+  {
+    "Name (Group)": "Geonwoo (ALD1)",
+    "Personality": "ESTJ"
   },
   {
     "Name (Group)": "Geumhee (CSR)",
@@ -2284,16 +2300,16 @@
     "Personality": "ISTP"
   },
   {
-    "Name (Group)": "GoEun (PURPLE KISS)",
-    "Personality": "ENFP"
+    "Name (Group)": "Goeun",
+    "Personality": "ESTP"
   },
   {
     "Name (Group)": "Goeun (LAYSHA)",
     "Personality": "ESTP"
   },
   {
-    "Name (Group)": "Goeun",
-    "Personality": "ESTP"
+    "Name (Group)": "GoEun (PURPLE KISS)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "GOLDBUUDA",
@@ -2368,12 +2384,12 @@
     "Personality": "ISFJ"
   },
   {
-    "Name (Group)": "Gyuri (KARA)",
-    "Personality": "ESTJ"
-  },
-  {
     "Name (Group)": "Gyuri (fromis_9)",
     "Personality": "ISTP"
+  },
+  {
+    "Name (Group)": "Gyuri (KARA)",
+    "Personality": "ESTJ"
   },
   {
     "Name (Group)": "H3hyeon",
@@ -2428,20 +2444,24 @@
     "Personality": "INTP"
   },
   {
-    "Name (Group)": "Haeun (Q6IX)",
-    "Personality": "ENFP"
-  },
-  {
     "Name (Group)": "Haeun (3YE)",
     "Personality": "ESFP"
+  },
+  {
+    "Name (Group)": "Haeun (ARTBEAT v)",
+    "Personality": "INFP"
   },
   {
     "Name (Group)": "Haeun (Lapillus)",
     "Personality": "ESTP"
   },
   {
-    "Name (Group)": "Haeun (ARTBEAT v)",
-    "Personality": "INFP"
+    "Name (Group)": "Haeun (Q6IX)",
+    "Personality": "ENFP"
+  },
+  {
+    "Name (Group)": "Haeun (UNCHILD)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "Haewon (NMIXX)",
@@ -2476,16 +2496,16 @@
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Hamin (PLAVE)",
-    "Personality": "INFJ"
-  },
-  {
     "Name (Group)": "Hamin (BXB)",
     "Personality": "INTP"
   },
   {
     "Name (Group)": "Hamin (ENOi)",
     "Personality": "ISFP"
+  },
+  {
+    "Name (Group)": "Hamin (PLAVE)",
+    "Personality": "INFJ"
   },
   {
     "Name (Group)": "Han (Stray Kids)",
@@ -2536,16 +2556,16 @@
     "Personality": "INFJ"
   },
   {
-    "Name (Group)": "Hana (SPIA)",
-    "Personality": "ENFP"
-  },
-  {
     "Name (Group)": "Hana (FIFTY FIFTY)",
     "Personality": "INFJ"
   },
   {
     "Name (Group)": "Hana (ILY:1)",
     "Personality": "INFP"
+  },
+  {
+    "Name (Group)": "Hana (SPIA)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "Hana (UNICODE)",
@@ -2632,6 +2652,10 @@
     "Personality": "INTJ"
   },
   {
+    "Name (Group)": "Harin (KIIRAS)",
+    "Personality": "ISTJ"
+  },
+  {
     "Name (Group)": "Harin (ONEWE)",
     "Personality": "ENFJ"
   },
@@ -2652,12 +2676,12 @@
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Haru (XLOV)",
-    "Personality": "ENFP"
-  },
-  {
     "Name (Group)": "Haru (NEXZ)",
     "Personality": "ENTJ"
+  },
+  {
+    "Name (Group)": "Haru (XLOV)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "Harua (&TEAM)",
@@ -2668,12 +2692,12 @@
     "Personality": "ISFJ"
   },
   {
-    "Name (Group)": "Haruna (KOKOIYA)",
-    "Personality": "ENFP"
-  },
-  {
     "Name (Group)": "Haruna (Billlie)",
     "Personality": "ESFP"
+  },
+  {
+    "Name (Group)": "Haruna (KOKOIYA)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "Haruta",
@@ -2688,12 +2712,12 @@
     "Personality": "INFP"
   },
   {
-    "Name (Group)": "Haseul (HighUp Baby)",
-    "Personality": "ENFP"
-  },
-  {
     "Name (Group)": "HaSeul (ARTMS)",
     "Personality": "INFJ"
+  },
+  {
+    "Name (Group)": "Haseul (HighUp Baby)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "Haseung (WHIB)",
@@ -2768,8 +2792,8 @@
     "Personality": "ENTJ"
   },
   {
-    "Name (Group)": "Heejin (tracer)",
-    "Personality": "ENFP"
+    "Name (Group)": "HeeJin",
+    "Personality": "INTP"
   },
   {
     "Name (Group)": "HeeJin (ARTMS)",
@@ -2780,12 +2804,16 @@
     "Personality": "ENTJ"
   },
   {
-    "Name (Group)": "HeeJin",
-    "Personality": "INTP"
+    "Name (Group)": "Heejin (tracer)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "Heeju (CMDM)",
     "Personality": "ENFP"
+  },
+  {
+    "Name (Group)": "Heekie (UNCHILD)",
+    "Personality": "ENFJ"
   },
   {
     "Name (Group)": "Heeseok (LIMITLESS)",
@@ -2804,12 +2832,12 @@
     "Personality": "ISFJ"
   },
   {
-    "Name (Group)": "Hengyu (MODYSSEY)",
-    "Personality": "INFP"
-  },
-  {
     "Name (Group)": "Hendery (NCT)",
     "Personality": "INFJ"
+  },
+  {
+    "Name (Group)": "Hengyu (MODYSSEY)",
+    "Personality": "INFP"
   },
   {
     "Name (Group)": "Heo Sunbin",
@@ -2840,12 +2868,12 @@
     "Personality": "ESFJ"
   },
   {
-    "Name (Group)": "Hina (Witchers)",
-    "Personality": "ESFP"
-  },
-  {
     "Name (Group)": "Hina (QWER)",
     "Personality": "ISTP"
+  },
+  {
+    "Name (Group)": "Hina (Witchers)",
+    "Personality": "ESFP"
   },
   {
     "Name (Group)": "Hinata",
@@ -2892,10 +2920,6 @@
     "Personality": "ENTP"
   },
   {
-    "Name (Group)": "Hongbin (VIXX)",
-    "Personality": "ISFJ"
-  },
-  {
     "Name (Group)": "Hong Eunchae (LE SSERAFIM)",
     "Personality": "ISTJ"
   },
@@ -2918,6 +2942,10 @@
   {
     "Name (Group)": "Hong Sung Min (FANTASY BOYS)",
     "Personality": "INFP"
+  },
+  {
+    "Name (Group)": "Hongbin (VIXX)",
+    "Personality": "ISFJ"
   },
   {
     "Name (Group)": "Hongjoong (ATEEZ)",
@@ -3048,12 +3076,12 @@
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Hwi (TNX)",
-    "Personality": "ENTP"
-  },
-  {
     "Name (Group)": "Hwi (SWEET:CH)",
     "Personality": "ESFP"
+  },
+  {
+    "Name (Group)": "Hwi (TNX)",
+    "Personality": "ENTP"
   },
   {
     "Name (Group)": "Hwichan (OMEGA X)",
@@ -3252,16 +3280,16 @@
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Hyun (XLOV)",
-    "Personality": "INFJ"
-  },
-  {
     "Name (Group)": "Hyun (KAVE)",
     "Personality": "INTJ"
   },
   {
     "Name (Group)": "Hyun (n.SSign)",
     "Personality": "ISFP"
+  },
+  {
+    "Name (Group)": "Hyun (XLOV)",
+    "Personality": "INFJ"
   },
   {
     "Name (Group)": "Hyun Bin (Ciipher)",
@@ -3276,16 +3304,16 @@
     "Personality": "INFJ"
   },
   {
-    "Name (Group)": "HyunBin (TRI.BE)",
-    "Personality": "ENFJ"
-  },
-  {
     "Name (Group)": "Hyunbin (ALL(H)OURS)",
     "Personality": "ENFP"
   },
   {
     "Name (Group)": "Hyunbin (POW)",
     "Personality": "ENTP"
+  },
+  {
+    "Name (Group)": "HyunBin (TRI.BE)",
+    "Personality": "ENFJ"
   },
   {
     "Name (Group)": "Hyungho (Forestella)",
@@ -3304,12 +3332,12 @@
     "Personality": "INFP"
   },
   {
-    "Name (Group)": "Hyunjae (THE BOYZ)",
-    "Personality": "ENFJ"
-  },
-  {
     "Name (Group)": "Hyunjae (BLACK6IX)",
     "Personality": "ISTP"
+  },
+  {
+    "Name (Group)": "Hyunjae (THE BOYZ)",
+    "Personality": "ENFJ"
   },
   {
     "Name (Group)": "Hyunji (Ferry Blue)",
@@ -3336,16 +3364,16 @@
     "Personality": "INTJ"
   },
   {
-    "Name (Group)": "Hyunjun (THE BOYZ)",
-    "Personality": "ENFP"
-  },
-  {
     "Name (Group)": "Hyunjun (ATBO)",
     "Personality": "INFP"
   },
   {
     "Name (Group)": "Hyunjun (NouerA)",
     "Personality": "ISFP"
+  },
+  {
+    "Name (Group)": "Hyunjun (THE BOYZ)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "Hyunkyu (VROMANCE)",
@@ -3364,23 +3392,23 @@
     "Personality": "ESFJ"
   },
   {
-    "Name (Group)": "Hyunsik (XODIAC)",
-    "Personality": "ENFJ"
-  },
-  {
     "Name (Group)": "Hyunsik (BTOB)",
     "Personality": "INTP"
+  },
+  {
+    "Name (Group)": "Hyunsik (XODIAC)",
+    "Personality": "ENFJ"
   },
   {
     "Name (Group)": "Hyunsoo (TNX)",
     "Personality": "ISTP"
   },
   {
-    "Name (Group)": "Hyunsuk (TREASURE)",
+    "Name (Group)": "Hyunsuk (CIX)",
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Hyunsuk (CIX)",
+    "Name (Group)": "Hyunsuk (TREASURE)",
     "Personality": "ENFP"
   },
   {
@@ -3402,6 +3430,10 @@
   {
     "Name (Group)": "Hyunyul (Hi-Fi Un!corn)",
     "Personality": "ENFP"
+  },
+  {
+    "Name (Group)": "I-Rohm",
+    "Personality": "ENTP"
   },
   {
     "Name (Group)": "I.L (IRRIS)",
@@ -3508,20 +3540,16 @@
     "Personality": "INFJ"
   },
   {
-    "Name (Group)": "I-Rohm",
-    "Personality": "ENTP"
-  },
-  {
     "Name (Group)": "Isa (STAYC)",
     "Personality": "ESFJ"
   },
   {
-    "Name (Group)": "Isaac (SKYE)",
-    "Personality": "ESFP"
-  },
-  {
     "Name (Group)": "Isaac (KJRGL)",
     "Personality": "INFP"
+  },
+  {
+    "Name (Group)": "Isaac (SKYE)",
+    "Personality": "ESFP"
   },
   {
     "Name (Group)": "Isak (Isak 'N' Jiyeon)",
@@ -3550,6 +3578,14 @@
   {
     "Name (Group)": "J (STAYC)",
     "Personality": "INFJ"
+  },
+  {
+    "Name (Group)": "j-hope (BTS)",
+    "Personality": "INFJ"
+  },
+  {
+    "Name (Group)": "J-Min (BAE173)",
+    "Personality": "INTP"
   },
   {
     "Name (Group)": "J.Seph (KARD)",
@@ -3624,16 +3660,16 @@
     "Personality": "INFP"
   },
   {
-    "Name (Group)": "Jaehyun (N.Flying)",
-    "Personality": "ENFJ"
-  },
-  {
     "Name (Group)": "Jaehyun (BOYNEXTDOOR)",
     "Personality": "ENFP"
   },
   {
     "Name (Group)": "Jaehyun (Golden Child)",
     "Personality": "ESFP"
+  },
+  {
+    "Name (Group)": "Jaehyun (N.Flying)",
+    "Personality": "ENFJ"
   },
   {
     "Name (Group)": "Jaehyun (NCT)",
@@ -3648,11 +3684,11 @@
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Jaemin (NXD)",
+    "Name (Group)": "Jaemin (NCT)",
     "Personality": "ISFJ"
   },
   {
-    "Name (Group)": "Jaemin (NCT)",
+    "Name (Group)": "Jaemin (NXD)",
     "Personality": "ISFJ"
   },
   {
@@ -3680,12 +3716,12 @@
     "Personality": "ISTJ"
   },
   {
-    "Name (Group)": "James (dearALICE)",
-    "Personality": "ENFP"
-  },
-  {
     "Name (Group)": "James",
     "Personality": "INFP"
+  },
+  {
+    "Name (Group)": "James (dearALICE)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "James (Trainee A)",
@@ -3756,12 +3792,12 @@
     "Personality": "INFJ"
   },
   {
-    "Name (Group)": "Jay (ENHYPEN)",
-    "Personality": "ENTJ"
-  },
-  {
     "Name (Group)": "Jay (ASC2NT)",
     "Personality": "INFJ"
+  },
+  {
+    "Name (Group)": "Jay (ENHYPEN)",
+    "Personality": "ENTJ"
   },
   {
     "Name (Group)": "Jay (iKON)",
@@ -3960,14 +3996,6 @@
     "Personality": "ENTJ"
   },
   {
-    "Name (Group)": "j-hope (BTS)",
-    "Personality": "INFJ"
-  },
-  {
-    "Name (Group)": "Jiae (Lovelyz)",
-    "Personality": "ISTP"
-  },
-  {
     "Name (Group)": "Ji Eun Ho (LUN8wave)",
     "Personality": "ENTP"
   },
@@ -3984,16 +4012,20 @@
     "Personality": "INFJ"
   },
   {
-    "Name (Group)": "Jia (TRI.BE)",
-    "Personality": "ENFJ"
-  },
-  {
     "Name (Group)": "Jia (MIMIIROSE)",
     "Personality": "ISTP"
   },
   {
+    "Name (Group)": "Jia (TRI.BE)",
+    "Personality": "ENFJ"
+  },
+  {
     "Name (Group)": "Jia Hao",
     "Personality": "INTJ"
+  },
+  {
+    "Name (Group)": "Jiae (Lovelyz)",
+    "Personality": "ISTP"
   },
   {
     "Name (Group)": "Jiahn (SKYE)",
@@ -4020,24 +4052,24 @@
     "Personality": "INFP"
   },
   {
-    "Name (Group)": "Jieun (MayLiz)",
-    "Personality": "ENFP"
-  },
-  {
-    "Name (Group)": "Jieun (YOUNG POSSE)",
-    "Personality": "ESFJ"
-  },
-  {
     "Name (Group)": "Jieun (Bling Bling)",
     "Personality": "INFJ"
+  },
+  {
+    "Name (Group)": "Jieun (Busters)",
+    "Personality": "ISTP"
+  },
+  {
+    "Name (Group)": "Jieun (MayLiz)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "Jieun (PURPLE KISS)",
     "Personality": "INFP"
   },
   {
-    "Name (Group)": "Jieun (Busters)",
-    "Personality": "ISTP"
+    "Name (Group)": "Jieun (YOUNG POSSE)",
+    "Personality": "ESFJ"
   },
   {
     "Name (Group)": "Jihan (Weeekly)",
@@ -4076,40 +4108,40 @@
     "Personality": "ISFJ"
   },
   {
-    "Name (Group)": "Jimin (HAWW)",
-    "Personality": "ENFJ"
+    "Name (Group)": "Jimin (AOA)",
+    "Personality": "INFP"
   },
   {
     "Name (Group)": "Jimin (BTS)",
     "Personality": "ESTP"
   },
   {
-    "Name (Group)": "Jimin (MuuTive)",
-    "Personality": "INFJ"
-  },
-  {
-    "Name (Group)": "Jimin (AOA)",
-    "Personality": "INFP"
-  },
-  {
     "Name (Group)": "Jimin (CLASS:y)",
     "Personality": "ISTP"
   },
   {
-    "Name (Group)": "Jin (Lovelyz)",
-    "Personality": "ENFP"
+    "Name (Group)": "Jimin (HAWW)",
+    "Personality": "ENFJ"
+  },
+  {
+    "Name (Group)": "Jimin (MuuTive)",
+    "Personality": "INFJ"
+  },
+  {
+    "Name (Group)": "Jin (BTS)",
+    "Personality": "INTP"
   },
   {
     "Name (Group)": "Jin (INI)",
     "Personality": "ESFP"
   },
   {
-    "Name (Group)": "Jin (SWEET:CH)",
-    "Personality": "INFJ"
+    "Name (Group)": "Jin (Lovelyz)",
+    "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Jin (BTS)",
-    "Personality": "INTP"
+    "Name (Group)": "Jin (SWEET:CH)",
+    "Personality": "INFJ"
   },
   {
     "Name (Group)": "Jin Hyeon Jun",
@@ -4148,12 +4180,12 @@
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Jini (NMIXX)",
-    "Personality": "INFP"
-  },
-  {
     "Name (Group)": "Jini (Another Level)",
     "Personality": "ISTP"
+  },
+  {
+    "Name (Group)": "Jini (NMIXX)",
+    "Personality": "INFP"
   },
   {
     "Name (Group)": "Jinjin (ASTRO)",
@@ -4192,12 +4224,12 @@
     "Personality": "ESFJ"
   },
   {
-    "Name (Group)": "Jinyoung (GOT7)",
-    "Personality": "ISFJ"
-  },
-  {
     "Name (Group)": "Jinyoung (CIX)",
     "Personality": "ISFP"
+  },
+  {
+    "Name (Group)": "Jinyoung (GOT7)",
+    "Personality": "ISFJ"
   },
   {
     "Name (Group)": "Jiseob (2Z)",
@@ -4244,32 +4276,32 @@
     "Personality": "INTJ"
   },
   {
-    "Name (Group)": "Jiwon (fromis_9)",
-    "Personality": "ENTJ"
-  },
-  {
     "Name (Group)": "Jiwon (Cherry Bullet)",
     "Personality": "ENTP"
+  },
+  {
+    "Name (Group)": "Jiwon (fromis_9)",
+    "Personality": "ENTJ"
   },
   {
     "Name (Group)": "Jiwon (SECHSKIES)",
     "Personality": "ISFP"
   },
   {
-    "Name (Group)": "Jiwoo (KARD)",
-    "Personality": "INFJ"
+    "Name (Group)": "Jiwoo (Hearts2Hearts)",
+    "Personality": "ISTJ"
   },
   {
-    "Name (Group)": "JiWoo (tripleS)",
-    "Personality": "INTP"
+    "Name (Group)": "Jiwoo (KARD)",
+    "Personality": "INFJ"
   },
   {
     "Name (Group)": "Jiwoo (NMIXX)",
     "Personality": "ISTP"
   },
   {
-    "Name (Group)": "Jiwoo (Hearts2Hearts)",
-    "Personality": "ISTJ"
+    "Name (Group)": "JiWoo (tripleS)",
+    "Personality": "INTP"
   },
   {
     "Name (Group)": "Jiyeon (T-ARA)",
@@ -4284,16 +4316,16 @@
     "Personality": "INTJ"
   },
   {
+    "Name (Group)": "Jiyoon (ICHILLIN')",
+    "Personality": "INFP"
+  },
+  {
     "Name (Group)": "Jiyoon (VVUP)",
     "Personality": "ENFP"
   },
   {
     "Name (Group)": "Jiyoon (Witchers)",
     "Personality": "INFJ"
-  },
-  {
-    "Name (Group)": "Jiyoon (ICHILLIN')",
-    "Personality": "INFP"
   },
   {
     "Name (Group)": "Jiyoung (KARA)",
@@ -4318,10 +4350,6 @@
   {
     "Name (Group)": "JL (AHOF)",
     "Personality": "ENFP"
-  },
-  {
-    "Name (Group)": "J-Min (BAE173)",
-    "Personality": "INTP"
   },
   {
     "Name (Group)": "JN (SUPERX)",
@@ -4488,6 +4516,10 @@
     "Personality": "ESFJ"
   },
   {
+    "Name (Group)": "Ju-ne (iKON)",
+    "Personality": "ENFP"
+  },
+  {
     "Name (Group)": "Jueun (DIA)",
     "Personality": "ISTP"
   },
@@ -4520,10 +4552,6 @@
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Jun.K (2PM)",
-    "Personality": "ENFJ"
-  },
-  {
     "Name (Group)": "Jun (SEVENTEEN)",
     "Personality": "ESFP"
   },
@@ -4544,12 +4572,12 @@
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "June (BXB)",
+    "Name (Group)": "Jun.K (2PM)",
     "Personality": "ENFJ"
   },
   {
-    "Name (Group)": "Ju-ne (iKON)",
-    "Personality": "ENFP"
+    "Name (Group)": "June (BXB)",
+    "Personality": "ENFJ"
   },
   {
     "Name (Group)": "Jung Bo Moon",
@@ -4692,24 +4720,24 @@
     "Personality": "INFJ"
   },
   {
-    "Name (Group)": "Junho (NOMAD)",
-    "Personality": "INFP"
-  },
-  {
     "Name (Group)": "Junho (DRIPPIN)",
     "Personality": "ISTJ"
+  },
+  {
+    "Name (Group)": "Junho (NOMAD)",
+    "Personality": "INFP"
   },
   {
     "Name (Group)": "Junhwi (SAY MY NAME)",
     "Personality": "ISFP"
   },
   {
-    "Name (Group)": "Junhyeok (n.SSign)",
-    "Personality": "ENFJ"
-  },
-  {
     "Name (Group)": "Junhyeok (5but)",
     "Personality": "INFP"
+  },
+  {
+    "Name (Group)": "Junhyeok (n.SSign)",
+    "Personality": "ENFJ"
   },
   {
     "Name (Group)": "Junhyeok (TNX)",
@@ -4756,16 +4784,8 @@
     "Personality": "ISTP"
   },
   {
-    "Name (Group)": "Junseo (DKB)",
-    "Personality": "ENFP"
-  },
-  {
     "Name (Group)": "Junseo",
     "Personality": "ENFP"
-  },
-  {
-    "Name (Group)": "Junseo (WEi)",
-    "Personality": "ESTJ"
   },
   {
     "Name (Group)": "Junseo (ALD1)",
@@ -4774,6 +4794,14 @@
   {
     "Name (Group)": "Junseo (BAE173)",
     "Personality": "ISFJ"
+  },
+  {
+    "Name (Group)": "Junseo (DKB)",
+    "Personality": "ENFP"
+  },
+  {
+    "Name (Group)": "Junseo (WEi)",
+    "Personality": "ESTJ"
   },
   {
     "Name (Group)": "Junseok (ATBO)",
@@ -4992,12 +5020,12 @@
     "Personality": "ESFJ"
   },
   {
-    "Name (Group)": "Karin (CRAXY)",
-    "Personality": "INFJ"
-  },
-  {
     "Name (Group)": "Karin (ALICE)",
     "Personality": "ISTP"
+  },
+  {
+    "Name (Group)": "Karin (CRAXY)",
+    "Personality": "INFJ"
   },
   {
     "Name (Group)": "Karina (aespa)",
@@ -5060,16 +5088,16 @@
     "Personality": "ESFP"
   },
   {
+    "Name (Group)": "Kei",
+    "Personality": "ESFJ"
+  },
+  {
     "Name (Group)": "Kei (EL7Z UP)",
     "Personality": "ENFJ"
   },
   {
     "Name (Group)": "Kei(Lovelyz)",
     "Personality": "ENFJ"
-  },
-  {
-    "Name (Group)": "Kei",
-    "Personality": "ESFJ"
   },
   {
     "Name (Group)": "Keigo (JO1)",
@@ -5088,12 +5116,12 @@
     "Personality": "ISTP"
   },
   {
-    "Name (Group)": "Kelly (TRI.BE)",
-    "Personality": "ENTP"
-  },
-  {
     "Name (Group)": "Kelly (BADVILLAIN)",
     "Personality": "ISTP"
+  },
+  {
+    "Name (Group)": "Kelly (TRI.BE)",
+    "Personality": "ENTP"
   },
   {
     "Name (Group)": "Kelly Kim (I.MET.U)",
@@ -5136,20 +5164,20 @@
     "Personality": "ENFJ"
   },
   {
-    "Name (Group)": "Kevin (TFN)",
-    "Personality": "ENTJ"
-  },
-  {
-    "Name (Group)": "Kevin (U-KISS)",
-    "Personality": "ESFP"
-  },
-  {
     "Name (Group)": "Kevin (OMEGA X)",
     "Personality": "INFJ"
   },
   {
+    "Name (Group)": "Kevin (TFN)",
+    "Personality": "ENTJ"
+  },
+  {
     "Name (Group)": "Kevin (THE BOYZ)",
     "Personality": "INFP"
+  },
+  {
+    "Name (Group)": "Kevin (U-KISS)",
+    "Personality": "ESFP"
   },
   {
     "Name (Group)": "Key (SHINee)",
@@ -5740,6 +5768,10 @@
     "Personality": "ENFP"
   },
   {
+    "Name (Group)": "Kumi (Baby DONT Cry)",
+    "Personality": "ISFJ"
+  },
+  {
     "Name (Group)": "Kun (NCT)",
     "Personality": "ESFJ"
   },
@@ -5750,6 +5782,10 @@
   {
     "Name (Group)": "Kursor",
     "Personality": "INFP"
+  },
+  {
+    "Name (Group)": "Kurumi (KIIRAS)",
+    "Personality": "ISFP"
   },
   {
     "Name (Group)": "Kwanghee (ZE:A)",
@@ -5824,6 +5860,10 @@
     "Personality": "ISFJ"
   },
   {
+    "Name (Group)": "Kylie (KIIRAS)",
+    "Personality": "INTP"
+  },
+  {
     "Name (Group)": "Kyo (Pattern)",
     "Personality": "ISFJ"
   },
@@ -5864,12 +5904,12 @@
     "Personality": "ISFP"
   },
   {
-    "Name (Group)": "Kyungmin (TWS)",
-    "Personality": "ENTJ"
-  },
-  {
     "Name (Group)": "Kyungmin (8TURN)",
     "Personality": "INTP"
+  },
+  {
+    "Name (Group)": "Kyungmin (TWS)",
+    "Personality": "ENTJ"
   },
   {
     "Name (Group)": "Kyungmun (YOUNITE)",
@@ -6172,12 +6212,12 @@
     "Personality": "ENTJ"
   },
   {
-    "Name (Group)": "Lee Youngchae",
-    "Personality": "ESTP"
-  },
-  {
     "Name (Group)": "Lee Young-ji",
     "Personality": "ENTP"
+  },
+  {
+    "Name (Group)": "Lee Youngchae",
+    "Personality": "ESTP"
   },
   {
     "Name (Group)": "Lee Yumin",
@@ -6240,16 +6280,16 @@
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Leo/Taekwoon (VIXX)",
-    "Personality": "ISFP"
+    "Name (Group)": "Leo (WAKER)",
+    "Personality": "ISTJ"
   },
   {
     "Name (Group)": "Leo (XODIAC)",
     "Personality": "ISFP"
   },
   {
-    "Name (Group)": "Leo (WAKER)",
-    "Personality": "ISTJ"
+    "Name (Group)": "Leo/Taekwoon (VIXX)",
+    "Personality": "ISFP"
   },
   {
     "Name (Group)": "Leon (TRENDZ)",
@@ -6360,12 +6400,12 @@
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Lina (Chic&I's)",
-    "Personality": "ENFP"
-  },
-  {
     "Name (Group)": "Lina",
     "Personality": "ISTP"
+  },
+  {
+    "Name (Group)": "Lina (Chic&I's)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "Ling Qi (FANTASY BOYS)",
@@ -6374,6 +6414,10 @@
   {
     "Name (Group)": "Lingling",
     "Personality": "INFJ"
+  },
+  {
+    "Name (Group)": "LingLing (KIIRAS)",
+    "Personality": "ISTJ"
   },
   {
     "Name (Group)": "Lisa (BLACKPINK)",
@@ -6416,12 +6460,12 @@
     "Personality": "ESFP"
   },
   {
-    "Name (Group)": "Louii (HAWW)",
-    "Personality": "ENFJ"
-  },
-  {
     "Name (Group)": "Lou (VAV)",
     "Personality": "INFP"
+  },
+  {
+    "Name (Group)": "Louii (HAWW)",
+    "Personality": "ENFJ"
   },
   {
     "Name (Group)": "Louis (The KingDom)",
@@ -6456,12 +6500,12 @@
     "Personality": "ENFJ"
   },
   {
-    "Name (Group)": "Lucy (WOOAH)",
-    "Personality": "ENFP"
-  },
-  {
     "Name (Group)": "Lucy (Weki Meki)",
     "Personality": "INTP"
+  },
+  {
+    "Name (Group)": "Lucy (WOOAH)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "Luda (WJSN)",
@@ -6504,19 +6548,19 @@
     "Personality": "INFP"
   },
   {
-    "Name (Group)": "Lynn (tripleS)",
-    "Personality": "ISFP"
-  },
-  {
     "Name (Group)": "Lynn (7SENSES)",
     "Personality": "ISFP"
   },
   {
-    "Name (Group)": "LynnLynn (MODYSSEY)",
-    "Personality": "ISTJ"
+    "Name (Group)": "Lynn (tripleS)",
+    "Personality": "ISFP"
   },
   {
     "Name (Group)": "Lynn Lynn",
+    "Personality": "ISTJ"
+  },
+  {
+    "Name (Group)": "LynnLynn (MODYSSEY)",
     "Personality": "ISTJ"
   },
   {
@@ -6572,11 +6616,11 @@
     "Personality": "ISTP"
   },
   {
-    "Name (Group)": "Maika (ODD YOUTH)",
+    "Name (Group)": "Maika",
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Maika",
+    "Name (Group)": "Maika (ODD YOUTH)",
     "Personality": "ENFP"
   },
   {
@@ -6608,12 +6652,12 @@
     "Personality": "ISFP"
   },
   {
-    "Name (Group)": "Mark (NCT)",
-    "Personality": "INFJ"
-  },
-  {
     "Name (Group)": "Mark (GOT7)",
     "Personality": "INTJ"
+  },
+  {
+    "Name (Group)": "Mark (NCT)",
+    "Personality": "INFJ"
   },
   {
     "Name (Group)": "Marty: (MAVE:)",
@@ -6648,12 +6692,12 @@
     "Personality": "ISFJ"
   },
   {
-    "Name (Group)": "May (RESCENE)",
-    "Personality": "INTP"
-  },
-  {
     "Name (Group)": "May (Cherry Bullet)",
     "Personality": "ISFJ"
+  },
+  {
+    "Name (Group)": "May (RESCENE)",
+    "Personality": "INTP"
   },
   {
     "Name (Group)": "Maya (NiziU)",
@@ -6704,6 +6748,10 @@
     "Personality": "ESTP"
   },
   {
+    "Name (Group)": "Mia (Baby DONT Cry)",
+    "Personality": "ESFP"
+  },
+  {
     "Name (Group)": "Mia (EVERGLOW)",
     "Personality": "INTP"
   },
@@ -6732,12 +6780,12 @@
     "Personality": "ISFP"
   },
   {
-    "Name (Group)": "Mika (Geenius)",
-    "Personality": "ENFP"
-  },
-  {
     "Name (Group)": "Mika (Aesther)",
     "Personality": "ENTP"
+  },
+  {
+    "Name (Group)": "Mika (Geenius)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "Miku (I:MOND)",
@@ -6760,12 +6808,12 @@
     "Personality": "INTP"
   },
   {
-    "Name (Group)": "MIN (Hi-Fi Un!corn)",
-    "Personality": "ENFP"
-  },
-  {
     "Name (Group)": "Min",
     "Personality": "ESFP"
+  },
+  {
+    "Name (Group)": "MIN (Hi-Fi Un!corn)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "Min (TRY1)",
@@ -6820,28 +6868,28 @@
     "Personality": "ISFP"
   },
   {
-    "Name (Group)": "Minho (SHINee)",
-    "Personality": "ESFP"
-  },
-  {
     "Name (Group)": "Minho (8TURN)",
     "Personality": "INFJ"
+  },
+  {
+    "Name (Group)": "Minho (SHINee)",
+    "Personality": "ESFP"
   },
   {
     "Name (Group)": "Minhwan (FTISLAND)",
     "Personality": "INTJ"
   },
   {
-    "Name (Group)": "Minhyuk (WEUS)",
-    "Personality": "ENFJ"
+    "Name (Group)": "Minhyuk (BTOB)",
+    "Personality": "ISFJ"
   },
   {
     "Name (Group)": "Minhyuk (MONSTA X)",
     "Personality": "ENTP"
   },
   {
-    "Name (Group)": "Minhyuk (BTOB)",
-    "Personality": "ISFJ"
+    "Name (Group)": "Minhyuk (WEUS)",
+    "Personality": "ENFJ"
   },
   {
     "Name (Group)": "Minjae (DXMON)",
@@ -6856,12 +6904,12 @@
     "Personality": "INFP"
   },
   {
-    "Name (Group)": "Minje (KickFlip)",
-    "Personality": "INTP"
-  },
-  {
     "Name (Group)": "Minje (ALL(H)OURS)",
     "Personality": "ISFP"
+  },
+  {
+    "Name (Group)": "Minje (KickFlip)",
+    "Personality": "INTP"
   },
   {
     "Name (Group)": "Minji (Busters)",
@@ -6876,20 +6924,20 @@
     "Personality": "INFJ"
   },
   {
-    "Name (Group)": "Minju (KELT9b)",
-    "Personality": "ENFJ"
-  },
-  {
-    "Name (Group)": "Minju (IZ*ONE)",
-    "Personality": "INFJ"
-  },
-  {
     "Name (Group)": "Minju (GWSN)",
     "Personality": "INFP"
   },
   {
     "Name (Group)": "Minju (ILLIT)",
     "Personality": "ISTP"
+  },
+  {
+    "Name (Group)": "Minju (IZ*ONE)",
+    "Personality": "INFJ"
+  },
+  {
+    "Name (Group)": "Minju (KELT9b)",
+    "Personality": "ENFJ"
   },
   {
     "Name (Group)": "Minjun (NINE.i)",
@@ -6920,12 +6968,12 @@
     "Personality": "ESFP, ESTJ"
   },
   {
-    "Name (Group)": "Minseo (TEAPARTY)",
-    "Personality": "INFJ"
-  },
-  {
     "Name (Group)": "Minseo (SATURDAY)",
     "Personality": "ISFJ"
+  },
+  {
+    "Name (Group)": "Minseo (TEAPARTY)",
+    "Personality": "INFJ"
   },
   {
     "Name (Group)": "Minseo (WOOAH)",
@@ -6936,12 +6984,12 @@
     "Personality": "ISFJ"
   },
   {
-    "Name (Group)": "Minsu (UNNAME)",
-    "Personality": "ENFJ"
-  },
-  {
     "Name (Group)": "Minsu (TO1)",
     "Personality": "ISFJ"
+  },
+  {
+    "Name (Group)": "Minsu (UNNAME)",
+    "Personality": "ENFJ"
   },
   {
     "Name (Group)": "Minyong (HAWW)",
@@ -7148,11 +7196,11 @@
     "Personality": "ESFP"
   },
   {
-    "Name (Group)": "Nagomi (ViV)",
+    "Name (Group)": "Nagomi (MADEIN)",
     "Personality": "ISFP"
   },
   {
-    "Name (Group)": "Nagomi (MADEIN)",
+    "Name (Group)": "Nagomi (ViV)",
     "Personality": "ISFP"
   },
   {
@@ -7164,12 +7212,12 @@
     "Personality": "INFJ"
   },
   {
-    "Name (Group)": "Nahyun (PRIMROSE)",
-    "Personality": "INFJ"
-  },
-  {
     "Name (Group)": "Nahyun (AtHeart)",
     "Personality": "ISTP"
+  },
+  {
+    "Name (Group)": "Nahyun (PRIMROSE)",
+    "Personality": "INFJ"
   },
   {
     "Name (Group)": "Nako",
@@ -7212,16 +7260,16 @@
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Nana (WOOAH)",
-    "Personality": "ENFP"
-  },
-  {
     "Name (Group)": "Nana (After School)",
     "Personality": "ISFP"
   },
   {
     "Name (Group)": "Nana (UNIS)",
     "Personality": "ISTP"
+  },
+  {
+    "Name (Group)": "Nana (WOOAH)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "Nano (IS:SUE)",
@@ -7240,11 +7288,11 @@
     "Personality": "ISTP"
   },
   {
-    "Name (Group)": "Narin (MEOVV)",
+    "Name (Group)": "Narin (Bling Bling)",
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Narin (Bling Bling)",
+    "Name (Group)": "Narin (MEOVV)",
     "Personality": "ENFP"
   },
   {
@@ -7292,12 +7340,12 @@
     "Personality": "ENTJ"
   },
   {
-    "Name (Group)": "Neo (TRY1)",
-    "Personality": "ENTJ"
-  },
-  {
     "Name (Group)": "Neo",
     "Personality": "INFP"
+  },
+  {
+    "Name (Group)": "Neo (TRY1)",
+    "Personality": "ENTJ"
   },
   {
     "Name (Group)": "Neon",
@@ -7310,6 +7358,10 @@
   {
     "Name (Group)": "New (THE BOYZ)",
     "Personality": "INFP"
+  },
+  {
+    "Name (Group)": "Ni-ki (ENHYPEN)",
+    "Personality": "ENTJ"
   },
   {
     "Name (Group)": "Niaa (W!TCHX)",
@@ -7328,6 +7380,10 @@
     "Personality": "ENFP"
   },
   {
+    "Name (Group)": "Nicole (KAACHI)",
+    "Personality": "INTP"
+  },
+  {
     "Name (Group)": "Nicole (KARA)",
     "Personality": "ENFJ"
   },
@@ -7336,20 +7392,12 @@
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Nicole (KAACHI)",
-    "Personality": "INTP"
-  },
-  {
     "Name (Group)": "Niel (Teen Top)",
     "Personality": "INFP"
   },
   {
     "Name (Group)": "Nien (tripleS)",
     "Personality": "ESFP"
-  },
-  {
-    "Name (Group)": "Ni-ki (ENHYPEN)",
-    "Personality": "ENTJ"
   },
   {
     "Name (Group)": "Nina (IRRIS)",
@@ -7520,16 +7568,16 @@
     "Personality": "ENTP"
   },
   {
-    "Name (Group)": "On (TFN)",
-    "Personality": "ISFJ"
+    "Name (Group)": "On (ABLUE)",
+    "Personality": "ISTP"
   },
   {
     "Name (Group)": "On (Dignity)",
     "Personality": "ISTP"
   },
   {
-    "Name (Group)": "On (ABLUE)",
-    "Personality": "ISTP"
+    "Name (Group)": "On (TFN)",
+    "Personality": "ISFJ"
   },
   {
     "Name (Group)": "ON:N (ALL(H)OURS)",
@@ -7888,12 +7936,12 @@
     "Personality": "INFJ"
   },
   {
-    "Name (Group)": "Rena (Rocking doll)",
-    "Personality": "ENFP"
-  },
-  {
     "Name (Group)": "Rena (eite)",
     "Personality": "INFJ"
+  },
+  {
+    "Name (Group)": "Rena (Rocking doll)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "Renta (TO1)",
@@ -7972,16 +8020,16 @@
     "Personality": "ESTJ"
   },
   {
-    "Name (Group)": "Riku (NiziU)",
-    "Personality": "ESFP"
-  },
-  {
     "Name (Group)": "Riku (KJRGL)",
     "Personality": "ESFP"
   },
   {
     "Name (Group)": "Riku (NCT)",
     "Personality": "ISFP"
+  },
+  {
+    "Name (Group)": "Riku (NiziU)",
+    "Personality": "ESFP"
   },
   {
     "Name (Group)": "Rima (NiziU)",
@@ -7992,12 +8040,12 @@
     "Personality": "INFJ"
   },
   {
-    "Name (Group)": "Rin (IS:SUE)",
-    "Personality": "ENTJ"
-  },
-  {
     "Name (Group)": "Rin",
     "Personality": "ISTP"
+  },
+  {
+    "Name (Group)": "Rin (IS:SUE)",
+    "Personality": "ENTJ"
   },
   {
     "Name (Group)": "Rina (Beauty Box)",
@@ -8048,12 +8096,12 @@
     "Personality": "ESFP"
   },
   {
-    "Name (Group)": "Riwoo (NEWBEAT)",
-    "Personality": "ENFP"
-  },
-  {
     "Name (Group)": "Riwoo (BOYNEXTDOOR)",
     "Personality": "ISFP"
+  },
+  {
+    "Name (Group)": "Riwoo (NEWBEAT)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "Riye (PEACH A!)",
@@ -8064,16 +8112,20 @@
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Roa (Someilsang)",
-    "Personality": "ENFJ"
-  },
-  {
     "Name (Group)": "Roa (Rocking doll)",
     "Personality": "ISFP"
   },
   {
+    "Name (Group)": "Roa (Someilsang)",
+    "Personality": "ENFJ"
+  },
+  {
     "Name (Group)": "Roa (Witchers)",
     "Personality": "ISTP"
+  },
+  {
+    "Name (Group)": "Roah (KIIRAS)",
+    "Personality": "ISFP"
   },
   {
     "Name (Group)": "Robin (n.SSign)",
@@ -8144,12 +8196,12 @@
     "Personality": "ISFJ"
   },
   {
-    "Name (Group)": "Rui (XLOV)",
-    "Personality": "ENFJ"
-  },
-  {
     "Name (Group)": "Rui",
     "Personality": "INFP"
+  },
+  {
+    "Name (Group)": "Rui (XLOV)",
+    "Personality": "ENFJ"
   },
   {
     "Name (Group)": "Ruka (BABYMONSTER)",
@@ -8280,16 +8332,16 @@
     "Personality": "ISTJ"
   },
   {
-    "Name (Group)": "Sanghyeon (ALD1)",
-    "Personality": "ENFJ"
-  },
-  {
     "Name (Group)": "Sangah (LIGHTSUM)",
     "Personality": "ESFJ"
   },
   {
     "Name (Group)": "Sangha (NOMAD)",
     "Personality": "ESFJ"
+  },
+  {
+    "Name (Group)": "Sanghyeon (ALD1)",
+    "Personality": "ENFJ"
   },
   {
     "Name (Group)": "Sangwon (ALD1)",
@@ -8316,12 +8368,12 @@
     "Personality": "INTP"
   },
   {
-    "Name (Group)": "Sarang (PRITTI-G)",
-    "Personality": "ENFP"
-  },
-  {
     "Name (Group)": "Sarang (Candy Shop)",
     "Personality": "ISTP"
+  },
+  {
+    "Name (Group)": "Sarang (PRITTI-G)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "Satbyeol (PIXY)",
@@ -8348,12 +8400,12 @@
     "Personality": "ENFJ"
   },
   {
-    "Name (Group)": "Seeun (xikers)",
-    "Personality": "ESTJ"
-  },
-  {
     "Name (Group)": "Seeun (STAYC)",
     "Personality": "INFP"
+  },
+  {
+    "Name (Group)": "Seeun (xikers)",
+    "Personality": "ESTJ"
   },
   {
     "Name (Group)": "Sehun (EXO)",
@@ -8380,12 +8432,12 @@
     "Personality": "ESFP"
   },
   {
-    "Name (Group)": "Seita (NEXZ)",
-    "Personality": "INFJ"
-  },
-  {
     "Name (Group)": "Seita (DXMON)",
     "Personality": "ISTJ"
+  },
+  {
+    "Name (Group)": "Seita (NEXZ)",
+    "Personality": "INFJ"
   },
   {
     "Name (Group)": "Sejun (VICTON)",
@@ -8512,12 +8564,12 @@
     "Personality": "ESTP"
   },
   {
-    "Name (Group)": "Seongmin (ONE PACT)",
-    "Personality": "ENFJ"
-  },
-  {
     "Name (Group)": "Seongmin (CRAVITY)",
     "Personality": "INTP"
+  },
+  {
+    "Name (Group)": "Seongmin (ONE PACT)",
+    "Personality": "ENFJ"
   },
   {
     "Name (Group)": "Seongmo (82MAJOR)",
@@ -8548,44 +8600,44 @@
     "Personality": "INTJ"
   },
   {
-    "Name (Group)": "Seowon (UNIS)",
-    "Personality": "ESTJ"
-  },
-  {
     "Name (Group)": "Seowon (ADYA)",
     "Personality": "INFJ"
-  },
-  {
-    "Name (Group)": "Seowon (NINE.i)",
-    "Personality": "INFP"
   },
   {
     "Name (Group)": "Seowon (Lapillus)",
     "Personality": "INFP"
   },
   {
-    "Name (Group)": "Seoyeon (FAVORITE)",
-    "Personality": "ENFJ"
+    "Name (Group)": "Seowon (NINE.i)",
+    "Personality": "INFP"
   },
   {
-    "Name (Group)": "Seoyeon (CSR)",
-    "Personality": "ENFP"
-  },
-  {
-    "Name (Group)": "Seoyeon (YOURS)",
-    "Personality": "ENFP"
+    "Name (Group)": "Seowon (UNIS)",
+    "Personality": "ESTJ"
   },
   {
     "Name (Group)": "Seoyeon",
     "Personality": "INFP"
   },
   {
-    "Name (Group)": "SeoYeon (tripleS)",
-    "Personality": "ISFP"
+    "Name (Group)": "Seoyeon (CSR)",
+    "Personality": "ENFP"
+  },
+  {
+    "Name (Group)": "Seoyeon (FAVORITE)",
+    "Personality": "ENFJ"
   },
   {
     "Name (Group)": "Seoyeon (fromis_9)",
     "Personality": "ISTJ"
+  },
+  {
+    "Name (Group)": "SeoYeon (tripleS)",
+    "Personality": "ISFP"
+  },
+  {
+    "Name (Group)": "Seoyeon (YOURS)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "Seoyoon (BOTOPASS)",
@@ -8596,12 +8648,12 @@
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Sera (SPIA)",
-    "Personality": "ENTP"
-  },
-  {
     "Name (Group)": "Sera (9MUSES)",
     "Personality": "ISFP"
+  },
+  {
+    "Name (Group)": "Sera (SPIA)",
+    "Personality": "ENTP"
   },
   {
     "Name (Group)": "Serim (CRAVITY)",
@@ -8624,12 +8676,12 @@
     "Personality": "INTP"
   },
   {
-    "Name (Group)": "Seulgi (Rendezvous)",
-    "Personality": "ENFJ"
-  },
-  {
     "Name (Group)": "Seulgi (Red Velvet)",
     "Personality": "ISFP"
+  },
+  {
+    "Name (Group)": "Seulgi (Rendezvous)",
+    "Personality": "ENFJ"
   },
   {
     "Name (Group)": "Seulhee (Rainbow Note)",
@@ -8638,6 +8690,10 @@
   {
     "Name (Group)": "Seung (SUPERKIND)",
     "Personality": "ENTP"
+  },
+  {
+    "Name (Group)": "Seung Hee (CLC)",
+    "Personality": "ISFP"
   },
   {
     "Name (Group)": "Seungchae (ADYA)",
@@ -8656,10 +8712,6 @@
     "Personality": "INFP"
   },
   {
-    "Name (Group)": "Seung Hee (CLC)",
-    "Personality": "ISFP"
-  },
-  {
     "Name (Group)": "Seunghee (OH MY GIRL)",
     "Personality": "ISFJ"
   },
@@ -8672,24 +8724,24 @@
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Seunghwan (ATBO)",
-    "Personality": "ENFP"
-  },
-  {
     "Name (Group)": "Seunghwan (AIMERS)",
     "Personality": "ESFP"
+  },
+  {
+    "Name (Group)": "Seunghwan (ATBO)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "Seunghyub (N.Flying)",
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Seunghyun (JWiiver)",
-    "Personality": "INFP"
-  },
-  {
     "Name (Group)": "Seunghyun (AIMERS)",
     "Personality": "ISTP"
+  },
+  {
+    "Name (Group)": "Seunghyun (JWiiver)",
+    "Personality": "INFP"
   },
   {
     "Name (Group)": "Seungi",
@@ -8868,11 +8920,11 @@
     "Personality": "ISFJ"
   },
   {
-    "Name (Group)": "Shotaro (RIIZE)",
+    "Name (Group)": "Shotaro (DXTEEN)",
     "Personality": "ESFP"
   },
   {
-    "Name (Group)": "Shotaro (DXTEEN)",
+    "Name (Group)": "Shotaro (RIIZE)",
     "Personality": "ESFP"
   },
   {
@@ -8944,16 +8996,16 @@
     "Personality": "INTJ"
   },
   {
-    "Name (Group)": "Sion (YOUNITE)",
-    "Personality": "ENTJ"
+    "Name (Group)": "Sion (Geenius)",
+    "Personality": "ISFJ"
   },
   {
     "Name (Group)": "Sion (NCT)",
     "Personality": "INTJ"
   },
   {
-    "Name (Group)": "Sion (Geenius)",
-    "Personality": "ISFJ"
+    "Name (Group)": "Sion (YOUNITE)",
+    "Personality": "ENTJ"
   },
   {
     "Name (Group)": "Sirin",
@@ -8972,11 +9024,11 @@
     "Personality": "ENTJ"
   },
   {
-    "Name (Group)": "Siwoo (JUST B)",
+    "Name (Group)": "Siwoo (BXB)",
     "Personality": "ISFP"
   },
   {
-    "Name (Group)": "Siwoo (BXB)",
+    "Name (Group)": "Siwoo (JUST B)",
     "Personality": "ISFP"
   },
   {
@@ -8992,12 +9044,12 @@
     "Personality": "INFP"
   },
   {
-    "Name (Group)": "Siyun (NOWZ)",
-    "Personality": "ENFP"
-  },
-  {
     "Name (Group)": "Siyun (AMPERS&ONE)",
     "Personality": "ISTJ"
+  },
+  {
+    "Name (Group)": "Siyun (NOWZ)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "Snacky Chan (UpTown)",
@@ -9012,12 +9064,12 @@
     "Personality": "ENTJ"
   },
   {
-    "Name (Group)": "SoEun (TRI.BE)",
-    "Personality": "ENFP"
-  },
-  {
     "Name (Group)": "Soeun (tracer)",
     "Personality": "ISTP"
+  },
+  {
+    "Name (Group)": "SoEun (TRI.BE)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "Soffee",
@@ -9032,20 +9084,20 @@
     "Personality": "ESTJ"
   },
   {
-    "Name (Group)": "Sohee (Rocket Punch)",
-    "Personality": "INFJ"
+    "Name (Group)": "Sohee (Atlantis Kitsune)",
+    "Personality": "ISFJ"
   },
   {
     "Name (Group)": "Sohee (ICHILLIN')",
     "Personality": "INFJ"
   },
   {
-    "Name (Group)": "Sohee (Atlantis Kitsune)",
-    "Personality": "ISFJ"
-  },
-  {
     "Name (Group)": "Sohee (RIIZE)",
     "Personality": "ISTP"
+  },
+  {
+    "Name (Group)": "Sohee (Rocket Punch)",
+    "Personality": "INFJ"
   },
   {
     "Name (Group)": "Sohn Yujin",
@@ -9172,11 +9224,11 @@
     "Personality": "ENTP"
   },
   {
-    "Name (Group)": "Soo (Coupsis)",
+    "Name (Group)": "Soo (3piece)",
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Soo (3piece)",
+    "Name (Group)": "Soo (Coupsis)",
     "Personality": "ENFP"
   },
   {
@@ -9184,48 +9236,48 @@
     "Personality": "ESFP"
   },
   {
-    "Name (Group)": "Soobin (WJSN)",
-    "Personality": "ENFP"
-  },
-  {
     "Name (Group)": "Soobin (TXT)",
     "Personality": "ISFP"
+  },
+  {
+    "Name (Group)": "Soobin (WJSN)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "Soodam (SECRET NUMBER)",
     "Personality": "ISFP"
   },
   {
-    "Name (Group)": "Soohyun (U-KISS)",
-    "Personality": "ENFJ"
-  },
-  {
     "Name (Group)": "Soohyun (Be:MAX)",
     "Personality": "INTP"
+  },
+  {
+    "Name (Group)": "Soohyun (U-KISS)",
+    "Personality": "ENFJ"
   },
   {
     "Name (Group)": "Sooin (MEOVV)",
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Soojin (Rhea)",
-    "Personality": "ESTP"
-  },
-  {
     "Name (Group)": "Soojin (I-DLE)",
     "Personality": "ISFP"
+  },
+  {
+    "Name (Group)": "Soojin (Rhea)",
+    "Personality": "ESTP"
   },
   {
     "Name (Group)": "SooMin (tripleS)",
     "Personality": "ENTP"
   },
   {
-    "Name (Group)": "Soon (N.CUS)",
-    "Personality": "ENFP"
-  },
-  {
     "Name (Group)": "Soon",
     "Personality": "INFP"
+  },
+  {
+    "Name (Group)": "Soon (N.CUS)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "Soovi",
@@ -9276,10 +9328,6 @@
     "Personality": "INFP"
   },
   {
-    "Name (Group)": "Soyeon (T-ARA)",
-    "Personality": "ENFJ"
-  },
-  {
     "Name (Group)": "Soyeon (I-DLE)",
     "Personality": "INTJ"
   },
@@ -9288,12 +9336,20 @@
     "Personality": "ISFP"
   },
   {
+    "Name (Group)": "Soyeon (T-ARA)",
+    "Personality": "ENFJ"
+  },
+  {
     "Name (Group)": "Soyul (Chic'6 Muscats)",
     "Personality": "ESFJ"
   },
   {
     "Name (Group)": "Sriya (BLACKSWAN)",
     "Personality": "ENFJ"
+  },
+  {
+    "Name (Group)": "St. Van (VAV)",
+    "Personality": "ISFJ"
   },
   {
     "Name (Group)": "Stella (Hearts2Hearts)",
@@ -9308,24 +9364,24 @@
     "Personality": "INFP"
   },
   {
-    "Name (Group)": "St. Van (VAV)",
-    "Personality": "ISFJ"
-  },
-  {
     "Name (Group)": "Su Yeon",
     "Personality": "INFP"
-  },
-  {
-    "Name (Group)": "SuA (Dreamcatcher)",
-    "Personality": "ESFJ"
   },
   {
     "Name (Group)": "Sua (CSR)",
     "Personality": "ESFP"
   },
   {
+    "Name (Group)": "SuA (Dreamcatcher)",
+    "Personality": "ESFJ"
+  },
+  {
     "Name (Group)": "Sua (PIXY)",
     "Personality": "ESTP"
+  },
+  {
+    "Name (Group)": "Subin (A Train To Autumn)",
+    "Personality": "ISFP"
   },
   {
     "Name (Group)": "Subin (Heart)",
@@ -9334,10 +9390,6 @@
   {
     "Name (Group)": "Subin (VICTON)",
     "Personality": "INTJ"
-  },
-  {
-    "Name (Group)": "Subin (A Train To Autumn)",
-    "Personality": "ISFP"
   },
   {
     "Name (Group)": "Suga (BTS)",
@@ -9372,12 +9424,12 @@
     "Personality": "ISTP"
   },
   {
-    "Name (Group)": "Sui (KiiiKiii)",
-    "Personality": "ENTP"
-  },
-  {
     "Name (Group)": "Sui (Candy Shop)",
     "Personality": "ESFJ"
+  },
+  {
+    "Name (Group)": "Sui (KiiiKiii)",
+    "Personality": "ENTP"
   },
   {
     "Name (Group)": "Sujeong (Lovelyz)",
@@ -9412,12 +9464,12 @@
     "Personality": "INFP"
   },
   {
-    "Name (Group)": "Sumin (xikers)",
-    "Personality": "INTJ"
-  },
-  {
     "Name (Group)": "Sumin (STAYC)",
     "Personality": "ISFJ"
+  },
+  {
+    "Name (Group)": "Sumin (xikers)",
+    "Personality": "INTJ"
   },
   {
     "Name (Group)": "Summer (ODD YOUTH)",
@@ -9448,12 +9500,12 @@
     "Personality": "ENTJ"
   },
   {
-    "Name (Group)": "Sunghoon (SECHSKIES)",
-    "Personality": "ESFP"
-  },
-  {
     "Name (Group)": "Sunghoon (ENHYPEN)",
     "Personality": "ISTJ"
+  },
+  {
+    "Name (Group)": "Sunghoon (SECHSKIES)",
+    "Personality": "ESFP"
   },
   {
     "Name (Group)": "Sunghyuk (TAN)",
@@ -9520,12 +9572,12 @@
     "Personality": "ENTP"
   },
   {
-    "Name (Group)": "Sunwoo (THE BOYZ)",
-    "Personality": "ENTP"
-  },
-  {
     "Name (Group)": "Sunwoo (Evermore Muse)",
     "Personality": "ESFJ"
+  },
+  {
+    "Name (Group)": "Sunwoo (THE BOYZ)",
+    "Personality": "ENTP"
   },
   {
     "Name (Group)": "Suren (MODYSSEY)",
@@ -9536,15 +9588,15 @@
     "Personality": "ENTJ"
   },
   {
+    "Name (Group)": "Suyeon (BABYS)",
+    "Personality": "ISTJ"
+  },
+  {
     "Name (Group)": "Suyeon (VVUP)",
     "Personality": "INTP"
   },
   {
     "Name (Group)": "Suyeon (Weki Meki)",
-    "Personality": "ISTJ"
-  },
-  {
-    "Name (Group)": "Suyeon (BABYS)",
     "Personality": "ISTJ"
   },
   {
@@ -9560,12 +9612,12 @@
     "Personality": "INTP"
   },
   {
-    "Name (Group)": "Suzy Bae",
-    "Personality": "ISFP"
-  },
-  {
     "Name (Group)": "Suzy (MAJORS)",
     "Personality": "ISTP"
+  },
+  {
+    "Name (Group)": "Suzy Bae",
+    "Personality": "ISFP"
   },
   {
     "Name (Group)": "Sviat",
@@ -9616,12 +9668,12 @@
     "Personality": "INFP"
   },
   {
-    "Name (Group)": "Taehun (TNX)",
-    "Personality": "ENFJ"
-  },
-  {
     "Name (Group)": "Taehun (NINE.i)",
     "Personality": "ESTJ"
+  },
+  {
+    "Name (Group)": "Taehun (TNX)",
+    "Personality": "ENFJ"
   },
   {
     "Name (Group)": "Taehyun (TXT)",
@@ -9644,12 +9696,12 @@
     "Personality": "ENFJ"
   },
   {
-    "Name (Group)": "Taerae (TEMPEST)",
-    "Personality": "ISTJ"
-  },
-  {
     "Name (Group)": "Taemin (SHINee)",
     "Personality": "INFP"
+  },
+  {
+    "Name (Group)": "Taerae (TEMPEST)",
+    "Personality": "ISTJ"
   },
   {
     "Name (Group)": "Taeri (STRAW)",
@@ -9700,12 +9752,12 @@
     "Personality": "ISTP"
   },
   {
-    "Name (Group)": "Tag (ONE PACT)",
-    "Personality": "INFP"
-  },
-  {
     "Name (Group)": "Tag (Golden Child)",
     "Personality": "INTP"
+  },
+  {
+    "Name (Group)": "Tag (ONE PACT)",
+    "Personality": "INFP"
   },
   {
     "Name (Group)": "Taichi (DXTEEN)",
@@ -9784,6 +9836,10 @@
     "Personality": "INFJ"
   },
   {
+    "Name (Group)": "Tina (UNCHILD)",
+    "Personality": "INFP"
+  },
+  {
     "Name (Group)": "TK",
     "Personality": "ENFP"
   },
@@ -9860,6 +9916,10 @@
     "Personality": "ESFP"
   },
   {
+    "Name (Group)": "U-Know (TVXQ!)",
+    "Personality": "ENFJ"
+  },
+  {
     "Name (Group)": "Uchae (NATURE)",
     "Personality": "ISFJ"
   },
@@ -9881,10 +9941,6 @@
   },
   {
     "Name (Group)": "Uka",
-    "Personality": "ENFJ"
-  },
-  {
-    "Name (Group)": "U-Know (TVXQ!)",
     "Personality": "ENFJ"
   },
   {
@@ -9944,12 +10000,12 @@
     "Personality": "INTP"
   },
   {
-    "Name (Group)": "Victoria (f(x))",
-    "Personality": "ISTJ"
-  },
-  {
     "Name (Group)": "Victor",
     "Personality": "ISFP"
+  },
+  {
+    "Name (Group)": "Victoria (f(x))",
+    "Personality": "ISTJ"
   },
   {
     "Name (Group)": "Viin (0WAVE)",
@@ -10076,12 +10132,12 @@
     "Personality": "INFJ"
   },
   {
-    "Name (Group)": "Wish (ViV)",
-    "Personality": "INTJ"
-  },
-  {
     "Name (Group)": "Wish (EPEX)",
     "Personality": "ISFP"
+  },
+  {
+    "Name (Group)": "Wish (ViV)",
+    "Personality": "INTJ"
   },
   {
     "Name (Group)": "Won (Ciipher)",
@@ -10096,12 +10152,12 @@
     "Personality": "ISTP"
   },
   {
-    "Name (Group)": "Wonbin (RIIZE)",
-    "Personality": "INFJ"
-  },
-  {
     "Name (Group)": "Wonbin (ATBO)",
     "Personality": "ISFJ"
+  },
+  {
+    "Name (Group)": "Wonbin (RIIZE)",
+    "Personality": "INFJ"
   },
   {
     "Name (Group)": "Wonhee (ILLIT)",
@@ -10132,12 +10188,12 @@
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Wonjun (E'LAST)",
-    "Personality": "ENFP"
-  },
-  {
     "Name (Group)": "Wonjun (ABLUE)",
     "Personality": "ISFJ"
+  },
+  {
+    "Name (Group)": "Wonjun (E'LAST)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "Wonpil (DAY6)",
@@ -10176,12 +10232,12 @@
     "Personality": "INFP"
   },
   {
-    "Name (Group)": "Woojin (MY.st)",
-    "Personality": "ESFJ"
-  },
-  {
     "Name (Group)": "Woojin (GHOST9)",
     "Personality": "ISFJ"
+  },
+  {
+    "Name (Group)": "Woojin (MY.st)",
+    "Personality": "ESFJ"
   },
   {
     "Name (Group)": "Wooju (BLITZERS)",
@@ -10228,12 +10284,12 @@
     "Personality": "ENTJ"
   },
   {
-    "Name (Group)": "Wooyeon (WOOAH)",
-    "Personality": "ENFP"
-  },
-  {
     "Name (Group)": "Wooyeon (Be:MAX)",
     "Personality": "ISFP"
+  },
+  {
+    "Name (Group)": "Wooyeon (WOOAH)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "Wooyoung (2PM)",
@@ -10448,15 +10504,15 @@
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Yebin (DIA)",
-    "Personality": "ENFP"
+    "Name (Group)": "Ye-on (Hearts2Hearts)",
+    "Personality": "ISTJ"
   },
   {
     "Name (Group)": "Yebin",
     "Personality": "ISFJ"
   },
   {
-    "Name (Group)": "Yechan (TRENDZ)",
+    "Name (Group)": "Yebin (DIA)",
     "Personality": "ENFP"
   },
   {
@@ -10464,24 +10520,32 @@
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Yechan (xikers)",
-    "Personality": "ENTP"
-  },
-  {
     "Name (Group)": "Yechan (OMEGA X)",
     "Personality": "ESFJ"
+  },
+  {
+    "Name (Group)": "Yechan (TRENDZ)",
+    "Personality": "ENFP"
+  },
+  {
+    "Name (Group)": "Yechan (xikers)",
+    "Personality": "ENTP"
   },
   {
     "Name (Group)": "Yedam (ONE PACT)",
     "Personality": "ENFP"
   },
   {
+    "Name (Group)": "Yeeun",
+    "Personality": "INFP"
+  },
+  {
     "Name (Group)": "Yeeun (CLC)",
     "Personality": "INFJ"
   },
   {
-    "Name (Group)": "Yeeun",
-    "Personality": "INFP"
+    "Name (Group)": "Yeeun (UNCHILD)",
+    "Personality": "ESTP"
   },
   {
     "Name (Group)": "Yeham (CSR)",
@@ -10500,12 +10564,12 @@
     "Personality": "INFJ"
   },
   {
-    "Name (Group)": "Yeji (VIVID)",
-    "Personality": "ESFJ"
-  },
-  {
     "Name (Group)": "Yeji (ITZY)",
     "Personality": "ESTJ"
+  },
+  {
+    "Name (Group)": "Yeji (VIVID)",
+    "Personality": "ESFJ"
   },
   {
     "Name (Group)": "Yejin (1set)",
@@ -10528,16 +10592,16 @@
     "Personality": "ISTJ"
   },
   {
-    "Name (Group)": "Yena (IZ*ONE)",
-    "Personality": "ENFP"
+    "Name (Group)": "Yena (APRIL)",
+    "Personality": "ISFJ"
   },
   {
     "Name (Group)": "Yena (CooKie)",
     "Personality": "ENTP"
   },
   {
-    "Name (Group)": "Yena (APRIL)",
-    "Personality": "ISFJ"
+    "Name (Group)": "Yena (IZ*ONE)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "Yeo Gang Dong",
@@ -10560,10 +10624,6 @@
     "Personality": "ISFP"
   },
   {
-    "Name (Group)": "Ye-on (Hearts2Hearts)",
-    "Personality": "ISTJ"
-  },
-  {
     "Name (Group)": "Yeonhee (EL7Z UP)",
     "Personality": "ENFP"
   },
@@ -10580,12 +10640,12 @@
     "Personality": "INFJ"
   },
   {
-    "Name (Group)": "Yeonjeong (Q6IX)",
-    "Personality": "INFP"
-  },
-  {
     "Name (Group)": "Yeonjeong",
     "Personality": "ISTJ"
+  },
+  {
+    "Name (Group)": "Yeonjeong (Q6IX)",
+    "Personality": "INFP"
   },
   {
     "Name (Group)": "YeonJi (tripleS)",
@@ -10594,10 +10654,6 @@
   {
     "Name (Group)": "Yeonjun (TXT)",
     "Personality": "ENFP"
-  },
-  {
-    "Name (Group)": "Yeonwoo (NOWZ)",
-    "Personality": "I-T-"
   },
   {
     "Name (Group)": "Yeonjung (WJSN)",
@@ -10626,6 +10682,10 @@
   {
     "Name (Group)": "Yeontae (SKYE)",
     "Personality": "INTP"
+  },
+  {
+    "Name (Group)": "Yeonwoo (NOWZ)",
+    "Personality": "I-T-"
   },
   {
     "Name (Group)": "Yeoreum (WJSN)",
@@ -10664,12 +10724,12 @@
     "Personality": "ENTP"
   },
   {
-    "Name (Group)": "Yeseo (MADEIN)",
-    "Personality": "ENFJ"
-  },
-  {
     "Name (Group)": "Yeseo (BABYS)",
     "Personality": "INTP"
+  },
+  {
+    "Name (Group)": "Yeseo (MADEIN)",
+    "Personality": "ENFJ"
   },
   {
     "Name (Group)": "Yeseul",
@@ -10692,12 +10752,12 @@
     "Personality": "INFJ"
   },
   {
-    "Name (Group)": "Yewon (HOT ISSUE)",
-    "Personality": "INFJ"
-  },
-  {
     "Name (Group)": "Yewon (FIFTY FIFTY)",
     "Personality": "ISFJ"
+  },
+  {
+    "Name (Group)": "Yewon (HOT ISSUE)",
+    "Personality": "INFJ"
   },
   {
     "Name (Group)": "Yewon (MIMIIROSE)",
@@ -10708,24 +10768,32 @@
     "Personality": "ENTJ"
   },
   {
+    "Name (Group)": "Yi Chen",
+    "Personality": "ENFJ"
+  },
+  {
     "Name (Group)": "Yichen (MODYSSEY)",
     "Personality": "INFJ"
   },
   {
-    "Name (Group)": "Yi Chen",
-    "Personality": "ENFJ"
+    "Name (Group)": "Yihyun (Baby DONT Cry)",
+    "Personality": "INFJ"
   },
   {
     "Name (Group)": "Yiren (EVERGLOW)",
     "Personality": "INFP"
   },
   {
+    "Name (Group)": "Yiyeon (BVNDIT)",
+    "Personality": "ISFP"
+  },
+  {
     "Name (Group)": "Yiyeon (Evermore Muse)",
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Yiyeon (BVNDIT)",
-    "Personality": "ISFP"
+    "Name (Group)": "Yo-na (STRAW)",
+    "Personality": "INTP"
   },
   {
     "Name (Group)": "Yoel (AIMERS)",
@@ -10733,10 +10801,6 @@
   },
   {
     "Name (Group)": "Yona",
-    "Personality": "INTP"
-  },
-  {
-    "Name (Group)": "Yo-na (STRAW)",
     "Personality": "INTP"
   },
   {
@@ -10800,11 +10864,11 @@
     "Personality": "ISFJ"
   },
   {
-    "Name (Group)": "Yoon (STAYC)",
+    "Name (Group)": "Yoon (NOWZ)",
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Yoon (NOWZ)",
+    "Name (Group)": "Yoon (STAYC)",
     "Personality": "ENFP"
   },
   {
@@ -10856,12 +10920,12 @@
     "Personality": "ESFP"
   },
   {
-    "Name (Group)": "Yoona (UNIS)",
-    "Personality": "ESTP"
-  },
-  {
     "Name (Group)": "Yoona (I.C.E)",
     "Personality": "INFP"
+  },
+  {
+    "Name (Group)": "Yoona (UNIS)",
+    "Personality": "ESTP"
   },
   {
     "Name (Group)": "Yoonchae (KATSEYE)",
@@ -10924,12 +10988,12 @@
     "Personality": "INFP"
   },
   {
-    "Name (Group)": "YOU (YdBB)",
-    "Personality": "INFP"
-  },
-  {
     "Name (Group)": "You (ABLUE)",
     "Personality": "ISTP"
+  },
+  {
+    "Name (Group)": "YOU (YdBB)",
+    "Personality": "INFP"
   },
   {
     "Name (Group)": "You Dayeon (LipBubble)",
@@ -10954,10 +11018,6 @@
   {
     "Name (Group)": "Young K (DAY6)",
     "Personality": "INTP"
-  },
-  {
-    "Name (Group)": "Youngseo (ALLDAY PROJECT)",
-    "Personality": "ESTJ"
   },
   {
     "Name (Group)": "Young Tak",
@@ -10992,24 +11052,28 @@
     "Personality": "INFP"
   },
   {
-    "Name (Group)": "Youngjae (TWS)",
-    "Personality": "ISFJ"
-  },
-  {
     "Name (Group)": "Youngjae (GOT7)",
     "Personality": "ISTJ"
+  },
+  {
+    "Name (Group)": "Youngjae (TWS)",
+    "Personality": "ISFJ"
   },
   {
     "Name (Group)": "Youngji (KARA)",
     "Personality": "ISFJ"
   },
   {
-    "Name (Group)": "Youngseo (BAE173)",
-    "Personality": "ESFP"
-  },
-  {
     "Name (Group)": "Youngseo",
     "Personality": "ESTJ"
+  },
+  {
+    "Name (Group)": "Youngseo (ALLDAY PROJECT)",
+    "Personality": "ESTJ"
+  },
+  {
+    "Name (Group)": "Youngseo (BAE173)",
+    "Personality": "ESFP"
   },
   {
     "Name (Group)": "Youngwon (I:MOND)",
@@ -11036,6 +11100,10 @@
     "Personality": "INTP"
   },
   {
+    "Name (Group)": "Yubin (ARTBEAT v)",
+    "Personality": "ISFJ"
+  },
+  {
     "Name (Group)": "Yubin (Bling Bling)",
     "Personality": "ESFJ"
   },
@@ -11044,16 +11112,12 @@
     "Personality": "ESFP"
   },
   {
-    "Name (Group)": "Yubin (ARTBEAT v)",
-    "Personality": "ISFJ"
+    "Name (Group)": "Yubin (OH MY GIRL)",
+    "Personality": "ISTJ"
   },
   {
     "Name (Group)": "YuBin (tripleS)",
     "Personality": "ISTP"
-  },
-  {
-    "Name (Group)": "Yubin (OH MY GIRL)",
-    "Personality": "ISTJ"
   },
   {
     "Name (Group)": "Yuchan (NCHIVE)",
@@ -11076,12 +11140,12 @@
     "Personality": "INTP"
   },
   {
-    "Name (Group)": "Yui (NTORE)",
-    "Personality": "INFP"
-  },
-  {
     "Name (Group)": "Yui",
     "Personality": "ISFJ"
+  },
+  {
+    "Name (Group)": "Yui (NTORE)",
+    "Personality": "INFP"
   },
   {
     "Name (Group)": "Yuiko",
@@ -11092,12 +11156,12 @@
     "Personality": "ESFP"
   },
   {
-    "Name (Group)": "Yuisa (eite)",
-    "Personality": "ESFJ"
-  },
-  {
     "Name (Group)": "Yuisa",
     "Personality": "ISFJ"
+  },
+  {
+    "Name (Group)": "Yuisa (eite)",
+    "Personality": "ESFJ"
   },
   {
     "Name (Group)": "Yuito",
@@ -11116,20 +11180,20 @@
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Yujin (Kep1er)",
-    "Personality": "ENFP"
-  },
-  {
     "Name (Group)": "Yujin (IVE)",
     "Personality": "ISTP"
   },
   {
-    "Name (Group)": "Yuju (GFRIEND)",
-    "Personality": "ENFJ"
+    "Name (Group)": "Yujin (Kep1er)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "Yuju (Cherry Bullet)",
     "Personality": "INFP"
+  },
+  {
+    "Name (Group)": "Yuju (GFRIEND)",
+    "Personality": "ENFJ"
   },
   {
     "Name (Group)": "Yujun",
@@ -11140,16 +11204,16 @@
     "Personality": "ISFP"
   },
   {
-    "Name (Group)": "Yuki (SATURDAY)",
-    "Personality": "ENFP"
-  },
-  {
     "Name (Group)": "Yuki (NEXZ)",
     "Personality": "INFP"
   },
   {
     "Name (Group)": "Yuki (PURPLE KISS)",
     "Personality": "ISFJ"
+  },
+  {
+    "Name (Group)": "Yuki (SATURDAY)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "Yukika (Real Girls Project)",
@@ -11180,12 +11244,12 @@
     "Personality": "INFP"
   },
   {
-    "Name (Group)": "Yuma (LUN8)",
-    "Personality": "INFP"
-  },
-  {
     "Name (Group)": "Yuma (&TEAM)",
     "Personality": "ISTJ"
+  },
+  {
+    "Name (Group)": "Yuma (LUN8)",
+    "Personality": "INFP"
   },
   {
     "Name (Group)": "Yume (LOVEONE)",
@@ -11196,12 +11260,12 @@
     "Personality": "ISFP"
   },
   {
-    "Name (Group)": "Yuna (LOVEONE)",
+    "Name (Group)": "Yuna",
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Yuna",
-    "Personality": "ENFP"
+    "Name (Group)": "Yuna (BB GIRLS)",
+    "Personality": "ISTJ"
   },
   {
     "Name (Group)": "Yuna (CSR)",
@@ -11212,8 +11276,8 @@
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Yuna (BB GIRLS)",
-    "Personality": "ISTJ"
+    "Name (Group)": "Yuna (LOVEONE)",
+    "Personality": "ENFP"
   },
   {
     "Name (Group)": "Yunah (ILLIT)",
@@ -11272,12 +11336,12 @@
     "Personality": "ESFJ"
   },
   {
-    "Name (Group)": "Yura (Girl's Day)",
-    "Personality": "ENFJ"
-  },
-  {
     "Name (Group)": "Yura",
     "Personality": "ESTP"
+  },
+  {
+    "Name (Group)": "Yura (Girl's Day)",
+    "Personality": "ENFJ"
   },
   {
     "Name (Group)": "Yura (PICKUS)",
@@ -11288,12 +11352,12 @@
     "Personality": "ISFP"
   },
   {
-    "Name (Group)": "Yuri (Girls' Generation)",
-    "Personality": "ENFJ"
-  },
-  {
     "Name (Group)": "Yuri",
     "Personality": "ENFP"
+  },
+  {
+    "Name (Group)": "Yuri (Girls' Generation)",
+    "Personality": "ENFJ"
   },
   {
     "Name (Group)": "Yurim (3YE)",
@@ -11348,12 +11412,12 @@
     "Personality": "ISFP"
   },
   {
-    "Name (Group)": "Zen (IB147)",
-    "Personality": "ENTJ"
-  },
-  {
     "Name (Group)": "Zen",
     "Personality": "ISTP"
+  },
+  {
+    "Name (Group)": "Zen (IB147)",
+    "Personality": "ENTJ"
   },
   {
     "Name (Group)": "Zen Zen",
@@ -11376,12 +11440,12 @@
     "Personality": "ISTP"
   },
   {
-    "Name (Group)": "Zero (TFN)",
-    "Personality": "ESFJ"
-  },
-  {
     "Name (Group)": "Zero (NEKIRU)",
     "Personality": "ESTP"
+  },
+  {
+    "Name (Group)": "Zero (TFN)",
+    "Personality": "ESFJ"
   },
   {
     "Name (Group)": "Zeyu (BOY STORY)",
@@ -11420,6 +11484,10 @@
     "Personality": "ENFJ"
   },
   {
+    "Name (Group)": "Zheyi (MODYSSEY)",
+    "Personality": "ENFJ"
+  },
+  {
     "Name (Group)": "Zhou Jiaqi",
     "Personality": "ISFP"
   },
@@ -11440,15 +11508,11 @@
     "Personality": "ENTJ"
   },
   {
-    "Name (Group)": "Zheyi (MODYSSEY)",
-    "Personality": "ENFJ"
-  },
-  {
-    "Name (Group)": "Zihao (MODYSSEY)",
+    "Name (Group)": "Zihao (BOY STORY)",
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Zihao (BOY STORY)",
+    "Name (Group)": "Zihao (MODYSSEY)",
     "Personality": "ENFP"
   },
   {
