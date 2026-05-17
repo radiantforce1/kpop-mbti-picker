@@ -112,6 +112,7 @@ export default function KpopMbtiPicker() {
       calculateMbti(picks);
     }
     initialPicksRef.current = null;
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [idols]);
 
   // Sync picks to URL
