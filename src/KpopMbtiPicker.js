@@ -645,7 +645,7 @@ export default function KpopMbtiPicker() {
           Want an idol added or amended? Fill in this{" "}
           <a href="https://forms.gle/ni6CkCGZPktyCiML8" style={s.footerLink}>form</a> and I'll update the data.<br />
           Enjoyed this? Share it with your fellow fans! 💜 Or{" "}
-          <a href="https://buymeacoffee.com/radiantforce" target="_blank" rel="noopener noreferrer" style={s.footerLink}>gift me a photocard 🎴</a> to keep my Yuna and Karina collection growing!<br />
+          <a href="https://buymeacoffee.com/radiantforce" target="_blank" rel="noopener noreferrer" style={s.footerLink}>gift a photocard 🎴</a> to keep my Yuna and Karina collection growing!<br />
           Outreach &amp; feedback:{" "}
           <a href="mailto:kpopmbtipicker@gmail.com" style={s.footerLink}>kpopmbtipicker@gmail.com</a><br /><br />
           <em>Disclaimer: MBTI data is compiled from official and non-official sources and may not be fully accurate.</em>
