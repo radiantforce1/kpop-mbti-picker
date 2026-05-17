@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SEVENTEEN MBTI Personalities | Kpop MBTI Picker</title>
+  <meta name="description" content="Discover the MBTI personality types of all SEVENTEEN members. Group consensus: INFJ (The Advocate). Pick your favorites on Kpop MBTI Picker." />
+  <link rel="canonical" href="https://kpopmbtipicker.com/groups/seventeen" />
+  <meta property="og:title" content="SEVENTEEN MBTI Personalities | Kpop MBTI Picker" />
+  <meta property="og:description" content="See every SEVENTEEN member's MBTI type and add them to your personality picker!" />
+  <meta property="og:url" content="https://kpopmbtipicker.com/groups/seventeen" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Kpop MBTI Picker" />
+  <meta name="twitter:card" content="summary" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 50%, #ede7f6 100%); min-height: 100vh; color: #3d2c4e; padding: 24px 16px 48px; }
+    .site-header { text-align: center; margin-bottom: 20px; }
+    .site-name { font-size: 0.85rem; font-weight: 700; color: #9c6aaa; text-decoration: none; letter-spacing: 0.5px; }
+    .site-name:hover { color: #e91e8c; }
+    .breadcrumb { text-align: center; font-size: 0.8rem; color: #b39ddb; margin-bottom: 24px; }
+    .breadcrumb a { color: #e91e8c; text-decoration: none; }
+    .card { background: white; border-radius: 24px; padding: 28px; max-width: 640px; margin: 0 auto 20px; box-shadow: 0 4px 24px rgba(156,39,176,0.12); }
+    .group-hero { text-align: center; }
+    .group-label { font-size: 0.75rem; font-weight: 700; color: #9c27b0; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+    .group-name { font-size: 2.4rem; font-weight: 900; background: linear-gradient(90deg, #e91e8c, #9c27b0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 6px; }
+    .group-meta { font-size: 0.85rem; color: #9c6aaa; margin-bottom: 24px; }
+    .consensus-label { font-size: 0.75rem; font-weight: 700; color: #9c27b0; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+    .consensus-mbti { font-size: 3rem; font-weight: 900; background: linear-gradient(90deg, #e91e8c, #9c27b0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: 6px; margin-bottom: 4px; }
+    .consensus-name { font-size: 0.95rem; color: #7c5c8a; font-style: italic; margin-bottom: 20px; }
+    .cta-btn { display: inline-block; background: linear-gradient(90deg, #e91e8c, #9c27b0); color: white; border-radius: 14px; padding: 14px 32px; font-size: 1rem; font-weight: 700; text-decoration: none; box-shadow: 0 4px 14px rgba(233,30,140,0.35); }
+    .section-label { font-size: 0.85rem; font-weight: 700; color: #9c27b0; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px; }
+    .split-row { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+    .split-letter-win { font-weight: 800; font-size: 1rem; color: #e91e8c; width: 20px; text-align: center; }
+    .split-letter-alt { font-weight: 800; font-size: 1rem; color: #bbb; width: 20px; text-align: center; }
+    .split-pct-win { font-size: 0.8rem; font-weight: 700; color: #9c27b0; width: 34px; text-align: right; }
+    .split-pct-alt { font-size: 0.8rem; font-weight: 700; color: #bbb; width: 34px; }
+    .split-track { flex: 1; height: 12px; background: #e0e0e0; border-radius: 100px; overflow: hidden; position: relative; }
+    .split-fill { position: absolute; left: 0; top: 0; height: 100%; background: linear-gradient(90deg, #e91e8c, #9c27b0); border-radius: 100px; }
+    .members-grid { display: flex; flex-direction: column; gap: 10px; }
+    .member-row { display: flex; align-items: center; justify-content: space-between; background: #fdf4ff; border: 1.5px solid #f3e5f5; border-radius: 14px; padding: 12px 16px; }
+    .member-name { font-size: 0.95rem; font-weight: 700; color: #3d2c4e; }
+    .member-right { display: flex; align-items: center; gap: 10px; }
+    .member-mbti-name { font-size: 0.8rem; color: #9c6aaa; font-style: italic; }
+    .member-badge { background: linear-gradient(90deg, #e91e8c, #9c27b0); color: white; font-size: 0.78rem; font-weight: 700; border-radius: 100px; padding: 4px 12px; }
+    .description-text { font-size: 0.9rem; color: #4a3358; line-height: 1.7; background: linear-gradient(135deg, #fce4ec, #f3e5f5); border: 1.5px solid #f48fb1; border-radius: 16px; padding: 18px 20px; }
+    .back-link { display: block; text-align: center; margin: 0 auto 20px; max-width: 640px; font-size: 0.85rem; color: #e91e8c; text-decoration: none; font-weight: 600; }
+</style>
+</head>
+<body>
+
+  <div class="site-header">
+    <a href="/" class="site-name">✦ Kpop MBTI Picker ✦</a>
+  </div>
+
+  <div class="breadcrumb">
+    <a href="/">Home</a> › <a href="/groups/">Groups</a> › SEVENTEEN
+  </div>
+
+  <div class="card group-hero">
+    <div class="group-label">Group Profile</div>
+    <div class="group-name">SEVENTEEN</div>
+    <div class="group-meta">13 members · Pledis Entertainment · Debuted 2015</div>
+    
+    <div class="consensus-label">Group Consensus MBTI</div>
+    <div class="consensus-mbti">INFJ</div>
+    <div class="consensus-name">The Advocate</div>
+    <a href="/?picks=Dino%20(SEVENTEEN)%2CDK%20(SEVENTEEN)%2CHoshi%20(SEVENTEEN)%2CJeonghan%20(SEVENTEEN)%2CJoshua%20(SEVENTEEN)%2CJun%20(SEVENTEEN)%2CMingyu%20(SEVENTEEN)%2CS.Coups%20(SEVENTEEN)%2CSeungkwan%20(SEVENTEEN)%2CThe8%20(SEVENTEEN)%2CVernon%20(SEVENTEEN)%2CWonwoo%20(SEVENTEEN)%2CWoozi%20(SEVENTEEN)" class="cta-btn">✨ Add SEVENTEEN to my picker</a>
+  </div>
+
+  
+  <div class="card">
+    <div class="section-label">About INFJ — The Advocate</div>
+    <div class="description-text">INFJs are rare, deeply empathetic idealists driven by a strong sense of purpose. Creative and private, they form deep connections and are fiercely loyal — often described as old souls.</div>
+  </div>
+
+  
+  <div class="card">
+    <div class="section-label">MBTI Breakdown</div>
+    
+    <div class="split-row">
+      <div class="split-letter-win">I</div>
+      <div class="split-pct-win">62%</div>
+      <div class="split-track"><div class="split-fill" style="width:62%"></div></div>
+      <div class="split-pct-alt">38%</div>
+      <div class="split-letter-alt">E</div>
+    </div>
+    <div class="split-row">
+      <div class="split-letter-win">N</div>
+      <div class="split-pct-win">77%</div>
+      <div class="split-track"><div class="split-fill" style="width:77%"></div></div>
+      <div class="split-pct-alt">23%</div>
+      <div class="split-letter-alt">S</div>
+    </div>
+    <div class="split-row">
+      <div class="split-letter-win">F</div>
+      <div class="split-pct-win">54%</div>
+      <div class="split-track"><div class="split-fill" style="width:54%"></div></div>
+      <div class="split-pct-alt">46%</div>
+      <div class="split-letter-alt">T</div>
+    </div>
+    <div class="split-row">
+      <div class="split-letter-win">J</div>
+      <div class="split-pct-win">54%</div>
+      <div class="split-track"><div class="split-fill" style="width:54%"></div></div>
+      <div class="split-pct-alt">46%</div>
+      <div class="split-letter-alt">P</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="section-label">Members</div>
+    <div class="members-grid">
+    <div class="member-row">
+      <div class="member-name">Dino</div>
+      <div class="member-right">
+        <div class="member-mbti-name">The Protagonist</div>
+        <div class="member-badge">ENFJ</div>
+      </div>
+    </div>
+    <div class="member-row">
+      <div class="member-name">DK</div>
+      <div class="member-right">
+        <div class="member-mbti-name">The Mediator</div>
+        <div class="member-badge">INFP</div>
+      </div>
+    </div>
+    <div class="member-row">
+      <div class="member-name">Hoshi</div>
+      <div class="member-right">
+        <div class="member-mbti-name">The Architect</div>
+        <div class="member-badge">INTJ</div>
+      </div>
+    </div>
+    <div class="member-row">
+      <div class="member-name">Jeonghan</div>
+      <div class="member-right">
+        <div class="member-mbti-name">The Defender</div>
+        <div class="member-badge">ISFJ</div>
+      </div>
+    </div>
+    <div class="member-row">
+      <div class="member-name">Joshua</div>
+      <div class="member-right">
+        <div class="member-mbti-name">The Protagonist</div>
+        <div class="member-badge">ENFJ</div>
+      </div>
+    </div>
+    <div class="member-row">
+      <div class="member-name">Jun</div>
+      <div class="member-right">
+        <div class="member-mbti-name">The Entertainer</div>
+        <div class="member-badge">ESFP</div>
+      </div>
+    </div>
+    <div class="member-row">
+      <div class="member-name">Mingyu</div>
+      <div class="member-right">
+        <div class="member-mbti-name">The Commander</div>
+        <div class="member-badge">ENTJ</div>
+      </div>
+    </div>
+    <div class="member-row">
+      <div class="member-name">S.Coups</div>
+      <div class="member-right">
+        <div class="member-mbti-name">The Mediator</div>
+        <div class="member-badge">INFP</div>
+      </div>
+    </div>
+    <div class="member-row">
+      <div class="member-name">Seungkwan</div>
+      <div class="member-right">
+        <div class="member-mbti-name">The Debater</div>
+        <div class="member-badge">ENTP</div>
+      </div>
+    </div>
+    <div class="member-row">
+      <div class="member-name">The8</div>
+      <div class="member-right">
+        <div class="member-mbti-name">The Architect</div>
+        <div class="member-badge">INTJ</div>
+      </div>
+    </div>
+    <div class="member-row">
+      <div class="member-name">Vernon</div>
+      <div class="member-right">
+        <div class="member-mbti-name">The Virtuoso</div>
+        <div class="member-badge">ISTP</div>
+      </div>
+    </div>
+    <div class="member-row">
+      <div class="member-name">Wonwoo</div>
+      <div class="member-right">
+        <div class="member-mbti-name">The Mediator</div>
+        <div class="member-badge">INFP</div>
+      </div>
+    </div>
+    <div class="member-row">
+      <div class="member-name">Woozi</div>
+      <div class="member-right">
+        <div class="member-mbti-name">The Architect</div>
+        <div class="member-badge">INTJ</div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <a href="/" class="back-link">← Back to Kpop MBTI Picker</a>
+
+</body>
+</html>
