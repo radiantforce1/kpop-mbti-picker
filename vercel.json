@@ -1,6 +1,9 @@
 {
+  "trailingSlash": false,
   "rewrites": [
+    { "source": "/groups/:group/", "destination": "/groups/:group/index.html" },
     { "source": "/groups/:group", "destination": "/groups/:group/index.html" },
+    { "source": "/groups/", "destination": "/groups/index.html" },
     { "source": "/groups", "destination": "/groups/index.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
