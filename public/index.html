@@ -1,7 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="overflow-y:scroll;scrollbar-gutter:stable;background:linear-gradient(135deg,#fce4ec 0%,#f3e5f5 50%,#ede7f6 100%)">
   <head>
     <meta charset="utf-8" />
+    <script type="speculationrules">
+      {"prerender":[{"source":"list","urls":["/photocard-cropper"]}]}
+    </script>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://cdn.amplitude.com" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="description" content="Pick up to 10 Kpop idols and discover your MBTI consensus. See which idols match your vibe. Fun and shareable Kpop personality test."/>
     <meta name="keywords" content="Kpop MBTI, Kpop personality test, MBTI quiz, Kpop idol test, MBTI types, Kpop personality quiz, Kpop MBTI consensus, kpop mbti picker"/>
@@ -25,6 +31,10 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Kpop MBTI Picker | Discover Your Idol Personality Match</title>
+    <style>
+      @view-transition { navigation: auto; }
+      ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
+    </style>
     <script src="https://cdn.amplitude.com/script/7bcef4d2aee76f7bc3c7284a06cf8aee.js"></script>
 <script>
   window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1}));
@@ -51,7 +61,7 @@
  
 
   </head>
-  <body>
+  <body style="margin:0;background:linear-gradient(135deg,#fce4ec 0%,#f3e5f5 50%,#ede7f6 100%);min-height:100vh;">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--

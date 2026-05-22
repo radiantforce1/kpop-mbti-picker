@@ -1,5 +1,16 @@
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+}
+
 html {
   scrollbar-gutter: stable;
+  overflow-y: scroll;
+  background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 50%, #ede7f6 100%);
 }
 
 body {

@@ -13,7 +13,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scrollbar-gutter: stable; }
+    @view-transition { navigation: auto; }
+    ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
+    </style>
+    <script type="speculationrules">
+      {"prerender":[{"source":"list","urls":["/mbti-picker"]}]}
+    </script>
+    <style>
+    html { scrollbar-gutter: stable; overflow-y: scroll; background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 50%, #ede7f6 100%); }
     body {
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 50%, #ede7f6 100%);
@@ -91,20 +98,22 @@
     /* Ratio pills */
     .ratio-pills { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
     .ratio-pill {
-      padding: 6px 14px; border-radius: 100px;
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 0 14px; height: 32px; border-radius: 100px;
       border: 2px solid #ce93d8; background: white;
       font-size: 0.82rem; font-weight: 700; cursor: pointer; color: #9c27b0;
-      transition: all 0.12s;
+      transition: all 0.12s; box-sizing: border-box;
+      appearance: none; -webkit-appearance: none;
     }
     .ratio-pill.active {
       background: linear-gradient(90deg, #e91e8c, #9c27b0);
-      color: white; border-color: transparent;
+      color: white; border: none;
     }
     .custom-inputs { display: flex; align-items: center; gap: 6px; }
     .custom-inputs input {
-      width: 52px; padding: 6px 8px;
+      width: 44px; height: 32px; padding: 0 4px; box-sizing: border-box;
       background: #fce4ec; border: 2px solid #f48fb1;
-      border-radius: 10px; font-size: 0.85rem; text-align: center;
+      border-radius: 10px; font-size: 0.82rem; text-align: center;
       color: #3d2c4e; font-family: 'Segoe UI', sans-serif;
     }
     .custom-inputs span { color: #9c27b0; font-weight: 700; }
@@ -115,12 +124,13 @@
       padding: 7px 18px; border: 2px solid #ce93d8; background: white;
       font-size: 0.82rem; font-weight: 700; cursor: pointer; color: #9c27b0;
       font-family: 'Segoe UI', sans-serif;
+      appearance: none; -webkit-appearance: none; box-sizing: border-box;
     }
     .format-btn:first-child { border-radius: 100px 0 0 100px; }
     .format-btn:last-child { border-radius: 0 100px 100px 0; border-left: none; }
     .format-btn.active {
       background: linear-gradient(90deg, #e91e8c, #9c27b0);
-      color: white; border-color: transparent;
+      color: white; border: none;
     }
 
     /* Quality */
@@ -204,7 +214,7 @@
     /* Image grid */
     #imageGrid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(var(--card-min-width, 180px), 1fr));
       gap: 14px; max-width: 860px; margin: 0 auto;
       --thumb-ratio: 1.6;
     }
@@ -430,16 +440,13 @@
   <div class="controls-row">
     <span class="ctrl-label">Ratio</span>
     <div class="ratio-pills" id="ratioPills">
-      <button class="ratio-pill active" data-ratio="11:17">11:17 (photocard)</button>
-      <button class="ratio-pill" data-ratio="1:1">1:1</button>
+      <button class="ratio-pill active" data-ratio="11:17">11:17 (Photocard)</button>
+      <button class="ratio-pill" data-ratio="5:7">5:7 (TCG)</button>
       <button class="ratio-pill" data-ratio="4:3">4:3</button>
-      <button class="ratio-pill" data-ratio="3:2">3:2</button>
       <button class="ratio-pill" data-ratio="16:9">16:9</button>
       <button class="ratio-pill" data-ratio="16:10">16:10</button>
       <button class="ratio-pill" data-ratio="9:16">9:16</button>
-      <button class="ratio-pill" data-ratio="3:4">3:4</button>
-      <button class="ratio-pill" data-ratio="2:3">2:3</button>
-      <button class="ratio-pill" data-ratio="custom">custom</button>
+      <button class="ratio-pill" data-ratio="custom">Custom</button>
       <div class="custom-inputs" id="customInputs" style="display:none;">
         <input type="number" id="customW" min="1" value="16" />
         <span>:</span>
@@ -457,6 +464,10 @@
       <span style="font-size:0.85rem;color:#7c5c8a;font-weight:600;">Quality</span>
       <input type="range" id="qualitySlider" min="60" max="100" value="100" />
       <span id="qualityLabel">100%</span>
+    </div>
+    <div class="quality-wrap">
+      <span style="font-size:0.85rem;color:#7c5c8a;font-weight:600;">Preview Size</span>
+      <input type="range" id="previewSlider" min="100" max="300" value="180" />
     </div>
   </div>
 </div>
@@ -570,8 +581,8 @@
 // CONSTANTS
 // ═══════════════════════════════════════════════
 const RATIO_MAP = {
-  '1:1': 1.0, '4:3': 1.333, '3:2': 1.5, '16:9': 1.778,
-  '16:10': 1.6, '9:16': 0.5625, '3:4': 0.75, '2:3': 0.667, '11:17': 0.647,
+  '11:17': 0.647, '5:7': 0.714, '4:3': 1.333, '16:9': 1.778,
+  '16:10': 1.6, '9:16': 0.5625,
 };
 const MODEL_URL = 'https://cdn.jsdelivr.net/npm/@vladmandic/face-api/model/';
 
@@ -1355,6 +1366,12 @@ document.querySelectorAll('.format-btn').forEach(btn => {
     qualityWrap.classList.toggle('dimmed', state.format === 'PNG');
   });
 });
+
+// Preview Size
+document.getElementById('previewSlider').addEventListener('input', function() {
+  document.getElementById('imageGrid').style.setProperty('--card-min-width', this.value + 'px');
+});
+
 
 // Quality
 qualitySlider.addEventListener('input', () => {

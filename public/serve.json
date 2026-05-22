@@ -1,8 +1,5 @@
 {
   "trailingSlash": false,
-  "redirects": [
-    { "source": "/", "destination": "/mbti-picker", "type": 301 }
-  ],
   "rewrites": [
     { "source": "/mbti-picker", "destination": "/index.html" },
     { "source": "/mbti-picker/", "destination": "/index.html" },
