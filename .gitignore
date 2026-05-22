@@ -21,3 +21,12 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+.vercel
+
+# local dev / preview files
+public/serve.json
+public/js/
+public/models/
+scripts/
+*-preview.html

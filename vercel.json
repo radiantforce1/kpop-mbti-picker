@@ -5,6 +5,8 @@
     { "source": "/groups/:group", "destination": "/groups/:group/index.html" },
     { "source": "/groups/", "destination": "/groups/index.html" },
     { "source": "/groups", "destination": "/groups/index.html" },
+    { "source": "/bulk-cropper/", "destination": "/bulk-cropper/index.html" },
+    { "source": "/bulk-cropper", "destination": "/bulk-cropper/index.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

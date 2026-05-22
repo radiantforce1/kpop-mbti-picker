@@ -25,7 +25,7 @@ const s = {
   page: { minHeight: "100vh", background: "linear-gradient(135deg, #fce4ec 0%, #f3e5f5 50%, #ede7f6 100%)", padding: "24px 16px 48px", fontFamily: "'Segoe UI', sans-serif", color: "#3d2c4e" },
   header: { textAlign: "center", marginBottom: "28px" },
   h1: { fontSize: "2rem", fontWeight: 800, background: "linear-gradient(90deg, #e91e8c, #9c27b0)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text", letterSpacing: "-0.5px", margin: 0 },
-  tagline: { fontSize: "0.95rem", color: "#7c5c8a", marginTop: "6px" },
+  tagline: { fontSize: "0.9rem", color: "#7c5c8a", marginTop: "4px" },
   howItWorks: { display: "flex", justifyContent: "center", alignItems: "center", gap: "8px", marginBottom: "28px", flexWrap: "wrap" },
   step: { background: "white", borderRadius: "16px", padding: "12px 20px", display: "flex", alignItems: "center", gap: "10px", boxShadow: "0 2px 12px rgba(156,39,176,0.1)", fontSize: "0.88rem", fontWeight: 600, color: "#6a3d7a" },
   stepArrow: { color: "#ce93d8", fontSize: "1.4rem", flexShrink: 0 },
@@ -71,6 +71,8 @@ const s = {
   idolGrid: { display: "flex", flexWrap: "wrap", gap: "8px" },
   idolTag: { background: "#f3e5f5", border: "1.5px solid #ce93d8", borderRadius: "100px", padding: "5px 14px", fontSize: "0.82rem", fontWeight: 600, color: "#6a3d7a" },
   errorMsg: { color: "#e91e8c", fontWeight: 600, fontSize: "0.88rem", marginBottom: "8px", textAlign: "center" },
+  navPill: { display: "inline-flex", alignItems: "center", gap: "5px", fontSize: "0.8rem", fontWeight: 700, color: "#9c27b0", textDecoration: "none", background: "white", border: "1.5px solid #e1bee7", borderRadius: "100px", padding: "5px 14px", boxShadow: "0 2px 8px rgba(156,39,176,0.1)" },
+  pageTitle: { fontSize: "1.8rem", fontWeight: 800, color: "#3d2c4e", marginTop: "20px", marginBottom: "4px" },
   footer: { textAlign: "center", maxWidth: "640px", margin: "0 auto", fontSize: "0.9rem", color: "#9c6aaa", lineHeight: 1.8 },
   footerDivider: { border: "none", borderTop: "1px solid #e1bee7", margin: "20px 0 14px" },
   footerLink: { color: "#e91e8c", textDecoration: "none" },
@@ -271,7 +273,12 @@ export default function KpopMbtiPicker() {
 
       {/* HEADER */}
       <div style={s.header}>
-        <h1 style={s.h1}>✦ Kpop MBTI Picker ✦</h1>
+        <h1 style={s.h1}>✦ Kpop Tools ✦</h1>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", marginTop: "10px", flexWrap: "wrap" }}>
+          <a href="/" style={s.navPill}>✨ Kpop MBTI Picker</a>
+          <a href="/bulk-cropper" style={s.navPill}>✂️ Kpop Photocard Cropper</a>
+        </div>
+        <div style={s.pageTitle}>✨ Kpop MBTI Picker</div>
         <p style={s.tagline}>Pick your faves. Discover your MBTI vibe.</p>
       </div>
 
@@ -646,7 +653,7 @@ export default function KpopMbtiPicker() {
           Outreach &amp; feedback:{" "}
           <a href="mailto:kpopmbtipicker@gmail.com" style={s.footerLink}>kpopmbtipicker@gmail.com</a><br /><br />
           <em>Disclaimer: MBTI data is compiled from official and non-official sources and may not be fully accurate.</em>
-          <br /><br />
+          <br />
           <span style={{ fontSize: "0.75rem", color: "#c9a0dc" }}>A project by radiantforce</span>
         </footer>
       </div>
