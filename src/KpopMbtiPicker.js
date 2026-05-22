@@ -275,7 +275,7 @@ export default function KpopMbtiPicker() {
       <div style={s.header}>
         <h1 style={s.h1}>✦ Kpop Tools ✦</h1>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", marginTop: "10px", flexWrap: "wrap" }}>
-          <a href="/" style={s.navPill}>✨ Kpop MBTI Picker</a>
+          <a href="/mbti-picker" style={s.navPill}>✨ Kpop MBTI Picker</a>
           <a href="/photocard-cropper" style={s.navPill}>✂️ Kpop Photocard Cropper</a>
         </div>
         <div style={s.pageTitle}>✨ Kpop MBTI Picker</div>
@@ -494,7 +494,7 @@ export default function KpopMbtiPicker() {
           {/* Header */}
           <div style={{ textAlign: "center", marginBottom: "24px" }}>
             <div style={{ fontSize: "18px", fontWeight: 800, color: "#9c27b0", letterSpacing: "2px", textTransform: "uppercase" }}>✦ Kpop MBTI Picker ✦</div>
-            <div style={{ fontSize: "12px", fontWeight: 600, color: "#ce93d8", marginTop: "3px", letterSpacing: "0.5px" }}>kpopmbtipicker.com</div>
+            <div style={{ fontSize: "12px", fontWeight: 600, color: "#ce93d8", marginTop: "3px", letterSpacing: "0.5px" }}>kpoptools.com</div>
           </div>
 
           {/* Two columns */}

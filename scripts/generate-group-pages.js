@@ -187,10 +187,10 @@ function generateGroupPage(group, members, breakdown) {
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>${group.name} MBTI Personalities | Kpop MBTI Picker</title>
   <meta name="description" content="Discover the MBTI personality types of all ${group.name} members.${consensus ? ` Group consensus: ${consensus} (${typeName}).` : ""} Pick your favorites on Kpop MBTI Picker." />
-  <link rel="canonical" href="https://kpopmbtipicker.com/groups/${group.slug}" />
+  <link rel="canonical" href="https://kpoptools.com/mbti-picker/groups/${group.slug}" />
   <meta property="og:title" content="${group.name} MBTI Personalities | Kpop MBTI Picker" />
   <meta property="og:description" content="See every ${group.name} member's MBTI type and add them to your personality picker!" />
-  <meta property="og:url" content="https://kpopmbtipicker.com/groups/${group.slug}" />
+  <meta property="og:url" content="https://kpoptools.com/mbti-picker/groups/${group.slug}" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Kpop MBTI Picker" />
   <meta name="twitter:card" content="summary" />
@@ -199,11 +199,11 @@ function generateGroupPage(group, members, breakdown) {
 <body>
 
   <div class="site-header">
-    <a href="/" class="site-name">✦ Kpop MBTI Picker ✦</a>
+    <a href="/mbti-picker" class="site-name">✦ Kpop MBTI Picker ✦</a>
   </div>
 
   <div class="breadcrumb">
-    <a href="/">Home</a> › <a href="/groups/">Groups</a> › ${group.name}
+    <a href="/mbti-picker">Home</a> › <a href="/mbti-picker/groups/">Groups</a> › ${group.name}
   </div>
 
   <div class="card group-hero">
@@ -235,7 +235,7 @@ function generateGroupPage(group, members, breakdown) {
     </div>
   </div>
 
-  <a href="/" class="back-link">← Back to Kpop MBTI Picker</a>
+  <a href="/mbti-picker" class="back-link">← Back to Kpop MBTI Picker</a>
 
 </body>
 </html>`;
@@ -246,7 +246,7 @@ function generateGroupsIndex(groups) {
     const consensus = breakdown ? breakdown.consensus : null;
     const typeName = consensus ? (MBTI_NAMES[consensus] || "") : "";
     return `
-    <a href="/groups/${group.slug}/" class="group-card">
+    <a href="/mbti-picker/groups/${group.slug}/" class="group-card">
       <div class="gc-name">${group.name}</div>
       <div class="gc-meta">${members.length} members · ${group.debut}</div>
       ${consensus ? `<div class="gc-mbti">${consensus}</div><div class="gc-type">${typeName}</div>` : `<div class="gc-type">—</div>`}
@@ -260,10 +260,10 @@ function generateGroupsIndex(groups) {
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kpop Group MBTI Profiles | Kpop MBTI Picker</title>
   <meta name="description" content="Browse MBTI personality profiles for the biggest Kpop groups — BLACKPINK, BTS, TWICE, aespa, Stray Kids, SEVENTEEN, and more." />
-  <link rel="canonical" href="https://kpopmbtipicker.com/groups" />
+  <link rel="canonical" href="https://kpoptools.com/mbti-picker/groups" />
   <meta property="og:title" content="Kpop Group MBTI Profiles | Kpop MBTI Picker" />
   <meta property="og:description" content="Browse MBTI personality profiles for the biggest Kpop groups." />
-  <meta property="og:url" content="https://kpopmbtipicker.com/groups" />
+  <meta property="og:url" content="https://kpoptools.com/mbti-picker/groups" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Kpop MBTI Picker" />
   <meta name="twitter:card" content="summary" />
@@ -289,16 +289,16 @@ function generateGroupsIndex(groups) {
 </head>
 <body>
   <div class="site-header">
-    <a href="/" class="site-name">✦ Kpop MBTI Picker ✦</a>
+    <a href="/mbti-picker" class="site-name">✦ Kpop MBTI Picker ✦</a>
   </div>
   <div class="breadcrumb">
-    <a href="/">Home</a> › Groups
+    <a href="/mbti-picker">Home</a> › Groups
   </div>
   <div class="page-title">Group Profiles</div>
   <div class="page-sub">Browse MBTI personalities for your favourite Kpop groups</div>
   <div class="groups-grid">${groupCards}
   </div>
-  <a href="/" class="back-link">← Back to Kpop MBTI Picker</a>
+  <a href="/mbti-picker" class="back-link">← Back to Kpop MBTI Picker</a>
 </body>
 </html>`;
 }
