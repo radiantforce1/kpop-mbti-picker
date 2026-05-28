@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/kpop-mbti-picker/static/css/main.903d1a8d.css",
-    "main.js": "/kpop-mbti-picker/static/js/main.fd96820e.js",
-    "static/js/453.2cacfafb.chunk.js": "/kpop-mbti-picker/static/js/453.2cacfafb.chunk.js",
-    "index.html": "/kpop-mbti-picker/index.html",
-    "main.903d1a8d.css.map": "/kpop-mbti-picker/static/css/main.903d1a8d.css.map",
-    "main.fd96820e.js.map": "/kpop-mbti-picker/static/js/main.fd96820e.js.map",
-    "453.2cacfafb.chunk.js.map": "/kpop-mbti-picker/static/js/453.2cacfafb.chunk.js.map"
+    "main.css": "/static/css/main.9ba0c1fa.css",
+    "main.js": "/static/js/main.f1c73f73.js",
+    "static/js/453.2cacfafb.chunk.js": "/static/js/453.2cacfafb.chunk.js",
+    "index.html": "/index.html",
+    "main.9ba0c1fa.css.map": "/static/css/main.9ba0c1fa.css.map",
+    "main.f1c73f73.js.map": "/static/js/main.f1c73f73.js.map",
+    "453.2cacfafb.chunk.js.map": "/static/js/453.2cacfafb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.903d1a8d.css",
-    "static/js/main.fd96820e.js"
+    "static/css/main.9ba0c1fa.css",
+    "static/js/main.f1c73f73.js"
   ]
 }

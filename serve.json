@@ -1,0 +1,14 @@
+{
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/mbti-picker", "destination": "/index.html" },
+    { "source": "/mbti-picker/", "destination": "/index.html" },
+    { "source": "/mbti-picker/groups/:group/", "destination": "/groups/:group/index.html" },
+    { "source": "/mbti-picker/groups/:group", "destination": "/groups/:group/index.html" },
+    { "source": "/mbti-picker/groups/", "destination": "/groups/index.html" },
+    { "source": "/mbti-picker/groups", "destination": "/groups/index.html" },
+    { "source": "/photocard-cropper/", "destination": "/photocard-cropper/index.html" },
+    { "source": "/photocard-cropper", "destination": "/photocard-cropper/index.html" },
+    { "source": "/mbti-picker/(.*)", "destination": "/index.html" }
+  ]
+}
