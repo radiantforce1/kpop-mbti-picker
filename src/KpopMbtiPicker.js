@@ -655,6 +655,18 @@ export default function KpopMbtiPicker() {
           <em>Disclaimer: MBTI data is compiled from official and non-official sources and may not be fully accurate.</em>
           <br />
           <span style={{ fontSize: "0.75rem", color: "#c9a0dc" }}>A project by radiantforce</span>
+          <br /><br />
+          <p style={{ fontSize: "0.8rem", fontWeight: 700, color: "#9c27b0", textTransform: "uppercase", letterSpacing: "0.5px", marginBottom: "10px" }}>Also by the creator</p>
+          <iframe
+            frameBorder="0"
+            src="https://itch.io/embed/4629448?bg_color=1e1850&fg_color=e8e6f0&border_color=6860CC"
+            width="552"
+            height="167"
+            title="GRID by radiantforce"
+            style={{ maxWidth: "100%" }}
+          >
+            <a href="https://radiantforce.itch.io/grid">GRID by radiantforce</a>
+          </iframe>
         </footer>
       </div>
 
