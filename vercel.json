@@ -1,4 +1,9 @@
 {
+  "git": {
+    "deploymentEnabled": {
+      "gh-pages": false
+    }
+  },
   "trailingSlash": false,
   "redirects": [
     { "source": "/", "destination": "/mbti-picker", "permanent": true }
