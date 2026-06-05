@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kpop MBTI Quiz | Guess the MBTI | kpoptools.com</title>
+  <meta name="description" content="Guess the MBTI types of your favourite Kpop group members. Search any group and see how well you know their personalities!" />
+  <link rel="canonical" href="https://kpoptools.com/mbti-quiz" />
+  <meta property="og:title" content="Kpop MBTI Quiz" />
+  <meta property="og:description" content="Guess the MBTI types of your favourite Kpop group members!" />
+  <meta property="og:url" content="https://kpoptools.com/mbti-quiz" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <script src="https://cdn.amplitude.com/script/7bcef4d2aee76f7bc3c7284a06cf8aee.js"></script>
+  <script>
+    window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1}));
+    window.amplitude.init('7bcef4d2aee76f7bc3c7284a06cf8aee', {"fetchRemoteConfig":true,"autocapture":true});
+  </script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    @view-transition { navigation: auto; }
+    ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
+    html { scrollbar-gutter: stable; overflow-y: scroll; background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 50%, #ede7f6 100%); }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 50%, #ede7f6 100%);
+      color: #3d2c4e; min-height: 100vh; padding: 24px 16px 48px;
+    }
+
+    .site-header { text-align: center; margin-bottom: 20px; }
+    .site-name {
+      font-size: 2rem; font-weight: 800;
+      background: linear-gradient(90deg, #e91e8c, #9c27b0);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; text-decoration: none; letter-spacing: -0.5px;
+      display: block; margin-bottom: 10px;
+    }
+    .site-name:hover { opacity: 0.85; }
+    .nav-pills { display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; }
+    .nav-pill {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 0.8rem; font-weight: 700; color: #9c27b0;
+      text-decoration: none; background: white; border: 1.5px solid #e1bee7;
+      border-radius: 100px; padding: 5px 14px;
+      box-shadow: 0 2px 8px rgba(156,39,176,0.1);
+    }
+    .nav-pill:hover { border-color: #ce93d8; }
+    .nav-pill.active {
+      background: linear-gradient(90deg, #e91e8c, #9c27b0);
+      color: white; border-color: transparent;
+    }
+
+    .page-title { text-align: center; margin-bottom: 24px; }
+    .page-title h1 { font-size: 1.8rem; font-weight: 800; color: #3d2c4e; margin-bottom: 4px; }
+    .page-title p { font-size: 0.9rem; color: #7c5c8a; }
+
+    .card {
+      background: white; border-radius: 24px; padding: 22px 24px;
+      margin-bottom: 16px; box-shadow: 0 4px 24px rgba(156,39,176,0.12);
+      max-width: 640px; margin-left: auto; margin-right: auto;
+    }
+    .section-label {
+      font-size: 0.85rem; font-weight: 700; color: #9c27b0;
+      text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;
+    }
+
+    /* Search */
+    .search-wrap { position: relative; max-width: 640px; margin: 0 auto 20px; }
+    .search-bar {
+      display: flex; align-items: center;
+      background: white; border: 2px solid #f48fb1;
+      border-radius: 16px; padding: 12px 16px; gap: 10px;
+      box-shadow: 0 4px 24px rgba(156,39,176,0.12);
+    }
+    .search-bar input {
+      border: none; background: transparent; font-size: 1rem;
+      color: #3d2c4e; flex: 1; outline: none; font-family: 'Segoe UI', sans-serif;
+    }
+    .search-bar input::placeholder { color: #ce93d8; }
+    .search-clear {
+      background: none; border: none; cursor: pointer;
+      color: #ce93d8; font-size: 1.1rem; line-height: 1; padding: 0;
+      display: none;
+    }
+    .search-clear.visible { display: block; }
+    .dropdown {
+      position: absolute; top: calc(100% + 4px); left: 0; right: 0;
+      background: white; border: 1.5px solid #f48fb1; border-radius: 14px;
+      box-shadow: 0 4px 20px rgba(156,39,176,0.15);
+      max-height: 220px; overflow-y: auto; z-index: 10; display: none;
+    }
+    .dropdown.open { display: block; }
+    .dropdown-item {
+      padding: 10px 16px; cursor: pointer; font-size: 0.92rem;
+      color: #3d2c4e; border-bottom: 1px solid #fce4ec;
+      display: flex; align-items: center; justify-content: space-between; gap: 8px;
+    }
+    .dropdown-item:last-child { border-bottom: none; }
+    .dropdown-item:hover { background: linear-gradient(90deg, #f48fb1, #ce93d8); color: white; }
+    .dropdown-item:hover .diff-badge { background: rgba(255,255,255,0.25); color: white; }
+    .diff-badge {
+      font-size: 0.72rem; font-weight: 700; border-radius: 100px;
+      padding: 2px 8px; white-space: nowrap; flex-shrink: 0;
+    }
+    .diff-1 { background: #e8f5e9; color: #2e7d32; }
+    .diff-2 { background: #e3f2fd; color: #1565c0; }
+    .diff-3 { background: #fff3e0; color: #e65100; }
+    .diff-4 { background: #fce4ec; color: #880e4f; }
+    .diff-5 { background: #f3e5f5; color: #6a1b9a; }
+
+    /* Consensus */
+    .consensus-block { text-align: center; padding: 4px 0 16px; }
+    .consensus-group-name {
+      font-size: 0.75rem; font-weight: 700; color: #9c27b0;
+      text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;
+    }
+    .consensus-mbti {
+      font-size: 3.5rem; font-weight: 900; letter-spacing: 6px;
+      background: linear-gradient(90deg, #e91e8c, #9c27b0);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; line-height: 1.1;
+    }
+    .consensus-type { font-size: 0.95rem; color: #7c5c8a; font-style: italic; margin-top: 6px; }
+
+    /* Breakdown bars */
+    .split-row { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+    .split-row:last-child { margin-bottom: 0; }
+    .split-letter-win { font-weight: 800; font-size: 1rem; color: #e91e8c; width: 20px; text-align: center; }
+    .split-letter-alt { font-weight: 800; font-size: 1rem; color: #bbb; width: 20px; text-align: center; }
+    .split-pct-win { font-size: 0.8rem; font-weight: 700; color: #9c27b0; width: 34px; text-align: right; }
+    .split-pct-alt { font-size: 0.8rem; font-weight: 700; color: #bbb; width: 34px; }
+    .split-track { flex: 1; height: 12px; background: #e0e0e0; border-radius: 100px; overflow: hidden; position: relative; }
+    .split-fill { position: absolute; left: 0; top: 0; height: 100%; background: linear-gradient(90deg, #e91e8c, #9c27b0); border-radius: 100px; }
+
+    /* Members */
+    .members-header {
+      display: flex; align-items: center; margin-bottom: 8px; padding: 0 2px;
+    }
+    .members-header-name { flex: 1; }
+    .dim-labels { display: flex; gap: 6px; }
+    .dim-label {
+      width: 42px; text-align: center; font-size: 0.7rem; font-weight: 700;
+      color: #b39ddb; text-transform: uppercase;
+      position: relative; cursor: default;
+    }
+    .dim-label::after {
+      content: attr(data-tip);
+      position: absolute; bottom: calc(100% + 7px); left: 50%;
+      transform: translateX(-50%);
+      background: #3d2c4e; color: white;
+      font-size: 0.72rem; font-weight: 600; line-height: 1.5;
+      padding: 6px 10px; border-radius: 8px;
+      white-space: nowrap; pointer-events: none;
+      opacity: 0; transition: opacity 0.15s; z-index: 20;
+    }
+    .dim-label::before {
+      content: ''; position: absolute; bottom: calc(100% + 1px); left: 50%;
+      transform: translateX(-50%);
+      border: 5px solid transparent; border-top-color: #3d2c4e;
+      pointer-events: none; opacity: 0; transition: opacity 0.15s; z-index: 20;
+    }
+    .dim-label:hover::after, .dim-label:hover::before { opacity: 1; }
+    .member-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .member-row:last-child { margin-bottom: 0; }
+    .member-name {
+      flex: 1; font-size: 0.95rem; font-weight: 700; color: #3d2c4e;
+      min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
+    .cells { display: flex; gap: 6px; }
+
+    .toggle-cell {
+      width: 42px; height: 42px; border-radius: 10px;
+      border: 2px dashed #ce93d8; background: #fdf4ff;
+      font-size: 1.1rem; font-weight: 800; color: transparent;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      transition: transform 0.1s; user-select: none;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .toggle-cell.filled {
+      background: linear-gradient(135deg, #e91e8c, #9c27b0);
+      border: none; color: white;
+    }
+    .toggle-cell.correct {
+      background: #4caf50; border: none; color: white; cursor: default;
+    }
+    .toggle-cell.wrong {
+      background: #e53935; border: none; color: white; cursor: default;
+    }
+    .toggle-cell.hinted {
+      background: linear-gradient(135deg, #9c27b0, #673ab7);
+      border: none; color: white; cursor: default;
+    }
+    .toggle-cell:hover:not(.correct):not(.wrong) { transform: scale(1.08); }
+
+    /* Submit / result */
+    .submit-row { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 20px; }
+    .btn-submit, .btn-hint, .btn-clear, .btn-reset {
+      background: white; color: #9c27b0;
+      border: 2px solid #ce93d8; border-radius: 100px;
+      padding: 8px 24px; font-size: 0.9rem; font-weight: 700;
+      cursor: pointer; font-family: 'Segoe UI', sans-serif;
+      transition: background 0.12s, color 0.12s, border-color 0.12s;
+    }
+    .btn-submit:hover, .btn-hint:hover, .btn-clear:hover, .btn-reset:hover {
+      background: linear-gradient(90deg, #e91e8c, #9c27b0);
+      color: white; border-color: transparent;
+    }
+
+    .result-box {
+      text-align: center; padding: 18px 16px; border-radius: 16px;
+      margin-top: 16px; display: none;
+    }
+    .result-box.win {
+      background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+      border: 2px solid #4caf50; display: block;
+    }
+    .result-box.partial {
+      background: #fce4ec; border: 2px solid #f48fb1; display: block;
+    }
+    .result-msg { font-size: 1.1rem; font-weight: 700; color: #3d2c4e; }
+    .result-score { font-size: 0.85rem; color: #7c5c8a; margin-top: 4px; }
+
+    .hidden { display: none !important; }
+
+    /* Footer */
+    .page-footer { max-width: 640px; margin: 32px auto 0; }
+    .footer-divider { border: none; border-top: 1px solid #e1bee7; margin-bottom: 16px; }
+    .footer { text-align: center; font-size: 0.9rem; color: #9c6aaa; line-height: 1.8; }
+    .footer a { color: #e91e8c; text-decoration: none; }
+    .footer-credit { font-size: 0.75rem; color: #c9a0dc; margin-top: 8px; }
+  </style>
+</head>
+<body>
+
+<div class="site-header">
+  <a href="/mbti-picker" class="site-name">✦ Kpop Tools ✦</a>
+  <div class="nav-pills">
+    <a href="/mbti-picker" class="nav-pill">✨ Kpop MBTI Picker</a>
+    <a href="/mbti-quiz" class="nav-pill active">🎮 Kpop MBTI Quiz</a>
+    <a href="/photocard-cropper" class="nav-pill">✂️ Kpop Photocard Cropper</a>
+  </div>
+</div>
+
+<div class="page-title">
+  <h1>🎮 Kpop MBTI Quiz</h1>
+  <p>Search a group and guess each member's MBTI type</p>
+</div>
+
+<!-- Search -->
+<div class="search-wrap">
+  <div class="search-bar">
+    <span>🔍</span>
+    <input type="text" id="searchInput" placeholder="Search a group (e.g. aespa, BTS, TWICE...)" autocomplete="off" />
+    <button class="search-clear" id="searchClear">✕</button>
+  </div>
+  <div class="dropdown" id="dropdown"></div>
+</div>
+
+<!-- Quiz area -->
+<div id="quizArea" class="hidden">
+
+  <div class="card" style="margin-bottom:16px;">
+    <div class="consensus-block">
+      <div class="consensus-group-name" id="groupNameLabel"></div>
+      <div style="font-size:0.72rem;font-weight:700;color:#b39ddb;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:2px;">Consensus MBTI</div>
+      <div class="consensus-mbti" id="consensusMbti"></div>
+      <div class="consensus-type" id="consensusType"></div>
+    </div>
+    <hr style="border:none;border-top:1px solid #f3e5f5;margin:16px 0;" />
+    <div class="section-label">MBTI Breakdown (Member Count)</div>
+    <div id="breakdownBars"></div>
+  </div>
+
+  <div class="card">
+    <div class="section-label" id="membersLabel"></div>
+    <div class="members-header">
+      <div class="members-header-name"></div>
+      <div class="dim-labels">
+        <div class="dim-label" data-tip="I = Introvert · E = Extrovert">I/E</div>
+        <div class="dim-label" data-tip="N = Intuitive · S = Sensing">N/S</div>
+        <div class="dim-label" data-tip="F = Feeling · T = Thinking">F/T</div>
+        <div class="dim-label" data-tip="J = Judging · P = Perceiving">J/P</div>
+      </div>
+    </div>
+    <div id="membersGrid"></div>
+
+    <div class="submit-row">
+      <button class="btn-hint" id="btnHint">💡 Hint</button>
+      <button class="btn-clear" id="btnClear">Reset</button>
+      <button class="btn-submit" id="btnSubmit">Submit</button>
+      <button class="btn-reset hidden" id="btnReset">Try Again</button>
+    </div>
+
+    <div class="result-box" id="resultBox">
+      <div class="result-msg" id="resultMsg"></div>
+      <div class="result-score" id="resultScore"></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="page-footer">
+  <hr class="footer-divider" />
+  <footer class="footer">
+    Want an idol added or amended? Fill in this <a href="https://forms.gle/ni6CkCGZPktyCiML8">form</a> and I'll update the data.<br />
+    Enjoyed this? Share it with your fellow fans! 💜 Or <a href="https://buymeacoffee.com/radiantforce" target="_blank" rel="noopener noreferrer">gift a photocard 🎴</a> to keep my Yuna and Karina collection growing!<br />
+    Outreach &amp; feedback: <a href="mailto:kpopmbtipicker@gmail.com">kpopmbtipicker@gmail.com</a><br /><br />
+    <em>Disclaimer: MBTI data is compiled from official and non-official sources and may not be fully accurate.</em><br />
+    <div class="footer-credit">A project by radiantforce</div>
+    <br />
+    <p style="font-size:0.8rem;font-weight:700;color:#9c27b0;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:10px;">Also by the creator</p>
+    <iframe frameborder="0" src="https://itch.io/embed/4629448?bg_color=1e1850&amp;fg_color=e8e6f0&amp;border_color=6860CC" width="552" height="167" title="GRID by radiantforce" style="max-width:100%;display:block;margin:0 auto;"><a href="https://radiantforce.itch.io/grid">GRID by radiantforce</a></iframe>
+  </footer>
+</div>
+
+<script>
+const PAIRS = [['I','E'], ['N','S'], ['F','T'], ['J','P']];
+
+let quizData = {};
+let currentGroup = null;
+let memberStates = [];
+let submitted = false;
+let attempts = 0;
+let hintedCells = new Set();
+let hintsUsed = 0;
+
+fetch('/quiz-data.json')
+  .then(r => r.json())
+  .then(data => { quizData = data; });
+
+const searchInput = document.getElementById('searchInput');
+const searchClear = document.getElementById('searchClear');
+const dropdown    = document.getElementById('dropdown');
+
+searchInput.addEventListener('input', () => {
+  const q = searchInput.value.trim().toLowerCase();
+  searchClear.classList.toggle('visible', q.length > 0);
+  if (!q) { dropdown.classList.remove('open'); return; }
+
+  const matches = Object.keys(quizData)
+    .filter(g => g.toLowerCase().includes(q))
+    .sort((a, b) => {
+      const ai = a.toLowerCase().indexOf(q), bi = b.toLowerCase().indexOf(q);
+      if (ai !== bi) return ai - bi;
+      return a.localeCompare(b);
+    })
+    .slice(0, 12);
+
+  if (!matches.length) { dropdown.classList.remove('open'); return; }
+  dropdown.innerHTML = matches.map(g => {
+    const d = quizData[g].difficulty;
+    const stars = '★'.repeat(d.stars) + '☆'.repeat(5 - d.stars);
+    return `<div class="dropdown-item" data-group="${g.replace(/"/g, '&quot;')}">
+      <span>${g}</span>
+      <span class="diff-badge diff-${d.stars}">${stars} ${d.label}</span>
+    </div>`;
+  }).join('');
+  dropdown.classList.add('open');
+});
+
+dropdown.addEventListener('click', e => {
+  const item = e.target.closest('.dropdown-item');
+  if (item) selectGroup(item.dataset.group);
+});
+
+searchClear.addEventListener('click', () => {
+  searchInput.value = '';
+  searchClear.classList.remove('visible');
+  dropdown.classList.remove('open');
+  document.getElementById('quizArea').classList.add('hidden');
+  currentGroup = null;
+});
+
+document.addEventListener('click', e => {
+  if (!e.target.closest('.search-wrap')) dropdown.classList.remove('open');
+});
+
+function selectGroup(key) {
+  currentGroup = quizData[key];
+  searchInput.value = key;
+  dropdown.classList.remove('open');
+  searchClear.classList.add('visible');
+  renderQuiz();
+}
+
+function renderQuiz() {
+  const g = currentGroup;
+  submitted = false;
+  attempts = 0;
+  hintedCells = new Set();
+  hintsUsed = 0;
+  memberStates = g.members.map(() => ['', '', '', '']);
+
+  document.getElementById('groupNameLabel').textContent = g.display + ' Consensus MBTI';
+  document.getElementById('consensusMbti').textContent = g.consensus;
+  document.getElementById('consensusType').textContent = g.consensusName;
+
+  document.getElementById('breakdownBars').innerHTML = g.splits.map(({ win, alt, winPct, altPct, winCount, altCount }) => `
+    <div class="split-row">
+      <div class="split-letter-win">${win}</div>
+      <div class="split-pct-win">${winCount}</div>
+      <div class="split-track"><div class="split-fill" style="width:${winPct}%"></div></div>
+      <div class="split-pct-alt">${altCount}</div>
+      <div class="split-letter-alt">${alt}</div>
+    </div>`).join('');
+
+  const d = g.difficulty;
+  const stars = '★'.repeat(d.stars) + '☆'.repeat(5 - d.stars);
+  document.getElementById('membersLabel').innerHTML =
+    `${g.display} Members (${g.members.length}) &nbsp;<span class="diff-badge diff-${d.stars}">${stars} ${d.label}</span>`;
+
+  document.getElementById('membersGrid').innerHTML = g.members.map((m, mi) => `
+    <div class="member-row">
+      <div class="member-name">${m.name}</div>
+      <div class="cells">
+        ${PAIRS.map((_, di) => `<div class="toggle-cell" data-mi="${mi}" data-di="${di}"></div>`).join('')}
+      </div>
+    </div>`).join('');
+
+  document.getElementById('btnSubmit').classList.remove('hidden');
+  document.getElementById('btnReset').classList.add('hidden');
+  const rb = document.getElementById('resultBox');
+  rb.className = 'result-box';
+  document.getElementById('resultMsg').textContent = '';
+  document.getElementById('resultScore').textContent = '';
+  document.getElementById('quizArea').classList.remove('hidden');
+}
+
+document.getElementById('membersGrid').addEventListener('click', e => {
+  if (submitted) return;
+  const cell = e.target.closest('.toggle-cell');
+  if (!cell) return;
+  const mi = +cell.dataset.mi, di = +cell.dataset.di;
+  if (hintedCells.has(`${mi}-${di}`)) return;
+  const [a, b] = PAIRS[di];
+  const cur = memberStates[mi][di];
+  const next = cur === '' ? a : cur === a ? b : '';
+  memberStates[mi][di] = next;
+  cell.classList.remove('correct', 'wrong');
+  cell.textContent = next;
+  cell.classList.toggle('filled', next !== '');
+});
+
+document.getElementById('btnHint').addEventListener('click', () => {
+  if (submitted) return;
+  const wrong = [];
+  currentGroup.members.forEach((m, mi) => {
+    PAIRS.forEach((_, di) => {
+      if (!hintedCells.has(`${mi}-${di}`) && memberStates[mi][di] !== m.mbti[di]) {
+        wrong.push({ mi, di, correct: m.mbti[di] });
+      }
+    });
+  });
+  if (!wrong.length) return;
+  const { mi, di, correct } = wrong[Math.floor(Math.random() * wrong.length)];
+  memberStates[mi][di] = correct;
+  hintedCells.add(`${mi}-${di}`);
+  hintsUsed++;
+  const cell = document.querySelector(`.toggle-cell[data-mi="${mi}"][data-di="${di}"]`);
+  cell.classList.remove('filled', 'correct', 'wrong');
+  cell.classList.add('hinted');
+  cell.textContent = correct;
+});
+
+document.getElementById('btnSubmit').addEventListener('click', () => {
+  if (submitted) return;
+  attempts++;
+
+  let correctMembers = 0, totalCells = 0, correctCells = 0;
+
+  currentGroup.members.forEach((m, mi) => {
+    let memberCorrect = true;
+    PAIRS.forEach((_, di) => {
+      const cell = document.querySelector(`.toggle-cell[data-mi="${mi}"][data-di="${di}"]`);
+      const guessed = memberStates[mi][di];
+      const actual = m.mbti[di];
+      totalCells++;
+      cell.classList.remove('filled', 'correct', 'wrong');
+      if (guessed === actual) {
+        cell.classList.add('correct');
+        correctCells++;
+      } else {
+        cell.classList.add('wrong');
+        cell.textContent = guessed || '?';
+        memberCorrect = false;
+      }
+    });
+    if (memberCorrect) correctMembers++;
+  });
+
+  const allWin = correctMembers === currentGroup.members.length;
+  const rb = document.getElementById('resultBox');
+  rb.className = 'result-box ' + (allWin ? 'win' : 'partial');
+
+  if (allWin) {
+    submitted = true;
+    document.getElementById('resultMsg').textContent = '🎉 You Win! All members correct!';
+    document.getElementById('resultScore').textContent = `${attempts} attempt${attempts !== 1 ? 's' : ''} · ${hintsUsed} hint${hintsUsed !== 1 ? 's' : ''} used`;
+    document.getElementById('btnSubmit').classList.add('hidden');
+    document.getElementById('btnHint').classList.add('hidden');
+    document.getElementById('btnClear').classList.add('hidden');
+    document.getElementById('btnReset').classList.remove('hidden');
+  } else {
+    document.getElementById('resultMsg').textContent = `${correctMembers}/${currentGroup.members.length} members fully correct`;
+    document.getElementById('resultScore').textContent = `${correctCells}/${totalCells} cells correct · attempt ${attempts}`;
+  }
+});
+
+document.getElementById('btnClear').addEventListener('click', () => {
+  submitted = false;
+  hintedCells = new Set();
+  memberStates = currentGroup.members.map(() => ['', '', '', '']);
+  document.querySelectorAll('.toggle-cell').forEach(cell => {
+    cell.className = 'toggle-cell';
+    cell.textContent = '';
+  });
+  document.getElementById('resultBox').className = 'result-box';
+  document.getElementById('resultMsg').textContent = '';
+  document.getElementById('resultScore').textContent = '';
+  document.getElementById('btnSubmit').classList.remove('hidden');
+  document.getElementById('btnHint').classList.remove('hidden');
+  document.getElementById('btnReset').classList.add('hidden');
+});
+
+document.getElementById('btnReset').addEventListener('click', renderQuiz);
+</script>
+
+</body>
+</html>
