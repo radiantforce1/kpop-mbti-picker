@@ -219,6 +219,32 @@
     }
     .result-msg { font-size: 1.1rem; font-weight: 700; color: #3d2c4e; }
     .result-score { font-size: 0.85rem; color: #7c5c8a; margin-top: 4px; }
+    .toggle-wrap { position: relative; }
+    .colour-toggle {
+      background: white; color: #b39ddb; border: 2px solid #e1bee7;
+      border-radius: 100px; padding: 5px 16px; font-size: 0.8rem; font-weight: 700;
+      cursor: pointer; font-family: 'Segoe UI', sans-serif;
+      transition: background 0.12s, color 0.12s, border-color 0.12s;
+    }
+    .colour-toggle.on {
+      background: linear-gradient(90deg, #e91e8c, #9c27b0);
+      color: white; border-color: transparent;
+    }
+    .colour-toggle::after {
+      content: attr(data-tip);
+      position: absolute; bottom: calc(100% + 7px); right: 0;
+      background: #3d2c4e; color: white;
+      font-size: 0.72rem; font-weight: 600; line-height: 1.5;
+      padding: 6px 10px; border-radius: 8px;
+      white-space: nowrap; pointer-events: none;
+      opacity: 0; transition: opacity 0.15s; z-index: 20;
+    }
+    .colour-toggle::before {
+      content: ''; position: absolute; bottom: calc(100% + 1px); right: 16px;
+      border: 5px solid transparent; border-top-color: #3d2c4e;
+      pointer-events: none; opacity: 0; transition: opacity 0.15s; z-index: 20;
+    }
+    .colour-toggle:hover::after, .colour-toggle:hover::before { opacity: 1; }
 
     .hidden { display: none !important; }
 
@@ -272,7 +298,12 @@
   </div>
 
   <div class="card">
-    <div class="section-label" id="membersLabel"></div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+      <div class="section-label" style="margin-bottom:0;" id="membersLabel"></div>
+      <div class="toggle-wrap">
+        <button class="colour-toggle" id="btnColourToggle" data-tip="On: Cells highlight green (correct)/red (wrong) on submit. Off: Score only, no hints on submit.">🎨 Cell colours: Off</button>
+      </div>
+    </div>
     <div class="members-header">
       <div class="members-header-name"></div>
       <div class="dim-labels">
@@ -323,6 +354,8 @@ let submitted = false;
 let attempts = 0;
 let hintedCells = new Set();
 let hintsUsed = 0;
+let lastCheckResults = [];
+let showColours = false;
 
 fetch('/quiz-data.json')
   .then(r => r.json())
@@ -389,6 +422,8 @@ function renderQuiz() {
   attempts = 0;
   hintedCells = new Set();
   hintsUsed = 0;
+  lastCheckResults = [];
+  // preserve showColours preference across groups
   memberStates = g.members.map(() => ['', '', '', '']);
 
   document.getElementById('groupNameLabel').textContent = g.display + ' Consensus MBTI';
@@ -418,6 +453,8 @@ function renderQuiz() {
     </div>`).join('');
 
   document.getElementById('btnSubmit').classList.remove('hidden');
+  document.getElementById('btnHint').classList.remove('hidden');
+  document.getElementById('btnClear').classList.remove('hidden');
   document.getElementById('btnReset').classList.add('hidden');
   const rb = document.getElementById('resultBox');
   rb.className = 'result-box';
@@ -439,6 +476,7 @@ document.getElementById('membersGrid').addEventListener('click', e => {
   cell.classList.remove('correct', 'wrong');
   cell.textContent = next;
   cell.classList.toggle('filled', next !== '');
+  document.getElementById('btnShowColours').classList.add('hidden');
 });
 
 document.getElementById('btnHint').addEventListener('click', () => {
@@ -467,23 +505,18 @@ document.getElementById('btnSubmit').addEventListener('click', () => {
   attempts++;
 
   let correctMembers = 0, totalCells = 0, correctCells = 0;
+  lastCheckResults = [];
 
   currentGroup.members.forEach((m, mi) => {
     let memberCorrect = true;
     PAIRS.forEach((_, di) => {
-      const cell = document.querySelector(`.toggle-cell[data-mi="${mi}"][data-di="${di}"]`);
       const guessed = memberStates[mi][di];
       const actual = m.mbti[di];
+      const isCorrect = guessed === actual;
       totalCells++;
-      cell.classList.remove('filled', 'correct', 'wrong');
-      if (guessed === actual) {
-        cell.classList.add('correct');
-        correctCells++;
-      } else {
-        cell.classList.add('wrong');
-        cell.textContent = guessed || '?';
-        memberCorrect = false;
-      }
+      if (isCorrect) correctCells++;
+      else memberCorrect = false;
+      lastCheckResults.push({ mi, di, isCorrect, guessed });
     });
     if (memberCorrect) correctMembers++;
   });
@@ -491,6 +524,19 @@ document.getElementById('btnSubmit').addEventListener('click', () => {
   const allWin = correctMembers === currentGroup.members.length;
   const rb = document.getElementById('resultBox');
   rb.className = 'result-box ' + (allWin ? 'win' : 'partial');
+
+  if (showColours || allWin) {
+    lastCheckResults.forEach(({ mi, di, isCorrect, guessed }) => {
+      const cell = document.querySelector(`.toggle-cell[data-mi="${mi}"][data-di="${di}"]`);
+      cell.classList.remove('filled', 'correct', 'wrong');
+      if (isCorrect) {
+        cell.classList.add('correct');
+      } else {
+        cell.classList.add('wrong');
+        cell.textContent = guessed || '?';
+      }
+    });
+  }
 
   if (allWin) {
     submitted = true;
@@ -520,6 +566,13 @@ document.getElementById('btnClear').addEventListener('click', () => {
   document.getElementById('btnSubmit').classList.remove('hidden');
   document.getElementById('btnHint').classList.remove('hidden');
   document.getElementById('btnReset').classList.add('hidden');
+});
+
+document.getElementById('btnColourToggle').addEventListener('click', () => {
+  showColours = !showColours;
+  const btn = document.getElementById('btnColourToggle');
+  btn.textContent = `🎨 Cell colours: ${showColours ? 'On' : 'Off'}`;
+  btn.classList.toggle('on', showColours);
 });
 
 document.getElementById('btnReset').addEventListener('click', renderQuiz);
