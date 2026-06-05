@@ -1365,7 +1365,8 @@
   },
   {
     "Name (Group)": "Daehwi (AB6IX)",
-    "Personality": "ESTJ"
+    "Personality": "ESTJ",
+    "Former Groups": ["Wanna One"]
   },
   {
     "Name (Group)": "Daehyeon (WEi)",
@@ -2045,7 +2046,8 @@
   },
   {
     "Name (Group)": "Eunha (VIVIZ)",
-    "Personality": "ISTP"
+    "Personality": "ISTP",
+    "Former Groups": ["GFRIEND"]
   },
   {
     "Name (Group)": "Eunho (NTX)",
@@ -2929,7 +2931,8 @@
   },
   {
     "Name (Group)": "Hitomi (SAY MY NAME)",
-    "Personality": "ESFJ"
+    "Personality": "ESFJ",
+    "Former Groups": ["IZ*ONE"]
   },
   {
     "Name (Group)": "Ho Szeching",
@@ -3085,7 +3088,8 @@
   },
   {
     "Name (Group)": "Hwang Min Hyun (NU'EST)",
-    "Personality": "ESFJ"
+    "Personality": "ESFJ",
+    "Former Groups": ["Wanna One"]
   },
   {
     "Name (Group)": "Hwang Sieun",
@@ -4273,7 +4277,8 @@
   },
   {
     "Name (Group)": "Jinyoung (CIX)",
-    "Personality": "ISFP"
+    "Personality": "ISFP",
+    "Former Groups": ["Wanna One"]
   },
   {
     "Name (Group)": "Jinyoung (GOT7)",
@@ -5325,7 +5330,8 @@
   },
   {
     "Name (Group)": "Kim Chaewon (LE SSERAFIM)",
-    "Personality": "ESTP"
+    "Personality": "ESTP",
+    "Former Groups": ["IZ*ONE"]
   },
   {
     "Name (Group)": "Kim Dabin",
@@ -6040,7 +6046,7 @@
     "Personality": "ESFP"
   },
   {
-    "Name (Group)": "Lee Chae Yeon (IZ*ONE)",
+    "Name (Group)": "Lee Chaeyeon (IZ*ONE)",
     "Personality": "ISFJ"
   },
   {
@@ -8397,7 +8403,8 @@
   },
   {
     "Name (Group)": "Sakura (LE SSERAFIM)",
-    "Personality": "INTP"
+    "Personality": "INTP",
+    "Former Groups": ["IZ*ONE"]
   },
   {
     "Name (Group)": "Sakuya (NCT)",
@@ -9069,7 +9076,8 @@
   },
   {
     "Name (Group)": "SinB (VIVIZ)",
-    "Personality": "ISFJ"
+    "Personality": "ISFJ",
+    "Former Groups": ["GFRIEND"]
   },
   {
     "Name (Group)": "SINCE",
@@ -10049,7 +10057,8 @@
   },
   {
     "Name (Group)": "Umji (VIVIZ)",
-    "Personality": "INFP"
+    "Personality": "INFP",
+    "Former Groups": ["GFRIEND"]
   },
   {
     "Name (Group)": "Uni (Reconquista)",
@@ -10305,7 +10314,8 @@
   },
   {
     "Name (Group)": "Wonyoung (IVE)",
-    "Personality": "ENTJ"
+    "Personality": "ENTJ",
+    "Former Groups": ["IZ*ONE"]
   },
   {
     "Name (Group)": "Woo (LIMITLESS)",
@@ -11300,8 +11310,9 @@
     "Personality": "ENFP"
   },
   {
-    "Name (Group)": "Yujin (IVE)",
-    "Personality": "ISTP"
+    "Name (Group)": "An Yujin (IVE)",
+    "Personality": "ISTP",
+    "Former Groups": ["IZ*ONE"]
   },
   {
     "Name (Group)": "Yujin (Kep1er)",

@@ -139,7 +139,12 @@ export default function KpopMbtiPicker() {
 
   const groupBreakdown = useMemo(() => {
     if (!selectedGroup) return null;
-    const members = idols.filter(idol => idol["Name (Group)"].includes(`(${selectedGroup})`));
+    const direct = idols.filter(idol => idol["Name (Group)"].endsWith(`(${selectedGroup})`));
+    const former = idols.filter(idol =>
+      idol["Former Groups"] && idol["Former Groups"].includes(selectedGroup) &&
+      !direct.some(d => d["Name (Group)"] === idol["Name (Group)"])
+    );
+    const members = [...direct, ...former];
     const valid = members.filter(({ Personality }) => Personality && Personality.length === 4 && !Personality.includes("-"));
     const total = valid.length;
     if (total === 0) return { members, consensus: null, letterPct: {}, otherPct: {}, total: members.length };
@@ -276,8 +281,8 @@ export default function KpopMbtiPicker() {
         <h1 style={s.h1}>✦ Kpop Tools ✦</h1>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", marginTop: "10px", flexWrap: "wrap" }}>
           <a href="/mbti-picker" style={{ ...s.navPill, background: "linear-gradient(90deg, #e91e8c, #9c27b0)", color: "white", border: "1.5px solid transparent" }}>✨ Kpop MBTI Picker</a>
-          <a href="/photocard-cropper" style={s.navPill}>✂️ Kpop Photocard Cropper</a>
           <a href="/mbti-quiz" style={s.navPill}>🎮 Kpop MBTI Quiz</a>
+          <a href="/photocard-cropper" style={s.navPill}>✂️ Kpop Photocard Cropper</a>
         </div>
         <div style={s.pageTitle}>✨ Kpop MBTI Picker</div>
         <p style={s.tagline}>Pick your faves. Discover your MBTI vibe.</p>

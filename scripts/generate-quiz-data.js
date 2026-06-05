@@ -37,6 +37,20 @@ idolData.forEach(idol => {
   groupMap[group].push({ name: extractName(idol["Name (Group)"]), mbti });
 });
 
+// Include former group members in their former groups' consensus
+idolData.forEach(idol => {
+  if (!idol["Former Groups"] || !idol["Former Groups"].length) return;
+  const mbti = idol["Personality"];
+  if (!mbti || mbti.length !== 4 || mbti.includes("-")) return;
+  const name = extractName(idol["Name (Group)"]);
+  idol["Former Groups"].forEach(formerGroup => {
+    if (!groupMap[formerGroup]) return;
+    if (!groupMap[formerGroup].some(m => m.name === name)) {
+      groupMap[formerGroup].push({ name, mbti });
+    }
+  });
+});
+
 function computeDifficulty(members) {
   const n = members.length;
 

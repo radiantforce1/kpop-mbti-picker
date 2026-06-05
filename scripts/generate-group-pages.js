@@ -308,7 +308,8 @@ const results = [];
 
 TARGET_GROUPS.forEach(group => {
   const members = idolData.filter(idol =>
-    idol["Name (Group)"].endsWith(`(${group.name})`)
+    idol["Name (Group)"].endsWith(`(${group.name})`) ||
+    (idol["Former Groups"] && idol["Former Groups"].includes(group.name))
   );
 
   if (members.length === 0) {
