@@ -9,6 +9,8 @@
     { "source": "/mbti-picker/groups", "destination": "/groups/index.html" },
     { "source": "/photocard-cropper/", "destination": "/photocard-cropper/index.html" },
     { "source": "/photocard-cropper", "destination": "/photocard-cropper/index.html" },
+    { "source": "/mbti-quiz/", "destination": "/mbti-quiz/index.html" },
+    { "source": "/mbti-quiz", "destination": "/mbti-quiz/index.html" },
     { "source": "/mbti-picker/(.*)", "destination": "/index.html" }
   ]
 }

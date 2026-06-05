@@ -275,8 +275,9 @@ export default function KpopMbtiPicker() {
       <div style={s.header}>
         <h1 style={s.h1}>✦ Kpop Tools ✦</h1>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", marginTop: "10px", flexWrap: "wrap" }}>
-          <a href="/mbti-picker" style={s.navPill}>✨ Kpop MBTI Picker</a>
+          <a href="/mbti-picker" style={{ ...s.navPill, background: "linear-gradient(90deg, #e91e8c, #9c27b0)", color: "white", border: "1.5px solid transparent" }}>✨ Kpop MBTI Picker</a>
           <a href="/photocard-cropper" style={s.navPill}>✂️ Kpop Photocard Cropper</a>
+          <a href="/mbti-quiz" style={s.navPill}>🎮 Kpop MBTI Quiz</a>
         </div>
         <div style={s.pageTitle}>✨ Kpop MBTI Picker</div>
         <p style={s.tagline}>Pick your faves. Discover your MBTI vibe.</p>
