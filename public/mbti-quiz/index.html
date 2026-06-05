@@ -194,26 +194,17 @@
 
     /* Submit / result */
     .submit-row { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 20px; }
-    .btn-submit {
+    .btn-submit, .btn-hint, .btn-clear, .btn-reset {
+      background: white; color: #9c27b0;
+      border: 2px solid #ce93d8; border-radius: 100px;
+      padding: 8px 24px; font-size: 0.9rem; font-weight: 700;
+      cursor: pointer; font-family: 'Segoe UI', sans-serif;
+      transition: background 0.12s, color 0.12s, border-color 0.12s;
+    }
+    .btn-submit:hover, .btn-hint:hover, .btn-clear:hover, .btn-reset:hover {
       background: linear-gradient(90deg, #e91e8c, #9c27b0);
-      color: white; border: none; border-radius: 14px;
-      padding: 13px 40px; font-size: 1rem; font-weight: 700;
-      cursor: pointer; box-shadow: 0 4px 14px rgba(233,30,140,0.35);
-      font-family: 'Segoe UI', sans-serif;
+      color: white; border-color: transparent;
     }
-    .btn-submit:hover { opacity: 0.9; }
-    .btn-hint {
-      background: white; color: #9c27b0; border: 2px solid #ce93d8;
-      border-radius: 14px; padding: 11px 24px; font-size: 1rem; font-weight: 700;
-      cursor: pointer; font-family: 'Segoe UI', sans-serif;
-    }
-    .btn-hint:hover { border-color: #e91e8c; }
-    .btn-reset {
-      background: white; color: #9c27b0; border: 2px solid #ce93d8;
-      border-radius: 14px; padding: 11px 24px; font-size: 1rem; font-weight: 700;
-      cursor: pointer; font-family: 'Segoe UI', sans-serif;
-    }
-    .btn-reset:hover { border-color: #e91e8c; }
 
     .result-box {
       text-align: center; padding: 18px 16px; border-radius: 16px;
@@ -295,6 +286,7 @@
 
     <div class="submit-row">
       <button class="btn-hint" id="btnHint">💡 Hint</button>
+      <button class="btn-clear" id="btnClear">Reset</button>
       <button class="btn-submit" id="btnSubmit">Submit</button>
       <button class="btn-reset hidden" id="btnReset">Try Again</button>
     </div>
@@ -506,11 +498,28 @@ document.getElementById('btnSubmit').addEventListener('click', () => {
     document.getElementById('resultScore').textContent = `${attempts} attempt${attempts !== 1 ? 's' : ''} · ${hintsUsed} hint${hintsUsed !== 1 ? 's' : ''} used`;
     document.getElementById('btnSubmit').classList.add('hidden');
     document.getElementById('btnHint').classList.add('hidden');
+    document.getElementById('btnClear').classList.add('hidden');
     document.getElementById('btnReset').classList.remove('hidden');
   } else {
     document.getElementById('resultMsg').textContent = `${correctMembers}/${currentGroup.members.length} members fully correct`;
     document.getElementById('resultScore').textContent = `${correctCells}/${totalCells} cells correct · attempt ${attempts}`;
   }
+});
+
+document.getElementById('btnClear').addEventListener('click', () => {
+  submitted = false;
+  hintedCells = new Set();
+  memberStates = currentGroup.members.map(() => ['', '', '', '']);
+  document.querySelectorAll('.toggle-cell').forEach(cell => {
+    cell.className = 'toggle-cell';
+    cell.textContent = '';
+  });
+  document.getElementById('resultBox').className = 'result-box';
+  document.getElementById('resultMsg').textContent = '';
+  document.getElementById('resultScore').textContent = '';
+  document.getElementById('btnSubmit').classList.remove('hidden');
+  document.getElementById('btnHint').classList.remove('hidden');
+  document.getElementById('btnReset').classList.add('hidden');
 });
 
 document.getElementById('btnReset').addEventListener('click', renderQuiz);
