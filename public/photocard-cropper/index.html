@@ -488,6 +488,16 @@
   <p>Drag &amp; drop one or more images, or browse to select</p>
   <label for="fileInput">Browse Files</label>
   <input type="file" id="fileInput" multiple accept="image/*" />
+  <div style="margin:20px auto 0;max-width:420px;text-align:left;">
+    <p style="font-size:0.8rem;font-weight:700;color:#9c27b0;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">How to use</p>
+    <ol style="padding-left:20px;margin:0;display:flex;flex-direction:column;gap:5px;font-size:0.82rem;color:#9c6aaa;line-height:1.5;">
+      <li>Upload your photos - Drag &amp; drop or browse. Batch upload supported.</li>
+      <li>Pick a ratio</li>
+      <li>Analyse all - auto-detects faces and sets the crop for each photo.</li>
+      <li>Click any photo to open the editor. Drag the frame, resize handles or hit <strong>Detect card</strong> to snap to physical card edges.</li>
+      <li>Apply crop when happy, then Download to get all photos as a ZIP. On mobile, long-press any cropped photo to save it directly.</li>
+    </ol>
+  </div>
 </div>
 
 <!-- Stats bar -->
@@ -869,7 +879,7 @@ function removeEntry(id) {
   updateStats();
   if (state.images.length === 0) {
     dropzone.classList.remove('hidden');
-    miniDropzone.classList.remove('visible');
+      miniDropzone.classList.remove('visible');
     statsBar.classList.remove('visible');
   }
 }
@@ -1284,26 +1294,74 @@ function detectTilt(edge, gxArr, gyArr, cW, cH, avgEdge) {
 }
 
 // Row/column projection peaks on a canvas → { top, bottom, left, right, confident }
+// Uses direction-separated projections to isolate card border signal from interior content
 function projectionPeaks(canvas, cW, cH) {
-  const { edge, avgEdge } = computeSobel(canvas, cW, cH);
-  const rowSum = new Float32Array(cH);
-  const colSum = new Float32Array(cW);
-  for (let y = 0; y < cH; y++)
-    for (let x = 0; x < cW; x++) { rowSum[y] += edge[y*cW+x]; colSum[x] += edge[y*cW+x]; }
-  function peakIn(arr, a, b) {
-    let best = a, bestVal = arr[a] || 0;
-    for (let i = a+1; i < b; i++) if (arr[i] > bestVal) { bestVal = arr[i]; best = i; }
-    return { idx: best, val: bestVal };
+  const { edge, gxArr, gyArr, avgEdge } = computeSobel(canvas, cW, cH);
+
+  // hRow: near-horizontal edges only (gy dominant) → card top/bottom borders
+  // vCol: near-vertical edges only (gx dominant) → card left/right borders
+  // Separating directions filters out diagonal interior content (faces, text, etc.)
+  const hRow = new Float32Array(cH);
+  const vCol = new Float32Array(cW);
+  const weakCut = avgEdge * 0.8;
+  for (let y = 1; y < cH - 1; y++) {
+    for (let x = 1; x < cW - 1; x++) {
+      const mag = edge[y*cW+x];
+      if (mag < weakCut) continue;
+      const ax = Math.abs(gxArr[y*cW+x]);
+      const ay = Math.abs(gyArr[y*cW+x]);
+      if (ay > ax * 1.5) hRow[y] += mag;
+      if (ax > ay * 1.5) vCol[x] += mag;
+    }
   }
-  const P = 0.02;
-  const top    = peakIn(rowSum, Math.floor(cH*P),    Math.floor(cH*0.50));
-  const bottom = peakIn(rowSum, Math.floor(cH*0.50), Math.floor(cH*(1-P)));
-  const left   = peakIn(colSum, Math.floor(cW*P),    Math.floor(cW*0.50));
-  const right  = peakIn(colSum, Math.floor(cW*0.50), Math.floor(cW*(1-P)));
-  const thresh = avgEdge * 2.5;
-  return { top, bottom, left, right,
-    confident: top.val >= thresh && bottom.val >= thresh &&
-               left.val >= thresh && right.val >= thresh };
+
+  // 3-pixel box smooth to reduce spiky noise
+  function smooth(arr) {
+    const out = new Float32Array(arr.length);
+    out[0] = arr[0]; out[arr.length-1] = arr[arr.length-1];
+    for (let i = 1; i < arr.length - 1; i++)
+      out[i] = (arr[i-1] + arr[i] + arr[i+1]) / 3;
+    return out;
+  }
+  const sH = smooth(hRow);
+  const sV = smooth(vCol);
+
+  // Find best-scoring pair of local-maxima peaks with minimum separation
+  function bestPair(arr, minGap) {
+    let maxVal = 0;
+    for (let i = 0; i < arr.length; i++) if (arr[i] > maxVal) maxVal = arr[i];
+    if (maxVal === 0) return null;
+    const thresh = maxVal * 0.25;
+    const peaks = [];
+    for (let i = 1; i < arr.length - 1; i++)
+      if (arr[i] >= thresh && arr[i] >= arr[i-1] && arr[i] >= arr[i+1])
+        peaks.push({ idx: i, val: arr[i] });
+    if (peaks.length < 2) return null;
+    let best = null, bestScore = -1;
+    for (let i = 0; i < peaks.length; i++)
+      for (let j = i+1; j < peaks.length; j++) {
+        if (peaks[j].idx - peaks[i].idx < minGap) continue;
+        const score = peaks[i].val + peaks[j].val;
+        if (score > bestScore) { bestScore = score; best = [peaks[i], peaks[j]]; }
+      }
+    return best;
+  }
+
+  const rowPair = bestPair(sH, Math.floor(cH * 0.15));
+  const colPair = bestPair(sV, Math.floor(cW * 0.15));
+  if (!rowPair || !colPair) return { confident: false };
+
+  const [top, bottom] = rowPair;
+  const [left, right]  = colPair;
+
+  // Both peaks must reach at least 30% of their projection's max
+  let maxH = 0, maxV = 0;
+  for (let i = 0; i < sH.length; i++) if (sH[i] > maxH) maxH = sH[i];
+  for (let i = 0; i < sV.length; i++) if (sV[i] > maxV) maxV = sV[i];
+  const confident = top.val >= maxH * 0.3 && bottom.val >= maxH * 0.3 &&
+                    left.val >= maxV * 0.3 && right.val >= maxV * 0.3;
+
+  return { top, bottom, left, right, confident };
 }
 
 // Rotate any drawable (canvas or image element) by angleDeg, return new canvas
