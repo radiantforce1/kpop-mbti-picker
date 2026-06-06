@@ -527,6 +527,7 @@
       <span id="modalFilename">filename.jpg</span>
       <span id="modalCounter"></span>
       <span id="modalMethod" style="display:none;"></span>
+      <button class="modal-btn" id="btnDetectCard">Detect card</button>
       <button class="modal-btn" id="btnReanalyse">Re-analyse</button>
       <button class="modal-btn modal-btn-danger" id="btnModalDelete">🗑 Delete</button>
       <button class="modal-btn" id="btnModalClose">✕ Close</button>
@@ -617,6 +618,7 @@ let imgRect = { x: 0, y: 0, w: 0, h: 0 };
 let drag = null;
 let baseAngle = 0;
 let fineAngle = 0;
+let pendingCardCrop = null; // set by detectCardEdges when tilt correction triggers applyRotation
 
 // ═══════════════════════════════════════════════
 // DOM REFS
@@ -660,6 +662,7 @@ const btnSaveNext     = document.getElementById('btnSaveNext');
 const btnRotCCW       = document.getElementById('btnRotCCW');
 const btnRotCW        = document.getElementById('btnRotCW');
 const btnRotReset     = document.getElementById('btnRotReset');
+const btnDetectCard   = document.getElementById('btnDetectCard');
 const qualitySlider   = document.getElementById('qualitySlider');
 const qualityLabel    = document.getElementById('qualityLabel');
 const qualityWrap     = document.getElementById('qualityWrap');
@@ -799,7 +802,7 @@ function generatePreview(entry, normCropBox) {
     entry.preview = canvas.toDataURL('image/jpeg', 0.82);
     renderCard(entry);
   };
-  img.src = entry.dataUrl;
+  img.src = entry.rotatedUrl || entry.dataUrl;
 }
 
 // ═══════════════════════════════════════════════
@@ -937,14 +940,30 @@ async function analyseEntry(entry) {
         normBox = cropCentredOn(cx, cy, img.naturalWidth, img.naturalHeight);
       }
     } else {
-      // Saliency fallback
-      const sal = saliencyPoint(img);
-      if (sal) {
-        normBox = cropCentredOn(sal.cx, sal.cy, img.naturalWidth, img.naturalHeight);
-        method = 'saliency';
+      // Try card edge detection before saliency fallback
+      const cardResult = runCardDetection(img);
+      if (cardResult.confident) {
+        if (Math.abs(cardResult.tiltAngle) > 0.3) {
+          const corrAngle = -cardResult.tiltAngle;
+          const { url } = await rotateToUrl(entry.dataUrl, corrAngle);
+          entry.rotatedUrl = url;
+          entry.fineAngle = corrAngle;
+          entry.baseAngle = 0;
+          method = `card · ${corrAngle > 0 ? '+' : ''}${corrAngle.toFixed(1)}°`;
+        } else {
+          method = 'card detected';
+        }
+        normBox = cardResult.normCrop;
       } else {
-        normBox = cropCentredOn(0.5, 0.35, img.naturalWidth, img.naturalHeight);
-        method = 'upper-third fallback';
+        // Saliency fallback
+        const sal = saliencyPoint(img);
+        if (sal) {
+          normBox = cropCentredOn(sal.cx, sal.cy, img.naturalWidth, img.naturalHeight);
+          method = 'saliency';
+        } else {
+          normBox = cropCentredOn(0.5, 0.35, img.naturalWidth, img.naturalHeight);
+          method = 'upper-third fallback';
+        }
       }
     }
 
@@ -1197,16 +1216,197 @@ function applyRotation() {
       imgNatH = modalImg.naturalHeight;
       requestAnimationFrame(() => {
         computeImgRect();
-        // Reposition centre at same proportional location; keep pixel size fixed so crop never resizes
-        const newCx = imgRect.x + savedNormCx * imgRect.w;
-        const newCy = imgRect.y + savedNormCy * imgRect.h;
-        cropPx = clampCrop({ x: newCx - savedW / 2, y: newCy - savedH / 2, w: savedW, h: savedH }, false);
+        if (pendingCardCrop) {
+          // detectCardEdges set this — apply the detected card bounds instead of restoring old crop
+          cropPx = clampCrop(normToPx(pendingCardCrop), true);
+          pendingCardCrop = null;
+        } else {
+          // Reposition centre at same proportional location; keep pixel size fixed so crop never resizes
+          const newCx = imgRect.x + savedNormCx * imgRect.w;
+          const newCy = imgRect.y + savedNormCy * imgRect.h;
+          cropPx = clampCrop({ x: newCx - savedW / 2, y: newCy - savedH / 2, w: savedW, h: savedH }, false);
+        }
         applyCropBox();
       });
     };
     modalImg.src = url;
   };
   img.src = src;
+}
+
+// ═══════════════════════════════════════════════
+// CARD EDGE DETECTION (Option B — axis-aligned, no perspective warp)
+// ═══════════════════════════════════════════════
+
+function computeSobel(canvas, cW, cH) {
+  const data = canvas.getContext('2d').getImageData(0, 0, cW, cH).data;
+  const gray = new Float32Array(cW * cH);
+  for (let i = 0; i < cW * cH; i++)
+    gray[i] = 0.299 * data[i*4] + 0.587 * data[i*4+1] + 0.114 * data[i*4+2];
+  const edge = new Float32Array(cW * cH);
+  const gxArr = new Float32Array(cW * cH);
+  const gyArr = new Float32Array(cW * cH);
+  let total = 0;
+  for (let y = 1; y < cH - 1; y++) {
+    for (let x = 1; x < cW - 1; x++) {
+      const gx = (gray[(y-1)*cW+(x+1)] - gray[(y-1)*cW+(x-1)])
+               + 2*(gray[y*cW+(x+1)]   - gray[y*cW+(x-1)])
+               + (gray[(y+1)*cW+(x+1)] - gray[(y+1)*cW+(x-1)]);
+      const gy = (gray[(y+1)*cW+(x-1)] - gray[(y-1)*cW+(x-1)])
+               + 2*(gray[(y+1)*cW+x]   - gray[(y-1)*cW+x])
+               + (gray[(y+1)*cW+(x+1)] - gray[(y-1)*cW+(x+1)]);
+      const mag = Math.sqrt(gx*gx + gy*gy);
+      edge[y*cW+x] = mag; gxArr[y*cW+x] = gx; gyArr[y*cW+x] = gy;
+      total += mag;
+    }
+  }
+  return { edge, gxArr, gyArr, avgEdge: total / (cW * cH) };
+}
+
+// Gradient direction histogram → card tilt angle in degrees (positive = clockwise)
+function detectTilt(edge, gxArr, gyArr, cW, cH, avgEdge) {
+  const thresh = avgEdge * 1.5;
+  const hist = new Float32Array(91); // index = angle + 45, covers -45° to +45°
+  for (let y = 1; y < cH - 1; y++) {
+    for (let x = 1; x < cW - 1; x++) {
+      const mag = edge[y*cW+x];
+      if (mag < thresh) continue;
+      let a = Math.atan2(gyArr[y*cW+x], gxArr[y*cW+x]) * 180 / Math.PI;
+      a = ((a % 90) + 90) % 90; // fold to 0–90 (horizontal + vertical edges both land here)
+      if (a > 45) a -= 90;       // fold to -45–45
+      const bin = Math.round(a) + 45;
+      if (bin >= 0 && bin <= 90) hist[bin] += mag;
+    }
+  }
+  let maxBin = 45;
+  for (let i = 0; i < 91; i++) if (hist[i] > hist[maxBin]) maxBin = i;
+  return maxBin - 45;
+}
+
+// Row/column projection peaks on a canvas → { top, bottom, left, right, confident }
+function projectionPeaks(canvas, cW, cH) {
+  const { edge, avgEdge } = computeSobel(canvas, cW, cH);
+  const rowSum = new Float32Array(cH);
+  const colSum = new Float32Array(cW);
+  for (let y = 0; y < cH; y++)
+    for (let x = 0; x < cW; x++) { rowSum[y] += edge[y*cW+x]; colSum[x] += edge[y*cW+x]; }
+  function peakIn(arr, a, b) {
+    let best = a, bestVal = arr[a] || 0;
+    for (let i = a+1; i < b; i++) if (arr[i] > bestVal) { bestVal = arr[i]; best = i; }
+    return { idx: best, val: bestVal };
+  }
+  const P = 0.02;
+  const top    = peakIn(rowSum, Math.floor(cH*P),    Math.floor(cH*0.50));
+  const bottom = peakIn(rowSum, Math.floor(cH*0.50), Math.floor(cH*(1-P)));
+  const left   = peakIn(colSum, Math.floor(cW*P),    Math.floor(cW*0.50));
+  const right  = peakIn(colSum, Math.floor(cW*0.50), Math.floor(cW*(1-P)));
+  const thresh = avgEdge * 2.5;
+  return { top, bottom, left, right,
+    confident: top.val >= thresh && bottom.val >= thresh &&
+               left.val >= thresh && right.val >= thresh };
+}
+
+// Rotate any drawable (canvas or image element) by angleDeg, return new canvas
+function rotateCanvas(src, srcW, srcH, angleDeg) {
+  const rad = angleDeg * Math.PI / 180;
+  const cos = Math.abs(Math.cos(rad)), sin = Math.abs(Math.sin(rad));
+  const rW = Math.ceil(srcW * cos + srcH * sin);
+  const rH = Math.ceil(srcW * sin + srcH * cos);
+  const rc = document.createElement('canvas');
+  rc.width = rW; rc.height = rH;
+  const ctx = rc.getContext('2d');
+  ctx.fillStyle = '#000'; ctx.fillRect(0, 0, rW, rH);
+  ctx.translate(rW/2, rH/2); ctx.rotate(rad);
+  ctx.drawImage(src, -srcW/2, -srcH/2);
+  return { canvas: rc, rW, rH };
+}
+
+// Rotate a dataUrl by angleDeg → Promise<{ url, rW, rH }>
+function rotateToUrl(dataUrl, angleDeg) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => {
+      const { canvas, rW, rH } = rotateCanvas(img, img.naturalWidth, img.naturalHeight, angleDeg);
+      resolve({ url: canvas.toDataURL('image/jpeg', 0.92), rW, rH });
+    };
+    img.onerror = reject;
+    img.src = dataUrl;
+  });
+}
+
+// Shared detection: { tiltAngle, normCrop, confident }
+// normCrop is normalised relative to the image AFTER correcting for tiltAngle
+function runCardDetection(imgEl) {
+  const W = imgEl.naturalWidth, H = imgEl.naturalHeight;
+  const SCALE = 0.25;
+  const cW = Math.max(2, Math.floor(W * SCALE));
+  const cH = Math.max(2, Math.floor(H * SCALE));
+
+  const c0 = document.createElement('canvas');
+  c0.width = cW; c0.height = cH;
+  c0.getContext('2d').drawImage(imgEl, 0, 0, cW, cH);
+
+  const { edge, gxArr, gyArr, avgEdge } = computeSobel(c0, cW, cH);
+  const tiltAngle = detectTilt(edge, gxArr, gyArr, cW, cH, avgEdge);
+
+  // Counter-rotate downscaled image so card edges are axis-aligned for projection
+  let det = c0, detW = cW, detH = cH;
+  if (Math.abs(tiltAngle) > 0.3) {
+    const r = rotateCanvas(c0, cW, cH, -tiltAngle);
+    det = r.canvas; detW = r.rW; detH = r.rH;
+  }
+
+  const peaks = projectionPeaks(det, detW, detH);
+  if (!peaks.confident) return { tiltAngle, normCrop: null, confident: false };
+
+  // Card centre normalised in detection-canvas space (≈ corrected-image space)
+  const cx = (peaks.left.idx + peaks.right.idx) / (2 * detW);
+  const cy = (peaks.top.idx  + peaks.bottom.idx) / (2 * detH);
+
+  // Natural dimensions of the corrected image (original rotated by -tiltAngle)
+  const rad = tiltAngle * Math.PI / 180;
+  const cos = Math.abs(Math.cos(rad)), sin = Math.abs(Math.sin(rad));
+  const rotNatW = W * cos + H * sin;
+  const rotNatH = W * sin + H * cos;
+
+  const detectedFracW = (peaks.right.idx - peaks.left.idx) / detW;
+  const cardNatW = detectedFracW * rotNatW;
+  const aspect = getAspect();
+  const normW = Math.min(1, cardNatW / rotNatW);
+  const normH = Math.min(1, (cardNatW / aspect) / rotNatH);
+  const normX = Math.max(0, Math.min(1 - normW, cx - normW / 2));
+  const normY = Math.max(0, Math.min(1 - normH, cy - normH / 2));
+
+  return { tiltAngle, normCrop: [normX, normY, normW, normH], confident: true };
+}
+
+async function detectCardEdges() {
+  if (!modalEntry) return;
+  btnDetectCard.disabled = true;
+  btnDetectCard.textContent = 'Detecting…';
+  try {
+    const imgEl = new Image();
+    await new Promise((res, rej) => {
+      imgEl.onload = res; imgEl.onerror = rej;
+      imgEl.src = modalEntry.rotatedUrl || modalEntry.dataUrl;
+    });
+    const { tiltAngle, normCrop, confident } = runCardDetection(imgEl);
+    if (!confident) { showToast('No clear card edges found — adjust crop manually'); return; }
+
+    if (Math.abs(tiltAngle) > 0.3) {
+      // Adjust fineAngle to correct tilt; pendingCardCrop is picked up in applyRotation's RAF callback
+      fineAngle = Math.max(-45, Math.min(45, fineAngle - tiltAngle));
+      fineSlider.value = fineAngle;
+      pendingCardCrop = normCrop;
+      applyRotation();
+      showToast(`Straightening ${(-tiltAngle).toFixed(1)}°…`);
+    } else {
+      cropPx = clampCrop(normToPx(normCrop), true);
+      applyCropBox();
+      showToast('Card edges detected ✓');
+    }
+  } catch { showToast('Detection failed'); }
+  finally { btnDetectCard.disabled = false; btnDetectCard.textContent = 'Detect card'; }
 }
 
 // ═══════════════════════════════════════════════
@@ -1312,7 +1512,7 @@ function cropToBlob(entry, mime, quality) {
       canvas.toBlob(resolve, mime, quality);
     };
     img.onerror = reject;
-    img.src = entry.dataUrl;
+    img.src = entry.rotatedUrl || entry.dataUrl;
   });
 }
 
@@ -1429,6 +1629,9 @@ btnModalDelete.addEventListener('click', () => {
   const nextEntry = state.images[Math.min(idx, state.images.length - 1)];
   openModal(nextEntry);
 });
+
+// Detect card edges
+btnDetectCard.addEventListener('click', detectCardEdges);
 
 // Re-analyse — update in-place, no modal flicker
 btnReanalyse.addEventListener('click', async () => {
