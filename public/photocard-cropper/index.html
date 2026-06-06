@@ -359,6 +359,13 @@
       font-family: 'Segoe UI', sans-serif;
     }
     .rot-reset:hover { color: #d4b8e0; border-color: #555; }
+    .rot-step-btn {
+      width: 26px; height: 26px; background: #2a2a2a; color: #f48fb1;
+      border: 1.5px solid #3a3a3a; border-radius: 7px; cursor: pointer;
+      font-size: 1rem; line-height: 1; display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; font-family: 'Segoe UI', sans-serif;
+    }
+    .rot-step-btn:hover { background: #333; border-color: #f48fb1; }
 
     /* Modal footer */
     #modalFooter {
@@ -554,7 +561,9 @@
       <button class="rot-btn" id="btnRotCCW" title="Rotate 90° counter-clockwise">↺</button>
       <button class="rot-btn" id="btnRotCW" title="Rotate 90° clockwise">↻</button>
       <span class="rot-label">Fine tune</span>
+      <button class="rot-step-btn" id="btnFineMinus" title="−0.2°">−</button>
       <input type="range" id="fineSlider" min="-45" max="45" step="0.5" value="0" />
+      <button class="rot-step-btn" id="btnFinePlus" title="+0.2°">+</button>
       <span id="degreeReadout">0°</span>
       <button class="rot-reset" id="btnRotReset">Reset</button>
     </div>
@@ -1160,6 +1169,12 @@ function applyRotation() {
   const src = modalEntry ? modalEntry.dataUrl : null;
   if (!src) return;
 
+  // Save crop centre as a fraction of imgRect (position), plus exact pixel size
+  const savedNormCx = (cropPx.x + cropPx.w / 2 - imgRect.x) / imgRect.w;
+  const savedNormCy = (cropPx.y + cropPx.h / 2 - imgRect.y) / imgRect.h;
+  const savedW = cropPx.w;
+  const savedH = cropPx.h;
+
   const img = new Image();
   img.onload = () => {
     const rad = total * Math.PI / 180;
@@ -1180,7 +1195,14 @@ function applyRotation() {
     modalImg.onload = () => {
       imgNatW = modalImg.naturalWidth;
       imgNatH = modalImg.naturalHeight;
-      requestAnimationFrame(() => { computeImgRect(); initialiseCropBox(); });
+      requestAnimationFrame(() => {
+        computeImgRect();
+        // Reposition centre at same proportional location; keep pixel size fixed so crop never resizes
+        const newCx = imgRect.x + savedNormCx * imgRect.w;
+        const newCy = imgRect.y + savedNormCy * imgRect.h;
+        cropPx = clampCrop({ x: newCx - savedW / 2, y: newCy - savedH / 2, w: savedW, h: savedH }, false);
+        applyCropBox();
+      });
     };
     modalImg.src = url;
   };
@@ -1467,6 +1489,14 @@ btnSaveNext.addEventListener('click', () => {
 btnRotCCW.addEventListener('click', () => { baseAngle = ((baseAngle - 90) % 360 + 360) % 360; applyRotation(); });
 btnRotCW.addEventListener('click',  () => { baseAngle = (baseAngle + 90) % 360; applyRotation(); });
 fineSlider.addEventListener('input', () => { fineAngle = parseFloat(fineSlider.value); applyRotation(); });
+document.getElementById('btnFineMinus').addEventListener('click', () => {
+  fineAngle = Math.max(-45, parseFloat((fineAngle - 0.2).toFixed(1)));
+  fineSlider.value = fineAngle; applyRotation();
+});
+document.getElementById('btnFinePlus').addEventListener('click', () => {
+  fineAngle = Math.min(45, parseFloat((fineAngle + 0.2).toFixed(1)));
+  fineSlider.value = fineAngle; applyRotation();
+});
 btnRotReset.addEventListener('click', () => {
   baseAngle = 0; fineAngle = 0;
   fineSlider.value = 0;
