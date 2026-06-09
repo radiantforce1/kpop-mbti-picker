@@ -912,6 +912,26 @@
     "Personality": "ISFJ"
   },
   {
+    "Name (Group)": "Im Nayoung (I.O.I)",
+    "Personality": "ISFJ"
+  },
+  {
+    "Name (Group)": "Kang Mina (I.O.I)",
+    "Personality": "ISFP"
+  },
+  {
+    "Name (Group)": "Pinky/Kyulkyung (I.O.I)",
+    "Personality": "ESFP"
+  },
+  {
+    "Name (Group)": "Sejeong (I.O.I)",
+    "Personality": "ENFP"
+  },
+  {
+    "Name (Group)": "Sohye (I.O.I)",
+    "Personality": "INFP"
+  },
+  {
     "Name (Group)": "Chaeyoung (fromis_9)",
     "Personality": "ISFP"
   },
@@ -11307,7 +11327,8 @@
   },
   {
     "Name (Group)": "Yujin (CLC)",
-    "Personality": "ENFP"
+    "Personality": "ENFP",
+    "Former Groups": ["I.O.I"]
   },
   {
     "Name (Group)": "An Yujin (IVE)",
